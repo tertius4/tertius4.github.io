@@ -11,7 +11,7 @@
       description: "An Afrikaans ToDo list app built to be simple, private, and offline-first.",
       logo_src: "/doenit-logo.webp",
       logo_alt: "Doenit Logo",
-      tech: ["SvelteKit", "Firebase"],
+      tech: ["SvelteKit", "Capacitor", "Firebase"],
       status: "In Development",
     },
   ];
