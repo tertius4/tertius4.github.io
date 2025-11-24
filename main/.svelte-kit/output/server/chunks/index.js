@@ -853,12 +853,12 @@ export {
   COMMENT_NODE as C,
   DIRTY as D,
   ERROR_VALUE as E,
-  escape_html as F,
-  attributes as G,
+  stringify as F,
+  getContext as G,
   HYDRATION_ERROR as H,
   INERT as I,
-  attr as J,
-  stringify as K,
+  escape_html as J,
+  attributes as K,
   LEGACY_PROPS as L,
   MAYBE_DIRTY as M,
   clsx as N,
@@ -892,5 +892,5 @@ export {
   setContext as w,
   head as x,
   slot as y,
-  getContext as z
+  attr as z
 };

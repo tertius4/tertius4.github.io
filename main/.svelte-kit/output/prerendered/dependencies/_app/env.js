@@ -1,1 +1,1 @@
-export const env={}
+export const env={"PUBLIC_ANALYTICS_ID":"G-EV7ES0K1L6"}
