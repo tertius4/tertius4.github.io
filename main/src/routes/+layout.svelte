@@ -1,12 +1,15 @@
 <script>
+  import config from "$lib/config";
   import "../app.css";
-  import { PUBLIC_ANALYTICS_ID } from "$env/static/public";
+
+  const { children } = $props();
 </script>
 
 <svelte:head>
   <meta charset="utf-8" />
   <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={PUBLIC_ANALYTICS_ID}"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id={config.google_analytics_id}"></script>
+  {@html `
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
@@ -14,8 +17,9 @@
     }
     gtag("js", new Date());
 
-    gtag("config", PUBLIC_ANALYTICS_ID);
+    gtag("config", ${JSON.stringify(config.google_analytics_id)});
   </script>
+  `}
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
@@ -23,5 +27,5 @@
 </svelte:head>
 
 <div class="font-sans antialiased">
-  <slot />
+  {@render children()}
 </div>
