@@ -41,7 +41,7 @@ npm run preview
 
 ## Deployment
 
-From the repository root, run:
+From the repository root (not `/main`), run:
 
 ```bash
 ./deploy
