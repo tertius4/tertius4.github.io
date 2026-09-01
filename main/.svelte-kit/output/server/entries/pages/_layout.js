@@ -1,5 +1,5 @@
 const prerender = true;
-const csr = false;
+const csr = true;
 export {
   csr,
   prerender

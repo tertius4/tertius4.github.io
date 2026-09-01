@@ -6,7 +6,8 @@
     "isEntry": true,
     "imports": [
       "_internal.js",
-      "_environment.js"
+      "_environment.js",
+      "_shared-server.js"
     ]
   },
   "_environment.js": {
@@ -34,8 +35,13 @@
     "imports": [
       "_index.js",
       "_environment.js",
-      "_equality.js"
+      "_equality.js",
+      "_shared-server.js"
     ]
+  },
+  "_shared-server.js": {
+    "file": "chunks/shared-server.js",
+    "name": "shared-server"
   },
   "_shared.js": {
     "file": "chunks/shared.js",
@@ -67,8 +73,9 @@
       "_environment.js",
       "_exports.js",
       "_utils.js",
-      "_internal.js",
-      "_shared.js"
+      "_shared-server.js",
+      "_shared.js",
+      "_internal.js"
     ]
   },
   "src/routes/+error.svelte": {
@@ -95,10 +102,11 @@
     "src": "src/routes/+layout.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js"
+      "_index.js",
+      "_shared-server.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.DWFsrMGn.css"
+      "_app/immutable/assets/_layout.D8aa1Te6.css"
     ]
   },
   "src/routes/+page.svelte": {

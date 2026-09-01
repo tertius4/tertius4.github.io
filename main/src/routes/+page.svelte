@@ -1,6 +1,7 @@
 <script>
   import Avatar from "$lib/components/Avatar.svelte";
   import Card from "$lib/components/Card.svelte";
+  import ScrollPastTimelineFab from "$lib/components/ScrollPastTimelineFab.svelte";
   import Tag from "$lib/components/Tag.svelte";
 
   const skills = ["JavaScript", "TypeScript", "Svelte", "Node.js", "Python", "Java", "C", "MongoDB", "Git", "REST API"];
@@ -17,22 +18,48 @@
   ];
 
   const socialLinks = [
-    { name: "X (Twitter)", url: "https://x.com/Tertius39", icon: "🐦" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/tertius-van-niekerk-96a674237/", icon: "💼" },
     { name: "GitHub", url: "https://github.com/tertius4/doenit", icon: "🐙" },
-    { name: "Reddit", url: "https://www.reddit.com/r/doenit/", icon: "🤖" },
+  ];
+
+  const lifeTimeline = [
+    {
+      year: "2020",
+      title: "Graduated in Computer Science",
+      description: "Completed my Computer Science degree at the University of Stellenbosch.",
+      type: "education",
+    },
+    {
+      year: "2021",
+      title: "Started My Professional Career",
+      description: "Joined my first start-up role and began building production software full-time.",
+      type: "career",
+    },
+    {
+      year: "Now",
+      title: "Building Products and Growing",
+      description: "Focused on practical full stack development while exploring new ideas through side projects.",
+      type: "present",
+    },
   ];
 </script>
 
 <svelte:head>
-  <title>Tertius - Full Stack Developer</title>
+  <title>Tertius – Software Developer</title>
   <link rel="icon" href="/tertius_picture.webp" />
-  <meta name="description" content="Personal website of Tertius, a full stack developer from South Africa." />
+  <meta
+    name="description"
+    content="Personal website of Tertius, a full stack software developer with South African and German citizenship, open to opportunities across Europe."
+  />
   <meta
     name="keywords"
-    content="full stack developer, web developer, JavaScript, TypeScript, Svelte, Node.js, South Africa"
+    content="full stack developer, web developer, JavaScript, TypeScript, Svelte, Node.js, Europe, Germany, South Africa, multilingual developer"
   />
-  <meta property="og:title" content="Tertius - Full Stack Developer" />
-  <meta property="og:description" content="Full stack developer from South Africa." />
+  <meta property="og:title" content="Tertius – Software Developer" />
+  <meta
+    property="og:description"
+    content="Full stack developer with South African and German citizenship, available for opportunities with European teams."
+  />
   <meta property="og:type" content="website" />
 </svelte:head>
 
@@ -49,7 +76,8 @@
             Hi, I'm <span class="text-blue-600">Tertius</span>
           </h1>
           <p class="text-xl text-neutral-700 mb-6 leading-relaxed">
-            A full Stack Developer building websites and applications
+            Full stack developer building practical products for international teams, with dual South African and German
+            citizenship.
           </p>
 
           <div class="flex flex-wrap justify-center md:justify-start gap-1 sm:gap-2 mb-6">
@@ -85,13 +113,19 @@
         <div class="grid md:grid-cols-2 gap-6">
           <Card title="🎓 Education & Background">
             I graduated with a <strong>Computer Science degree</strong> from the University of Stellenbosch in 2020. Since
-            starting my professional journey in 2021, I've worked a few start-ups to gain diverse experience and sharpen
-            my skills.
+            starting my professional journey in 2021, I've worked at start-ups to gain diverse product experience and
+            sharpen my delivery skills.
           </Card>
 
           <Card title="💼 Current Role">
             Currently working full-time as a <strong>Full Stack Developer</strong> at an innovative start-up, where I contribute
-            to building cutting-edge solutions while continuously expanding my skill set.
+            to building user-focused solutions while continuously expanding my skill set in fast-paced environments.
+          </Card>
+
+          <Card title="🌍 Mobility & Languages">
+            I hold <strong>dual citizenship: South African and German</strong>, which means I can work across Europe without
+            additional visa sponsorship. I am <strong>fluent in Afrikaans and English</strong>, with <strong>elementary German</strong>
+            proficiency.
           </Card>
 
           <Card title="🛠️ Technical Skills">
@@ -115,8 +149,54 @@
     </div>
   </section>
 
+  <!-- Timeline Section -->
+  <section id="life-timeline" class="bg-amber-50 py-16">
+    <div class="container mx-auto px-6">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-neutral-900 mb-4 text-center">Life Timeline</h2>
+        <p class="text-center text-neutral-600 mb-12">Moments and milestones that shaped my path.</p>
+
+        <div class="relative">
+          <div class="absolute left-1/2 top-0 bottom-0 w-1 bg-amber-200 -translate-x-1/2 hidden md:block"></div>
+
+          <div class="space-y-8">
+            {#each lifeTimeline as event, index (`${event.year}-${event.title}`)}
+              <article class="relative">
+                <div class="hidden md:block absolute left-1/2 top-8 -translate-x-1/2 z-10">
+                  <div class="w-4 h-4 rounded-full bg-amber-500 border-4 border-amber-100"></div>
+                </div>
+
+                <div class="md:grid md:grid-cols-2 md:gap-8 items-center">
+                  {#if index % 2 === 0}
+                    <div class="md:text-right md:pr-10">
+                      <div class="bg-white rounded-xl border border-amber-200 p-6 shadow-sm">
+                        <p class="text-sm font-semibold uppercase tracking-wide text-amber-700 mb-2">{event.year}</p>
+                        <h3 class="text-xl font-bold text-neutral-900 mb-2">{event.title}</h3>
+                        <p class="text-neutral-700 leading-relaxed">{event.description}</p>
+                      </div>
+                    </div>
+                    <div class="hidden md:block"></div>
+                  {:else}
+                    <div class="hidden md:block"></div>
+                    <div class="md:pl-10">
+                      <div class="bg-white rounded-xl border border-amber-200 p-6 shadow-sm">
+                        <p class="text-sm font-semibold uppercase tracking-wide text-amber-700 mb-2">{event.year}</p>
+                        <h3 class="text-xl font-bold text-neutral-900 mb-2">{event.title}</h3>
+                        <p class="text-neutral-700 leading-relaxed">{event.description}</p>
+                      </div>
+                    </div>
+                  {/if}
+                </div>
+              </article>
+            {/each}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Projects Section -->
-  <section class="py-16 bg-linear-to-br from-blue-50 to-indigo-50">
+  <section id="projects" class="py-16 bg-linear-to-br from-blue-50 to-indigo-50">
     <div class="container mx-auto px-6">
       <div class="max-w-4xl mx-auto">
         <h2 class="text-3xl font-bold text-neutral-900 mb-12 text-center">Current Projects</h2>
@@ -167,6 +247,8 @@
       </div>
     </div>
   </section>
+
+  <ScrollPastTimelineFab timeline_id="life-timeline" target_id="projects" label="Scroll past timeline" />
 
   <!-- Contact Section -->
   <section class="bg-neutral-900 text-white py-16">

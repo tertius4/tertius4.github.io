@@ -2,12 +2,7 @@ import { H as HYDRATION_ERROR, C as COMMENT_NODE, a as HYDRATION_END, b as HYDRA
 import { B as BROWSER } from "./environment.js";
 import { r as run_all, d as deferred, s as safe_equals, e as equals, o as object_prototype, a as array_prototype, g as get_descriptor, b as get_prototype_of, i as is_array, c as is_extensible, f as index_of, h as define_property, j as array_from } from "./equality.js";
 import "clsx";
-let public_env = {};
-function set_private_env(environment) {
-}
-function set_public_env(environment) {
-  public_env = environment;
-}
+import "./shared-server.js";
 function effect_update_depth_exceeded() {
   {
     throw new Error(`https://svelte.dev/e/effect_update_depth_exceeded`);
@@ -2629,7 +2624,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "j4g5ht"
+  version_hash: "1fffyvs"
 };
 async function get_hooks() {
   let handle;
@@ -2650,12 +2645,9 @@ async function get_hooks() {
   };
 }
 export {
-  set_public_env as a,
-  set_read_implementation as b,
-  set_manifest as c,
+  set_manifest as a,
   get_hooks as g,
   options as o,
-  public_env as p,
   read_implementation as r,
-  set_private_env as s
+  set_read_implementation as s
 };

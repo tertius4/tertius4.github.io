@@ -1,4 +1,4 @@
-import { x as head, z as attr, F as stringify } from "../../../chunks/index.js";
+import { x as head, y as attr, z as stringify } from "../../../chunks/index.js";
 function _page($$renderer) {
   const play_link = "https://play.google.com/store/apps/details?id=doenit.app";
   const reddit_link = "https://www.reddit.com/r/Doenit/";

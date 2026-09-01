@@ -832,15 +832,6 @@ function attributes(attrs, css_hash, classes, styles, flags = 0) {
 function stringify(value) {
   return typeof value === "string" ? value : value == null ? "" : value + "";
 }
-function slot(renderer, $$props, name, slot_props, fallback_fn) {
-  var slot_fn = $$props.$$slots?.[name];
-  if (slot_fn === true) {
-    slot_fn = $$props["children"];
-  }
-  if (slot_fn !== void 0) {
-    slot_fn(renderer, slot_props);
-  }
-}
 function ensure_array_like(array_like_or_iterator) {
   if (array_like_or_iterator) {
     return array_like_or_iterator.length !== void 0 ? array_like_or_iterator : Array.from(array_like_or_iterator);
@@ -853,16 +844,15 @@ export {
   COMMENT_NODE as C,
   DIRTY as D,
   ERROR_VALUE as E,
-  stringify as F,
-  getContext as G,
+  getContext as F,
+  escape_html as G,
   HYDRATION_ERROR as H,
   INERT as I,
-  escape_html as J,
-  attributes as K,
+  attributes as J,
+  clsx as K,
   LEGACY_PROPS as L,
   MAYBE_DIRTY as M,
-  clsx as N,
-  ensure_array_like as O,
+  ensure_array_like as N,
   ROOT_EFFECT as R,
   STATE_SYMBOL as S,
   UNOWNED as U,
@@ -891,6 +881,6 @@ export {
   render as v,
   setContext as w,
   head as x,
-  slot as y,
-  attr as z
+  attr as y,
+  stringify as z
 };
