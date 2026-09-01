@@ -10,7 +10,7 @@ return {
 	assets: new Set(["doenit-logo.webp","instellings.webp","page-not-found.webp","robots.txt","sitemap.xml","tertius_picture.webp","tuisblad.webp","wysig-taak.webp"]),
 	mimeTypes: {".webp":"image/webp",".txt":"text/plain",".xml":"text/xml"},
 	_: {
-		client: {start:"_app/immutable/entry/start.BOCycHto.js",app:"_app/immutable/entry/app.UpC_eeOj.js",imports:["_app/immutable/entry/start.BOCycHto.js","_app/immutable/chunks/4xGoGE9T.js","_app/immutable/chunks/DUI2O8Fk.js","_app/immutable/chunks/BA3sBYwL.js","_app/immutable/chunks/CIdfx8GB.js","_app/immutable/chunks/BJEp80Tu.js","_app/immutable/entry/app.UpC_eeOj.js","_app/immutable/chunks/BA3sBYwL.js","_app/immutable/chunks/CIdfx8GB.js","_app/immutable/chunks/DsnmJJEf.js","_app/immutable/chunks/DUI2O8Fk.js","_app/immutable/chunks/BJEp80Tu.js","_app/immutable/chunks/D37eTNF2.js","_app/immutable/chunks/BMQttaPa.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:true},
+		client: {start:"_app/immutable/entry/start.CQlQK0Lk.js",app:"_app/immutable/entry/app.C5oL2xr_.js",imports:["_app/immutable/entry/start.CQlQK0Lk.js","_app/immutable/chunks/CDo-mNCQ.js","_app/immutable/chunks/DUI2O8Fk.js","_app/immutable/chunks/BA3sBYwL.js","_app/immutable/chunks/CIdfx8GB.js","_app/immutable/chunks/BJEp80Tu.js","_app/immutable/entry/app.C5oL2xr_.js","_app/immutable/chunks/BA3sBYwL.js","_app/immutable/chunks/CIdfx8GB.js","_app/immutable/chunks/DsnmJJEf.js","_app/immutable/chunks/DUI2O8Fk.js","_app/immutable/chunks/BJEp80Tu.js","_app/immutable/chunks/D37eTNF2.js","_app/immutable/chunks/BMQttaPa.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:true},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),
