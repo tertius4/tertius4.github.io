@@ -120,12 +120,6 @@
     "src": "src/routes/+layout.js",
     "isEntry": true
   },
-  "src/routes/+layout.server.js": {
-    "file": "entries/pages/_layout.server.js",
-    "name": "entries/pages/_layout.server",
-    "src": "src/routes/+layout.server.js",
-    "isEntry": true
-  },
   "src/routes/+layout.svelte": {
     "file": "entries/pages/_layout.svelte.js",
     "name": "entries/pages/_layout.svelte",

@@ -1,16 +1,12 @@
 {
 	"/(me)": [
 		"src/routes/+layout.js",
-		"src/routes/+layout.server.js",
-		"src/routes/+layout.js",
-		"src/routes/+layout.server.js"
+		"src/routes/+layout.js"
 	],
 	"/": [
-		"src/routes/+layout.js",
-		"src/routes/+layout.server.js"
+		"src/routes/+layout.js"
 	],
 	"/doenit": [
-		"src/routes/+layout.js",
-		"src/routes/+layout.server.js"
+		"src/routes/+layout.js"
 	]
 }
