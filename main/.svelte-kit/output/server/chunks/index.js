@@ -832,27 +832,20 @@ function attributes(attrs, css_hash, classes, styles, flags = 0) {
 function stringify(value) {
   return typeof value === "string" ? value : value == null ? "" : value + "";
 }
-function ensure_array_like(array_like_or_iterator) {
-  if (array_like_or_iterator) {
-    return array_like_or_iterator.length !== void 0 ? array_like_or_iterator : Array.from(array_like_or_iterator);
-  }
-  return [];
-}
 export {
   ASYNC as A,
   BOUNDARY_EFFECT as B,
   COMMENT_NODE as C,
   DIRTY as D,
   ERROR_VALUE as E,
-  getContext as F,
-  escape_html as G,
+  escape_html as F,
+  attributes as G,
   HYDRATION_ERROR as H,
   INERT as I,
-  attributes as J,
-  clsx as K,
+  clsx as J,
+  getContext as K,
   LEGACY_PROPS as L,
   MAYBE_DIRTY as M,
-  ensure_array_like as N,
   ROOT_EFFECT as R,
   STATE_SYMBOL as S,
   UNOWNED as U,

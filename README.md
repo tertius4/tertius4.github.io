@@ -41,7 +41,13 @@ npm run preview
 
 ## Deployment
 
-From the repository root (not `/main`), run:
+First, make the deploy script executable if needed:
+
+```bash
+chmod +x deploy
+```
+
+Then, from the repository root (not `/main`), run:
 
 ```bash
 ./deploy

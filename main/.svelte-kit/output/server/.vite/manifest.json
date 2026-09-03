@@ -29,6 +29,16 @@
     "file": "chunks/index.js",
     "name": "index"
   },
+  "_index2.js": {
+    "file": "chunks/index2.js",
+    "name": "index",
+    "imports": [
+      "_equality.js",
+      "_exports.js",
+      "_utils.js",
+      "_index.js"
+    ]
+  },
   "_internal.js": {
     "file": "chunks/internal.js",
     "name": "internal",
@@ -78,6 +88,22 @@
       "_internal.js"
     ]
   },
+  "src/routes/(me)/+layout.svelte": {
+    "file": "entries/pages/(me)/_layout.svelte.js",
+    "name": "entries/pages/(me)/_layout.svelte",
+    "src": "src/routes/(me)/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js",
+      "_index2.js"
+    ]
+  },
+  "src/routes/(me)/+page.svelte": {
+    "file": "entries/pages/(me)/_page.svelte.js",
+    "name": "entries/pages/(me)/_page.svelte",
+    "src": "src/routes/(me)/+page.svelte",
+    "isEntry": true
+  },
   "src/routes/+error.svelte": {
     "file": "entries/pages/_error.svelte.js",
     "name": "entries/pages/_error.svelte",
@@ -85,15 +111,19 @@
     "isEntry": true,
     "imports": [
       "_index.js",
-      "_equality.js",
-      "_exports.js",
-      "_utils.js"
+      "_index2.js"
     ]
   },
   "src/routes/+layout.js": {
     "file": "entries/pages/_layout.js",
     "name": "entries/pages/_layout",
     "src": "src/routes/+layout.js",
+    "isEntry": true
+  },
+  "src/routes/+layout.server.js": {
+    "file": "entries/pages/_layout.server.js",
+    "name": "entries/pages/_layout.server",
+    "src": "src/routes/+layout.server.js",
     "isEntry": true
   },
   "src/routes/+layout.svelte": {
@@ -106,16 +136,7 @@
       "_shared-server.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.D8aa1Te6.css"
-    ]
-  },
-  "src/routes/+page.svelte": {
-    "file": "entries/pages/_page.svelte.js",
-    "name": "entries/pages/_page.svelte",
-    "src": "src/routes/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index.js"
+      "_app/immutable/assets/_layout.DKM0F4lc.css"
     ]
   },
   "src/routes/doenit/+page.svelte": {

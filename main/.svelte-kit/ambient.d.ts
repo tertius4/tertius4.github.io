@@ -113,6 +113,7 @@ declare module '$env/static/private' {
 	export const PWD: string;
 	export const npm_execpath: string;
 	export const XDG_CONFIG_DIRS: string;
+	export const COPILOT_DEBUG_NONCE: string;
 	export const ANDROID_HOME: string;
 	export const NVM_CD_FLAGS: string;
 	export const XDG_DATA_DIRS: string;
@@ -240,6 +241,7 @@ declare module '$env/dynamic/private' {
 		PWD: string;
 		npm_execpath: string;
 		XDG_CONFIG_DIRS: string;
+		COPILOT_DEBUG_NONCE: string;
 		ANDROID_HOME: string;
 		NVM_CD_FLAGS: string;
 		XDG_DATA_DIRS: string;

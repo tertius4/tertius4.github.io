@@ -27,16 +27,19 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/" | "/doenit";
+		RouteId(): "/(me)" | "/" | "/(me)/comps" | "/(me)/comps/layout" | "/doenit";
 		RouteParams(): {
 			
 		};
 		LayoutParams(): {
+			"/(me)": Record<string, never>;
 			"/": Record<string, never>;
+			"/(me)/comps": Record<string, never>;
+			"/(me)/comps/layout": Record<string, never>;
 			"/doenit": Record<string, never>
 		};
-		Pathname(): "/" | "/doenit" | "/doenit/";
+		Pathname(): "/" | "/comps" | "/comps/" | "/comps/layout" | "/comps/layout/" | "/doenit" | "/doenit/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): "/doenit-logo.webp" | "/instellings.webp" | "/page-not-found.webp" | "/robots.txt" | "/sitemap.xml" | "/tertius_picture.webp" | "/tuisblad.webp" | "/wysig-taak.webp" | string & {};
+		Asset(): "/cover-image.webp" | "/doenit-logo.webp" | "/instellings.webp" | "/page-not-found.webp" | "/robots.txt" | "/sitemap.xml" | "/tertius_picture.webp" | "/tradesmith-logo.png" | "/trou-webwerf-logo.webp" | "/tuisblad.webp" | "/vinkel-of-koljander-logo.webp" | "/wysig-taak.webp" | string & {};
 	}
 }

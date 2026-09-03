@@ -1,51 +1,5 @@
-import { F as getContext, x as head, G as escape_html } from "../../chunks/index.js";
-import "clsx";
-import { n as noop } from "../../chunks/equality.js";
-import "@sveltejs/kit/internal/server";
-import "@sveltejs/kit/internal";
-import { w as writable } from "../../chunks/exports.js";
-import "../../chunks/utils.js";
-function create_updated_store() {
-  const { set, subscribe } = writable(false);
-  {
-    return {
-      subscribe,
-      // eslint-disable-next-line @typescript-eslint/require-await
-      check: async () => false
-    };
-  }
-}
-const is_legacy = noop.toString().includes("$$") || /function \w+\(\) \{\}/.test(noop.toString());
-if (is_legacy) {
-  ({
-    data: {},
-    form: null,
-    error: null,
-    params: {},
-    route: { id: null },
-    state: {},
-    status: -1,
-    url: new URL("https://example.com")
-  });
-}
-const stores = {
-  updated: /* @__PURE__ */ create_updated_store()
-};
-({
-  check: stores.updated.check
-});
-function context() {
-  return getContext("__request__");
-}
-const page$1 = {
-  get error() {
-    return context().page.error;
-  },
-  get status() {
-    return context().page.status;
-  }
-};
-const page = page$1;
+import { x as head, F as escape_html } from "../../chunks/index.js";
+import { p as page } from "../../chunks/index2.js";
 function _error($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     head($$renderer2, ($$renderer3) => {
