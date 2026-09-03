@@ -4,7 +4,7 @@ import "@sveltejs/kit/internal/server";
 import "@sveltejs/kit/internal";
 import { w as writable } from "./exports.js";
 import "./utils.js";
-import { K as getContext } from "./index.js";
+import { O as getContext } from "./index.js";
 function create_updated_store() {
   const { set, subscribe } = writable(false);
   {

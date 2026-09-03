@@ -832,6 +832,16 @@ function attributes(attrs, css_hash, classes, styles, flags = 0) {
 function stringify(value) {
   return typeof value === "string" ? value : value == null ? "" : value + "";
 }
+function attr_class(value, hash, directives) {
+  var result = to_class(value, hash, directives);
+  return result ? ` class="${escape_html(result, true)}"` : "";
+}
+function ensure_array_like(array_like_or_iterator) {
+  if (array_like_or_iterator) {
+    return array_like_or_iterator.length !== void 0 ? array_like_or_iterator : Array.from(array_like_or_iterator);
+  }
+  return [];
+}
 export {
   ASYNC as A,
   BOUNDARY_EFFECT as B,
@@ -843,9 +853,11 @@ export {
   HYDRATION_ERROR as H,
   INERT as I,
   clsx as J,
-  getContext as K,
+  attr_class as K,
   LEGACY_PROPS as L,
   MAYBE_DIRTY as M,
+  ensure_array_like as N,
+  getContext as O,
   ROOT_EFFECT as R,
   STATE_SYMBOL as S,
   UNOWNED as U,

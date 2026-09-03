@@ -1,11 +1,15 @@
 <script>
   import { page } from "$app/state";
+  import { projects, skills } from "$lib";
   import Avatar from "$lib/comps/Avatar.svelte";
+  import CardProject from "./comps/CardProject.svelte";
   import t from "$lib/lang";
   import CoverImage from "./comps/CoverImage.svelte";
+  import Heading2 from "./comps/Heading2.svelte";
   import Container from "./comps/layout/Container.svelte";
   import Main from "./comps/layout/Main.svelte";
   import SidePanel from "./comps/layout/SidePanel.svelte";
+  import Skill from "./comps/Skill.svelte";
 
   function updateLanguage() {
     const currentLang = page.data.lang;
@@ -35,7 +39,7 @@
 </svelte:head>
 
 <Container class="w-dvw h-dvh">
-  <SidePanel class="bg-onyx-900 ring-2 ring-onyx-800 rounded-2xl p-2 space-y-4">
+  <SidePanel class="bg-onyx-900 ring-2 ring-onyx-800 rounded-2xl p-2 space-y-4 flex flex-col">
     <div class="relative mb-8">
       <CoverImage src="/cover-image.webp" alt="Cover Image" class="w-full h-[200px] rounded-2xl ring-2 ring-onyx-800" />
       <Avatar
@@ -49,11 +53,37 @@
       </button>
     </div>
 
-    <section class="p-8 space-y-2">
-      <h1 class="text-white font-medium text-2xl">Tertius van Niekerk</h1>
-      <p class="text-onyx-300">
-        {t("intro_sentence")}
-      </p>
+    <section class="p-8 space-y-4 overflow-y-auto grow">
+      <div class="space-y-2">
+        <h1 class="text-white font-medium text-2xl">Tertius van Niekerk</h1>
+        <p class="text-onyx-300">
+          {t("intro_sentence")}
+        </p>
+      </div>
+
+      <div class="space-y-2">
+        <Heading2>
+          {t("skills")}
+        </Heading2>
+
+        <div class="flex flex-wrap gap-1">
+          {#each skills.sort((a, b) => b.level - a.level) as skill}
+            <Skill {skill} />
+          {/each}
+        </div>
+      </div>
+
+      <div class="space-y-2">
+        <Heading2>
+          {t("my_projects")}
+        </Heading2>
+
+        <div class="space-y-1">
+          {#each projects as project}
+            <CardProject data={project} />
+          {/each}
+        </div>
+      </div>
     </section>
   </SidePanel>
   <Main>
