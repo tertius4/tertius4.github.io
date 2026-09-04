@@ -1,0 +1,1 @@
+import"../chunks/DsnmJJEf.js";import"../chunks/CS-SHI0N.js";import{f as p,e as t}from"../chunks/qmVkqO-U.js";var r=p('<span class="text-white">Hello, World!</span>');function m(o){var a=r();t(o,a)}export{m as component};

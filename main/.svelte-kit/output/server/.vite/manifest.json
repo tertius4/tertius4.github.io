@@ -88,21 +88,30 @@
       "_internal.js"
     ]
   },
-  "src/routes/(me)/+layout.svelte": {
-    "file": "entries/pages/(me)/_layout.svelte.js",
-    "name": "entries/pages/(me)/_layout.svelte",
-    "src": "src/routes/(me)/+layout.svelte",
+  "src/routes/(main)/+layout.svelte": {
+    "file": "entries/pages/(main)/_layout.svelte.js",
+    "name": "entries/pages/(main)/_layout.svelte",
+    "src": "src/routes/(main)/+layout.svelte",
     "isEntry": true,
     "imports": [
       "_index.js",
       "_index2.js"
     ]
   },
-  "src/routes/(me)/+page.svelte": {
-    "file": "entries/pages/(me)/_page.svelte.js",
-    "name": "entries/pages/(me)/_page.svelte",
-    "src": "src/routes/(me)/+page.svelte",
+  "src/routes/(main)/+page.svelte": {
+    "file": "entries/pages/(main)/_page.svelte.js",
+    "name": "entries/pages/(main)/_page.svelte",
+    "src": "src/routes/(main)/+page.svelte",
     "isEntry": true
+  },
+  "src/routes/(main)/doenit/+page.svelte": {
+    "file": "entries/pages/(main)/doenit/_page.svelte.js",
+    "name": "entries/pages/(main)/doenit/_page.svelte",
+    "src": "src/routes/(main)/doenit/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js"
+    ]
   },
   "src/routes/+error.svelte": {
     "file": "entries/pages/_error.svelte.js",
@@ -131,15 +140,6 @@
     ],
     "css": [
       "_app/immutable/assets/_layout.ZbG3fs7Q.css"
-    ]
-  },
-  "src/routes/doenit/+page.svelte": {
-    "file": "entries/pages/doenit/_page.svelte.js",
-    "name": "entries/pages/doenit/_page.svelte",
-    "src": "src/routes/doenit/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index.js"
     ]
   }
 }
