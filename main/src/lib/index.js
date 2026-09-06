@@ -1,18 +1,20 @@
 export const skills = [
-    { name: "JavaScript", level: 4 },
-    { name: "TypeScript", level: 4 },
-    { name: "Svelte", level: 4 },
-    { name: "React", level: 3 },
-    { name: "Node.js", level: 4 },
+    { name: "JavaScript", level: 5 },
+    { name: "TypeScript", level: 5 },
+    { name: "SvelteKit", level: 5 },
+    // { name: "React", level: 3 },
+    { name: "Node.js", level: 5 },
     { name: "Express.js", level: 4 },
     { name: "MongoDB", level: 3 },
-    { name: "PostgreSQL", level: 3 },
-    { name: "HTML5", level: 5 },
-    { name: "CSS3", level: 5 },
+    // { name: "PostgreSQL", level: 3 },
+    // { name: "HTML5", level: 5 },
+    // { name: "CSS3", level: 5 },
     { name: "Tailwind CSS", level: 4 },
     { name: "Git", level: 4 },
+    { name: "GitHub", level: 5 },
     { name: "Docker", level: 3 },
-    { name: "AWS", level: 2 },
+    { name: "Firebase", level: 3 },
+    // { name: "AWS", level: 2 },
 ];
 
 
@@ -31,6 +33,7 @@ export const projects = [
       image_src: "/vinkel-of-koljander-logo.webp",
       tech: ["SvelteKit", "Firebase"],
       status: "improving",
+      href: "/vinkel-of-koljander",
     },
     {
       title: "My Wedding website",

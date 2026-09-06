@@ -6,6 +6,6 @@
   const { children, ...rest }: Props & Record<string, any> = $props();
 </script>
 
-<div {...rest} class={["h-full overflow-hidden", rest.class || '']}>
+<aside {...rest} class={["h-full overflow-hidden", rest.class || '']}>
     {@render children()}
-</div>
+</aside>

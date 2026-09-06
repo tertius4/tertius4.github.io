@@ -1,0 +1,1 @@
+import"../chunks/DsnmJJEf.js";import"../chunks/BMh1GBHz.js";import{f as t,e as m}from"../chunks/WdMg3gl8.js";var r=t('<main class="text-white">My Background</main>');function e(a){var o=r();m(a,o)}export{e as component};

@@ -88,6 +88,24 @@
       "_internal.js"
     ]
   },
+  "src/routes/(main)/(projects)/doenit/+page.svelte": {
+    "file": "entries/pages/(main)/(projects)/doenit/_page.svelte.js",
+    "name": "entries/pages/(main)/(projects)/doenit/_page.svelte",
+    "src": "src/routes/(main)/(projects)/doenit/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index.js"
+    ]
+  },
+  "src/routes/(main)/(projects)/vinkel-of-koljander/+page.svelte": {
+    "file": "entries/pages/(main)/(projects)/vinkel-of-koljander/_page.svelte.js",
+    "name": "entries/pages/(main)/(projects)/vinkel-of-koljander/_page.svelte",
+    "src": "src/routes/(main)/(projects)/vinkel-of-koljander/+page.svelte",
+    "isEntry": true,
+    "css": [
+      "_app/immutable/assets/_page.DzyMUD5g.css"
+    ]
+  },
   "src/routes/(main)/+layout.svelte": {
     "file": "entries/pages/(main)/_layout.svelte.js",
     "name": "entries/pages/(main)/_layout.svelte",
@@ -104,14 +122,17 @@
     "src": "src/routes/(main)/+page.svelte",
     "isEntry": true
   },
-  "src/routes/(main)/doenit/+page.svelte": {
-    "file": "entries/pages/(main)/doenit/_page.svelte.js",
-    "name": "entries/pages/(main)/doenit/_page.svelte",
-    "src": "src/routes/(main)/doenit/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index.js"
-    ]
+  "src/routes/(main)/about/+page.svelte": {
+    "file": "entries/pages/(main)/about/_page.svelte.js",
+    "name": "entries/pages/(main)/about/_page.svelte",
+    "src": "src/routes/(main)/about/+page.svelte",
+    "isEntry": true
+  },
+  "src/routes/(main)/skills/+page.svelte": {
+    "file": "entries/pages/(main)/skills/_page.svelte.js",
+    "name": "entries/pages/(main)/skills/_page.svelte",
+    "src": "src/routes/(main)/skills/+page.svelte",
+    "isEntry": true
   },
   "src/routes/+error.svelte": {
     "file": "entries/pages/_error.svelte.js",
@@ -139,7 +160,7 @@
       "_shared-server.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.ZbG3fs7Q.css"
+      "_app/immutable/assets/_layout.B0fcRfbQ.css"
     ]
   }
 }

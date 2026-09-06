@@ -836,6 +836,10 @@ function attr_class(value, hash, directives) {
   var result = to_class(value, hash, directives);
   return result ? ` class="${escape_html(result, true)}"` : "";
 }
+function attr_style(value, directives) {
+  var result = to_style(value, directives);
+  return result ? ` style="${escape_html(result, true)}"` : "";
+}
 function ensure_array_like(array_like_or_iterator) {
   if (array_like_or_iterator) {
     return array_like_or_iterator.length !== void 0 ? array_like_or_iterator : Array.from(array_like_or_iterator);
@@ -852,12 +856,13 @@ export {
   attributes as G,
   HYDRATION_ERROR as H,
   INERT as I,
-  clsx as J,
-  attr_class as K,
+  attr_class as J,
+  clsx as K,
   LEGACY_PROPS as L,
   MAYBE_DIRTY as M,
-  ensure_array_like as N,
-  getContext as O,
+  attr_style as N,
+  ensure_array_like as O,
+  getContext as P,
   ROOT_EFFECT as R,
   STATE_SYMBOL as S,
   UNOWNED as U,

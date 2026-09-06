@@ -4,7 +4,7 @@ import "@sveltejs/kit/internal/server";
 import "@sveltejs/kit/internal";
 import { w as writable } from "./exports.js";
 import "./utils.js";
-import { O as getContext } from "./index.js";
+import { P as getContext } from "./index.js";
 function create_updated_store() {
   const { set, subscribe } = writable(false);
   {
@@ -46,6 +46,9 @@ const page$1 = {
   },
   get status() {
     return context().page.status;
+  },
+  get url() {
+    return context().page.url;
   }
 };
 const page = page$1;

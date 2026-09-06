@@ -6,7 +6,16 @@
 	"/": [
 		"src/routes/+layout.js"
 	],
-	"/(main)/doenit": [
+	"/(main)/about": [
+		"src/routes/+layout.js"
+	],
+	"/(main)/(projects)/doenit": [
+		"src/routes/+layout.js"
+	],
+	"/(main)/skills": [
+		"src/routes/+layout.js"
+	],
+	"/(main)/(projects)/vinkel-of-koljander": [
 		"src/routes/+layout.js"
 	]
 }

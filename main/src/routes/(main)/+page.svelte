@@ -1,1 +1,1 @@
-<span class="text-white">Hello, World!</span>
+<span class="text-white">Loading…</span>
