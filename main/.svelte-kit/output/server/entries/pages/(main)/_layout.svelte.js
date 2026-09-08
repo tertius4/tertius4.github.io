@@ -1,66 +1,6 @@
 import { G as attributes, y as attr, z as stringify, J as attr_class, F as escape_html, K as clsx, N as attr_style, x as head, O as ensure_array_like } from "../../../chunks/index.js";
 import { p as page } from "../../../chunks/index2.js";
-const skills = [
-  { name: "JavaScript", level: 5 },
-  { name: "TypeScript", level: 5 },
-  { name: "SvelteKit", level: 5 },
-  // { name: "React", level: 3 },
-  { name: "Node.js", level: 5 },
-  { name: "Express.js", level: 4 },
-  { name: "MongoDB", level: 3 },
-  // { name: "PostgreSQL", level: 3 },
-  // { name: "HTML5", level: 5 },
-  // { name: "CSS3", level: 5 },
-  { name: "Tailwind CSS", level: 4 },
-  { name: "Git", level: 4 },
-  { name: "GitHub", level: 5 },
-  { name: "Docker", level: 3 },
-  { name: "Firebase", level: 3 }
-  // { name: "AWS", level: 2 },
-];
-const projects = [
-  {
-    title: "Doenit",
-    description: "An Afrikaans ToDo list app built to be simple, private, and offline-first.",
-    image_src: "/doenit-logo.webp",
-    tech: ["SvelteKit", "Capacitor", "Firebase"],
-    status: "in_development",
-    href: "/doenit"
-  },
-  {
-    title: "Vinkel Of Koljander",
-    description: "A website I created for my family to share recipes",
-    image_src: "/vinkel-of-koljander-logo.webp",
-    tech: ["SvelteKit", "Firebase"],
-    status: "improving",
-    href: "/vinkel-of-koljander"
-  },
-  {
-    title: "My Wedding website",
-    description: "A website I built for my wedding for guests to RSVP, find basic information and handle the gift registry.",
-    image_src: "/trou-webwerf-logo.webp",
-    tech: ["Vue.js"],
-    status: "production"
-  },
-  {
-    title: "Tradesmith",
-    description: "A project to automatically trade cryptocurrency based on a set of rules and strategies.",
-    image_src: "/tradesmith-logo.png",
-    tech: ["Vue.js", "Binance API", "Luno API"],
-    status: "shelved"
-  },
-  {
-    title: "Console Colours",
-    description: "A small library to add colour to console output in Node.js.",
-    tech: ["Node.js", "Typescript"],
-    status: "shelved"
-  },
-  {
-    title: "Woorde Wenk",
-    description: "A simple word game built for Afrikaans learners to practice their vocabulary.",
-    tech: ["Firebase", "WhatsApp API"]
-  }
-];
+import { s as skills, p as projects } from "../../../chunks/index3.js";
 function Avatar($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     const { src, alt, $$slots, $$events, ...rest } = $$props;
@@ -73,7 +13,17 @@ function Avatar($$renderer, $$props) {
 function CardProject($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     const { data, $$slots, $$events, ...rest } = $$props;
-    $$renderer2.push(`<a${attr("href", data.href)} class="block outline-none focus:bg-onyx-300 hover:bg-onyx-700 rounded-lg"><article${attr_class(`p-2 ${stringify(data.image_src ? "grid gap-2 grid-cols-[auto_1fr]" : "")}`)}><div${attr("hidden", !data.image_src)}><img${attr("src", data.image_src)}${attr("alt", data.title)} class="size-12 object-cover rounded-lg"/></div> <div class="w-full"><div class="flex flex-row justify-between"><h3 class="text-white font-medium">${escape_html(data.title)}</h3> <div>`);
+    $$renderer2.push(`<a${attributes({
+      ...rest,
+      href: data.href,
+      class: clsx([
+        {
+          "block outline-none rounded-lg": true,
+          "focus:bg-onyx-300 hover:bg-onyx-700": !!data.href
+        },
+        rest.class || ""
+      ])
+    })}><article${attr_class(`p-2 ${stringify(data.image_src ? "grid gap-2 grid-cols-[auto_1fr]" : "")}`)}><div${attr("hidden", !data.image_src)}><img${attr("src", data.image_src)}${attr("alt", data.title)} class="size-12 object-cover rounded-lg"/></div> <div class="w-full space-y-1"><div class="flex flex-row justify-between"><h3 class="text-white font-medium">${escape_html(data.title)}</h3> <div>`);
     if (data.status === "in_development") {
       $$renderer2.push("<!--[-->");
       $$renderer2.push(`<span class="bg-yellow-500 text-black text-xs font-medium px-2 py-1 rounded-full">In Development</span>`);
@@ -101,7 +51,7 @@ function CardProject($$renderer, $$props) {
       }
       $$renderer2.push(`<!--]-->`);
     }
-    $$renderer2.push(`<!--]--></div></div> <p class="text-gray-400 text-sm line-clamp-1">${escape_html(data.description)}</p></div></article></a>`);
+    $$renderer2.push(`<!--]--></div></div> <p class="text-gray-400 text-sm">${escape_html(data.description)}</p></div></article></a>`);
   });
 }
 function t(key) {
@@ -141,7 +91,7 @@ function Container($$renderer, $$props) {
     $$renderer2.push(`<div${attributes({
       ...rest,
       class: clsx([
-        "grid lg:grid-cols-[400px_1fr] max-lg:grid-rows-[1fr_80px] lg:gap-8 font-sans lg:p-8",
+        "grid lg:grid-cols-[400px_1fr] max-lg:grid-rows-[1fr_80px] lg:gap-8 font-sans lg:p-8 overflow-hidden",
         rest.class
       ])
     })}>`);
@@ -268,15 +218,16 @@ function _layout($$renderer, $$props) {
       $$renderer3.push(`<link rel="icon" href="/tertius-pic-square.webp"/> <meta name="description" content="Personal website of Tertius, a full stack software developer with South African and German citizenship, open to opportunities across Europe."/> <meta name="keywords" content="full stack developer, web developer, JavaScript, TypeScript, Svelte, Node.js, Europe, Germany, South Africa, multilingual developer"/> <meta property="og:title" content="Tertius – Software Developer"/> <meta property="og:description" content="Full stack developer with South African and German citizenship, available for opportunities with European teams."/> <meta property="og:type" content="website"/>`);
     });
     Container($$renderer2, {
-      class: "w-dvw h-dvh",
+      class: "w-dvw h-dvh overflow-hidden",
       children: ($$renderer3) => {
         SidePanel($$renderer3, {
           class: {
+            "overflow-y-auto grow scrollbar-none w-full": true,
             "lg:flex flex-col max-lg:hidden bg-onyx-850 ring-2 ring-onyx-800 rounded-2xl p-2 space-y-4": !page.data.is_home,
             "max-lg:h-full flex flex-col": page.data.is_home
           },
           children: ($$renderer4) => {
-            $$renderer4.push(`<div class="relative bg-transparent">`);
+            $$renderer4.push(`<div class="relative">`);
             CoverImage($$renderer4, {
               src: "/cover-image.webp",
               alt: "Cover Image",
@@ -288,7 +239,7 @@ function _layout($$renderer, $$props) {
               alt: "Tertius",
               class: "absolute bottom-0 -mb-8 left-6 lg:left-8 transform size-36 ring-2 ring-onyx-700"
             });
-            $$renderer4.push(`<!----> <button class="absolute top-4 py-0.5 rounded-lg px-2 right-4 bg-onyx-800 hover:bg-onyx-600 active:bg-onyx-600 focus:bg-onyx-600 text-white outline-none hover:font-medium active:font-medium focus:font-medium">${escape_html(page.data.lang === "en" ? "EN" : "AF")}</button></div> <section class="p-6 pt-12 md:pt-8 space-y-4 overflow-y-auto grow scrollbar-none"><div class="space-y-2"><h1 class="text-white font-medium text-2xl">Tertius van Niekerk</h1> <p class="text-onyx-300">${escape_html(t("intro_sentence"))}</p> `);
+            $$renderer4.push(`<!----> <button class="absolute top-4 py-0.5 rounded-lg px-2 right-4 bg-onyx-800 hover:bg-onyx-600 active:bg-onyx-600 focus:bg-onyx-600 text-white outline-none hover:font-medium active:font-medium focus:font-medium">${escape_html(page.data.lang === "en" ? "EN" : "AF")}</button></div> <section class="p-6 pt-12 md:pt-8 space-y-8"><div class="flex items-center gap-2 mb-2 rounded-xl border border-amber-400/40 bg-amber-400/10 px-3 py-2 text-sm text-amber-100 shadow-sm shadow-amber-950/20"><span class="inline-flex size-2 rounded-full bg-amber-300" aria-hidden="true"></span> <span>This website is still under development.</span></div> <div class="space-y-2"><h1 class="text-white font-medium text-2xl">Tertius van Niekerk</h1> <p class="text-onyx-300">${escape_html(t("intro_sentence"))}</p> `);
             Link($$renderer4, {
               href: "/about",
               children: ($$renderer5) => {
@@ -321,7 +272,7 @@ function _layout($$renderer, $$props) {
               },
               $$slots: { default: true }
             });
-            $$renderer4.push(`<!----></div> <div class="space-y-2 pt-8" id="projects">`);
+            $$renderer4.push(`<!----></div> <div class="space-y-2" id="projects">`);
             Heading2($$renderer4, {
               children: ($$renderer5) => {
                 $$renderer5.push(`<!---->${escape_html(t("my_projects"))}`);
@@ -340,7 +291,7 @@ function _layout($$renderer, $$props) {
         });
         $$renderer3.push(`<!----> `);
         Main($$renderer3, {
-          class: "lg:rounded-lg overflow-hidden lg:ring-2 ring-onyx-800",
+          class: "lg:rounded-lg overflow-hidden w-full lg:ring-2 ring-onyx-800",
           children: ($$renderer4) => {
             children($$renderer4);
             $$renderer4.push(`<!---->`);
@@ -349,7 +300,7 @@ function _layout($$renderer, $$props) {
         });
         $$renderer3.push(`<!----> `);
         BottomBar($$renderer3, {
-          class: "bg-onyx-900 lg:hidden p-2",
+          class: "bg-onyx-900 lg:hidden p-2 overflow-hidden w-full",
           children: ($$renderer4) => {
             ButtonBottomBar($$renderer4, {
               active: page.url.pathname === "/",

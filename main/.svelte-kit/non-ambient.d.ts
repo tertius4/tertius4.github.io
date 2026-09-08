@@ -44,6 +44,6 @@ declare module "$app/types" {
 		};
 		Pathname(): "/" | "/about" | "/about/" | "/comps" | "/comps/" | "/comps/layout" | "/comps/layout/" | "/doenit" | "/doenit/" | "/skills" | "/skills/" | "/vinkel-of-koljander" | "/vinkel-of-koljander/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): "/cover-image.webp" | "/doenit-logo.webp" | "/instellings.webp" | "/page-not-found.webp" | "/robots.txt" | "/sitemap.xml" | "/tertius-pic-square.webp" | "/tertius_picture.webp" | "/tradesmith-logo.png" | "/trou-webwerf-logo.webp" | "/tuisblad.webp" | "/vinkel-of-koljander-logo.webp" | "/wysig-taak.webp" | string & {};
+		Asset(): "/cover-image.webp" | "/doenit-logo.webp" | "/icons/svelte.webp" | "/instellings.webp" | "/page-not-found.webp" | "/robots.txt" | "/sitemap.xml" | "/tertius-pic-square.webp" | "/tertius_picture.webp" | "/tradesmith-logo.png" | "/trou-webwerf-logo.webp" | "/tuisblad.webp" | "/vinkel-of-koljander-logo.webp" | "/wysig-taak.webp" | string & {};
 	}
 }

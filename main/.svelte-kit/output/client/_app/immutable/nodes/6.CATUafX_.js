@@ -1,0 +1,1 @@
+import"../chunks/DsnmJJEf.js";import"../chunks/7_JLbWxP.js";import{z as m,A as o}from"../chunks/CjXCw13j.js";var t=m('<main class="text-white"><h1>Summary</h1> <h1>Currently, I am:</h1> <h1>Education</h1> <h1>Work Experience</h1></main>');function i(a){var r=t();o(a,r)}export{i as component};

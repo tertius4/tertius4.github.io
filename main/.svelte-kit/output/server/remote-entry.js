@@ -2,7 +2,7 @@ import { get_request_store, with_request_store } from "@sveltejs/kit/internal/se
 import { parse } from "devalue";
 import { error, json } from "@sveltejs/kit";
 import { a as stringify_remote_arg, s as stringify, c as create_remote_cache_key } from "./chunks/shared.js";
-import { b as base, c as app_dir, B as BROWSER, p as prerendering } from "./chunks/environment.js";
+import { b as base, c as app_dir, D as DEV, p as prerendering } from "./chunks/environment.js";
 function create_validator(validate_or_fn, maybe_fn) {
   if (!maybe_fn) {
     return (arg) => {
@@ -640,7 +640,7 @@ function prerender(validate_or_fn, fn_or_options, maybe_options) {
       const payload = stringify_remote_arg(arg, state.transport);
       const id = __.id;
       const url = `${base}/${app_dir}/remote/${id}${payload ? `/${payload}` : ""}`;
-      if (!state.prerendering && !BROWSER && !event.isRemoteRequest) {
+      if (!state.prerendering && !DEV && !event.isRemoteRequest) {
         try {
           return await get_response(__, arg, state, async () => {
             const key = stringify_remote_arg(arg, state.transport);

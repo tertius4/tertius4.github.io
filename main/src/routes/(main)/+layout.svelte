@@ -57,14 +57,15 @@
   <meta property="og:type" content="website" />
 </svelte:head>
 
-<Container class="w-dvw h-dvh">
+<Container class="w-dvw h-dvh overflow-hidden">
   <SidePanel
     class={{
+      "overflow-y-auto grow scrollbar-none w-full": true,
       "lg:flex flex-col max-lg:hidden bg-onyx-850 ring-2 ring-onyx-800 rounded-2xl p-2 space-y-4": !page.data.is_home,
       "max-lg:h-full flex flex-col": page.data.is_home,
     }}
   >
-    <div class="relative bg-transparent">
+    <div class="relative">
       <CoverImage
         src="/cover-image.webp"
         alt="Cover Image"
@@ -84,7 +85,11 @@
       </button>
     </div>
 
-    <section class="p-6 pt-12 md:pt-8 space-y-4 overflow-y-auto grow scrollbar-none">
+    <section class="p-6 pt-12 md:pt-8 space-y-8">
+      <div class="flex items-center gap-2 mb-2  rounded-xl border border-amber-400/40 bg-amber-400/10 px-3 py-2 text-sm text-amber-100 shadow-sm shadow-amber-950/20">
+        <span class="inline-flex size-2 rounded-full bg-amber-300" aria-hidden="true"></span>
+        <span>This website is still under development.</span>
+      </div>
       <div class="space-y-2">
         <h1 class="text-white font-medium text-2xl">Tertius van Niekerk</h1>
         <p class="text-onyx-300">
@@ -112,7 +117,7 @@
         </Link>
       </div>
 
-      <div class="space-y-2 pt-8" id="projects">
+      <div class="space-y-2" id="projects">
         <Heading2>
           {t("my_projects")}
         </Heading2>
@@ -125,10 +130,10 @@
       </div>
     </section>
   </SidePanel>
-  <Main class="lg:rounded-lg overflow-hidden lg:ring-2 ring-onyx-800">
+  <Main class="lg:rounded-lg overflow-hidden w-full lg:ring-2 ring-onyx-800">
     {@render children()}
   </Main>
-  <BottomBar class="bg-onyx-900 lg:hidden p-2">
+  <BottomBar class="bg-onyx-900 lg:hidden p-2 overflow-hidden w-full">
     <ButtonBottomBar active={page.url.pathname === "/"}>
       <Icon name="home" size={24} />
       <span>Home</span>
