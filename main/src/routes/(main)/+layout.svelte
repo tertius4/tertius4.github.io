@@ -86,15 +86,29 @@
     </div>
 
     <section class="p-6 pt-12 md:pt-8 space-y-8">
-      <div class="flex items-center gap-2 mb-2  rounded-xl border border-amber-400/40 bg-amber-400/10 px-3 py-2 text-sm text-amber-100 shadow-sm shadow-amber-950/20">
-        <span class="inline-flex size-2 rounded-full bg-amber-300" aria-hidden="true"></span>
-        <span>This website is still under development.</span>
-      </div>
       <div class="space-y-2">
-        <h1 class="text-white font-medium text-2xl">Tertius van Niekerk</h1>
-        <p class="text-onyx-300">
-          {t("intro_sentence")}
-        </p>
+        <h1 class="text-white font-bold text-2xl mx-auto w-fit">Tertius van Niekerk</h1>
+        <p class="text-blue-400 font-medium text-lg w-fit mx-auto">Full-Stack Software Developer</p>
+        <span>Europa Bound * South Africa</span>
+        <div
+          class="flex items-center gap-2 mb-2 rounded-xl border border-amber-400/40 bg-amber-400/10 px-3 py-2 text-sm text-amber-100 shadow-sm shadow-amber-950/20"
+        >
+          <span
+            ><span class="inline-flex size-2 rounded-full bg-amber-300 shrink-0 animate-pulse mr-1" aria-hidden="true"
+            ></span> Available & actively seeking full-time developer opportunities in the Luxembourg tech industry.</span
+          >
+        </div>
+        <div class="grid grid-cols-3 gap-2">
+          <div class="rounded-lg flex items-center justify-center bg-onyx-800 p-2 text-white font-semibold font-mono">
+            <span>GitHub</span>
+          </div>
+          <div class="rounded-lg flex items-center justify-center bg-onyx-800 p-2 text-white font-semibold font-mono">
+            <span>LinkedIn</span>
+          </div>
+          <div class="rounded-lg flex items-center justify-center bg-onyx-800 p-2 text-white font-semibold font-mono">
+            <span>Email</span>
+          </div>
+        </div>
         <Link href="/about">
           <span>More about me</span>
           <Icon name="chevron-right" size={20} />
@@ -130,7 +144,7 @@
       </div>
     </section>
   </SidePanel>
-  <Main class="lg:rounded-lg overflow-hidden w-full lg:ring-2 ring-onyx-800">
+  <Main class="lg:rounded-lg overflow-hidden w-full">
     {@render children()}
   </Main>
   <BottomBar class="bg-onyx-900 lg:hidden p-2 overflow-hidden w-full">
