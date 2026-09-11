@@ -12,12 +12,12 @@
   {...rest}
   class={[
     {
-      "text-white px-2 py-1 rounded": true,
-      "bg-onyx-500": data.level === 5,
-      "bg-onyx-600": data.level === 4,
-      "bg-onyx-700": data.level === 3,
-      "bg-onyx-800": data.level === 2,
-      "bg-onyx-900": data.level === 1,
+      "text-normal px-2 py-1 rounded": true,
+      "bg-neutral-500 font-medium": data.level === 5,
+      "bg-neutral-600": data.level === 4,
+      "bg-neutral-700": data.level === 3,
+      "bg-neutral-800": data.level === 2,
+      "bg-neutral-900": data.level === 1,
     },
     rest.class || "",
   ]}

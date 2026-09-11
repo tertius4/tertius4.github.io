@@ -10,7 +10,7 @@
   {...rest}
   {href}
   class={[
-    "text-blue-400 font-medium flex items-center gap-1 leading-none border-b border-transparent hover:border-blue-400 active:border-blue-400 focus:border-blue-400 w-fit outline-none transition-[border]",
+    "text-primary font-medium flex items-center gap-1 leading-none border-b border-transparent hover:border-primary active:border-primary focus:border-primary w-fit outline-none transition-[border]",
     rest.class || "",
   ]}
 >

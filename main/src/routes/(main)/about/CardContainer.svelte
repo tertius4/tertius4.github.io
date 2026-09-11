@@ -2,6 +2,6 @@
   const { children } = $props();
 </script>
 
-<article class="p-2 rounded-lg bg-onyx-850 border border-onyx-700 w-full">
+<article class="p-2 rounded-lg bg-surface border border-default w-full">
   {@render children()}
 </article>

@@ -14,6 +14,7 @@
   import Link from "$lib/comps/Link.svelte";
   import BottomBar from "./comps/layout/BottomBar.svelte";
   import ButtonBottomBar from "./comps/ButtonBottomBar.svelte";
+  import CardContactMe from "./comps/CardContactMe.svelte";
 
   const { children } = $props();
 
@@ -60,8 +61,8 @@
 <Container class="w-dvw h-dvh overflow-hidden">
   <SidePanel
     class={{
-      "overflow-y-auto grow scrollbar-none w-full": true,
-      "lg:flex flex-col max-lg:hidden bg-onyx-850 ring-2 ring-onyx-800 rounded-2xl p-2 space-y-4": !page.data.is_home,
+      "grow w-full": true,
+      "lg:flex flex-col max-lg:hidden bg-onyx-850 ring-2 ring-onyx-800 rounded-2xl space-y-4": !page.data.is_home,
       "max-lg:h-full flex flex-col": page.data.is_home,
     }}
   >
@@ -69,85 +70,93 @@
       <CoverImage
         src="/cover-image.webp"
         alt="Cover Image"
-        class="w-full h-[200px] lg:rounded-2xl ring-2 ring-onyx-800"
+        class="w-full h-[200px] lg:rounded-2xl lg:border-2 border-default"
       />
       <Avatar
         src="/tertius-pic-square.webp"
         alt="Tertius"
-        class="absolute bottom-0 -mb-8 left-6 lg:left-8 transform size-36 ring-2 ring-onyx-700"
+        class="absolute bottom-0 -mb-8 left-6 lg:left-8 transform size-36 border-2 border-default"
       />
 
       <button
-        class="absolute top-4 py-0.5 rounded-lg px-2 right-4 bg-onyx-800 hover:bg-onyx-600 active:bg-onyx-600 focus:bg-onyx-600 text-white outline-none hover:font-medium active:font-medium focus:font-medium"
+        class="absolute top-4 py-0.5 rounded-lg px-2 right-4 bg-card active:bg-onyx-600 focus:bg-onyx-600 text-white outline-none hover:font-medium active:font-medium focus:font-medium"
         onclick={updateLanguage}
       >
         {page.data.lang === "en" ? "EN" : "AF"}
       </button>
     </div>
 
-    <section class="p-6 pt-12 md:pt-8 space-y-8">
-      <div class="space-y-2">
-        <h1 class="text-white font-bold text-2xl mx-auto w-fit">Tertius van Niekerk</h1>
-        <p class="text-blue-400 font-medium text-lg w-fit mx-auto">Full-Stack Software Developer</p>
-        <span>Europa Bound * South Africa</span>
-        <div
-          class="flex items-center gap-2 mb-2 rounded-xl border border-amber-400/40 bg-amber-400/10 px-3 py-2 text-sm text-amber-100 shadow-sm shadow-amber-950/20"
-        >
-          <span
-            ><span class="inline-flex size-2 rounded-full bg-amber-300 shrink-0 animate-pulse mr-1" aria-hidden="true"
-            ></span> Available & actively seeking full-time developer opportunities in the Luxembourg tech industry.</span
-          >
-        </div>
-        <div class="grid grid-cols-3 gap-2">
-          <div class="rounded-lg flex items-center justify-center bg-onyx-800 p-2 text-white font-semibold font-mono">
-            <span>GitHub</span>
-          </div>
-          <div class="rounded-lg flex items-center justify-center bg-onyx-800 p-2 text-white font-semibold font-mono">
-            <span>LinkedIn</span>
-          </div>
-          <div class="rounded-lg flex items-center justify-center bg-onyx-800 p-2 text-white font-semibold font-mono">
-            <span>Email</span>
-          </div>
-        </div>
-        <Link href="/about">
-          <span>More about me</span>
-          <Icon name="chevron-right" size={20} />
-        </Link>
-      </div>
-
-      <div class="space-y-4">
-        <Heading2>
-          {t("skills")}
-        </Heading2>
-
-        <div class="flex flex-wrap gap-1">
-          {#each skills.sort((a, b) => b.level - a.level) as skill}
-            <Skill data={skill} />
-          {/each}
-        </div>
-        <Link href="/skills">
-          <span>Read more detailed</span>
-          <Icon name="chevron-right" size={20} />
-        </Link>
-      </div>
-
-      <div class="space-y-2" id="projects">
-        <Heading2>
-          {t("my_projects")}
-        </Heading2>
-
-        <div class="space-y-1">
-          {#each projects as project}
-            <CardProject data={project} />
-          {/each}
-        </div>
-      </div>
+    <section class="pl-9 pt-12 md:pt-10">
+      <h1 class="text-white font-bold text-3xl leading-12">Tertius van Niekerk</h1>
+      <p class="text-primary font-medium text-lg leading-8">Full-Stack Software Developer</p>
+      <span class="text-muted flex items-center gap-0.5">
+        <Icon name="map-pin" size={20} />
+        Luxembourg Bound • From South Africa
+      </span>
     </section>
+
+    <div class="space-y-4 pt-4 px-4 lg:px-0">
+      <div
+        class="flex items-center gap-2 mb-2 rounded-lg border border-amber-400/40 bg-amber-400/10 px-3 py-2 text-sm text-amber-100 shadow-sm shadow-amber-950/20"
+      >
+        <span
+          ><span class="inline-flex size-2 rounded-full bg-amber-300 shrink-0 animate-pulse mr-1" aria-hidden="true"
+          ></span> Available & actively seeking full-time developer opportunities in the Luxembourg or German tech industry.</span
+        >
+      </div>
+      <div class="grid grid-cols-3 gap-2">
+        <CardContactMe class="flex flex-col gap-1" href="https://github.com/tertius4">
+          <Icon name="github" size={24} />
+          <span>GitHub</span>
+        </CardContactMe>
+        <CardContactMe class="flex flex-col gap-1" href="https://www.linkedin.com/in/tertius-van-niekerk-96a674237/">
+          <Icon name="linkedIn" size={24} class="mr-2" />
+          <span>LinkedIn</span>
+        </CardContactMe>
+        <CardContactMe class="flex flex-col gap-1" href="mailto:tertius.vanniekerk@pm.me">
+          <Icon name="email" size={24} class="mr-2" />
+          <span>Email</span>
+        </CardContactMe>
+      </div>
+      <Link href="/about" class="pt-2">
+        <span>More about me</span>
+        <Icon name="chevron-right" size={20} />
+      </Link>
+    </div>
+
+    <div class="space-y-2 pt-4 px-4 lg:px-0">
+      <Heading2>
+        {t("skills")}
+      </Heading2>
+
+      <div class="flex flex-wrap gap-1.5">
+        {#each skills.sort((a, b) => b.level - a.level) as skill}
+          <Skill data={skill} />
+        {/each}
+      </div>
+      <Link href="/skills">
+        <span>Read more detailed</span>
+        <Icon name="chevron-right" size={20} />
+      </Link>
+    </div>
+
+    <div class="space-y-2 py-4 px-4 lg:px-0" id="projects">
+      <Heading2>
+        {t("my_projects")}
+      </Heading2>
+
+      <div class="space-y-1">
+        {#each projects as project}
+          <CardProject data={project} />
+        {/each}
+      </div>
+    </div>
   </SidePanel>
+
   <Main class="lg:rounded-lg overflow-hidden w-full">
     {@render children()}
   </Main>
-  <BottomBar class="bg-onyx-900 lg:hidden p-2 overflow-hidden w-full">
+  <BottomBar class="bg-surface border-t border-default lg:hidden p-2 overflow-hidden w-full">
     <ButtonBottomBar active={page.url.pathname === "/"}>
       <Icon name="home" size={24} />
       <span>Home</span>

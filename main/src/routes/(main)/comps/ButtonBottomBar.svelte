@@ -13,8 +13,8 @@
   class={[
     {
         "flex flex-col items-center justify-center p-2 rounded-lg w-[120px]": true,
-        "text-onyx-600 bg-onyx-850 border border-onyx-600": active,
-        "text-onyx-700": !active
+        "text-normal bg-card border border-default": active,
+        "text-muted": !active
 
     },
     rest.class || "",

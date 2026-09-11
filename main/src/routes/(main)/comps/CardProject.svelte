@@ -11,8 +11,8 @@
   href={data.href}
   class={[
     {
-      "block outline-none rounded-lg": true,
-      "focus:bg-onyx-300 hover:bg-onyx-700": !!data.href,
+      "block outline-none rounded-lg transition-colors": true,
+      "focus:bg-neutral-700 hover:bg-neutral-700": !!data.href,
     },
     rest.class || "",
   ]}
@@ -27,13 +27,13 @@
         <h3 class="text-white font-medium">{data.title}</h3>
         <div>
           {#if data.status === "in_development"}
-            <span class="bg-yellow-500 text-black text-xs font-medium px-2 py-1 rounded-full">In Development</span>
+            <span class="bg-primary-800 text-normal text-xs font-medium px-2 py-1 rounded-full">In Development</span>
           {:else if data.status === "shelved"}
-            <span class="bg-gray-500 text-white text-xs font-medium px-2 py-1 rounded-full">Shelved</span>
+            <span class="bg-primary-900 text-muted text-xs font-medium px-2 py-1 rounded-full">Shelved</span>
           {:else if data.status === "production"}
-            <span class="bg-green-500 text-white text-xs font-medium px-2 py-1 rounded-full">Production</span>
+            <span class="bg-primary-800 text-normal text-xs font-medium px-2 py-1 rounded-full">Production</span>
           {:else if data.status === "improving"}
-            <span class="bg-blue-500 text-white text-xs font-medium px-2 py-1 rounded-full">Improving</span>
+            <span class="bg-primary-800 text-normal text-xs font-medium px-2 py-1 rounded-full">Improving</span>
           {/if}
         </div>
       </div>
