@@ -1,15 +1,17 @@
-import { G as attributes, y as attr, F as escape_html, K as clsx, O as ensure_array_like } from "../../../../chunks/index.js";
-import { s as skills } from "../../../../chunks/index3.js";
+import { G as attributes, K as clsx, F as escape_html, N as ensure_array_like } from "../../../../chunks/index.js";
+import { I as Icon, s as skills } from "../../../../chunks/Icon.js";
 function CardSkill($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     const { data, $$slots, $$events, ...rest } = $$props;
     $$renderer2.push(`<article${attributes({
       ...rest,
       class: clsx([
-        "bg-onyx-800 p-4 rounded-lg h-full w-full space-y-2",
+        "bg-card border border-default p-4 rounded-lg h-full w-full",
         rest.class || ""
       ])
-    })}><div class="flex items-center gap-2"><img${attr("src", data.icon)}${attr("alt", data.name)} class="size-8"/> <span class="font-medium text-xl">${escape_html(data.name)}</span></div> <div class="bg-onyx-850 w-full rounded font-mono py-0.5 px-2">${escape_html(data.experience)} ● ${escape_html(data.years)}</div> <p class="text-onyx-200">${escape_html(data.description)}</p></article>`);
+    })}><div class="flex items-center gap-2">`);
+    Icon($$renderer2, { name: data.icon, class: "size-8" });
+    $$renderer2.push(`<!----> <span class="font-medium text-xl">${escape_html(data.name)}</span></div> <div class="bg-neutral-900 text-foreground-700 w-full rounded font-mono py-0.5 px-2 mt-4">${escape_html(data.experience)} ● ${escape_html(data.years)}</div> <p class="text-foreground-400 mt-1">${escape_html(data.description)}</p></article>`);
   });
 }
 function _page($$renderer, $$props) {

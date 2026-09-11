@@ -74,9 +74,12 @@ body {
   }
   .bg-card {
     background-color: var(--color-neutral-700);
+  }
+  .bg-card-hover {
+    background-color: var(--color-neutral-700);
     transition: background-color 0.15s ease;
   }
-  .bg-card:hover {
+  .bg-card-hover:hover {
     background-color: var(--color-neutral-600);
   }
 
