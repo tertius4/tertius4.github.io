@@ -13,55 +13,15 @@ return {
 		client: {start:"_app/immutable/entry/start.DSjnfNc5.js",app:"_app/immutable/entry/app.D1lJPCAP.js",imports:["_app/immutable/entry/start.DSjnfNc5.js","_app/immutable/chunks/B2vTV8ut.js","_app/immutable/chunks/C3PQUiLt.js","_app/immutable/chunks/BsT7tmvf.js","_app/immutable/chunks/C8F1-0j3.js","_app/immutable/chunks/CNaSj9C7.js","_app/immutable/chunks/C36GHLWC.js","_app/immutable/chunks/BUApaBEI.js","_app/immutable/entry/app.D1lJPCAP.js","_app/immutable/chunks/BsT7tmvf.js","_app/immutable/chunks/C8F1-0j3.js","_app/immutable/chunks/CNaSj9C7.js","_app/immutable/chunks/DsnmJJEf.js","_app/immutable/chunks/C3PQUiLt.js","_app/immutable/chunks/C36GHLWC.js","_app/immutable/chunks/BtBJpNRK.js","_app/immutable/chunks/HiGChCIY.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:true},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
-			__memo(() => import('./nodes/1.js')),
-			__memo(() => import('./nodes/2.js')),
-			__memo(() => import('./nodes/3.js')),
-			__memo(() => import('./nodes/4.js')),
-			__memo(() => import('./nodes/5.js')),
-			__memo(() => import('./nodes/6.js')),
-			__memo(() => import('./nodes/7.js'))
+			__memo(() => import('./nodes/1.js'))
 		],
 		remotes: {
 			
 		},
 		routes: [
-			{
-				id: "/(main)",
-				pattern: /^\/?$/,
-				params: [],
-				page: { layouts: [0,2,], errors: [1,,], leaf: 3 },
-				endpoint: null
-			},
-			{
-				id: "/(main)/about",
-				pattern: /^\/about\/?$/,
-				params: [],
-				page: { layouts: [0,2,], errors: [1,,], leaf: 6 },
-				endpoint: null
-			},
-			{
-				id: "/(main)/(projects)/doenit",
-				pattern: /^\/doenit\/?$/,
-				params: [],
-				page: { layouts: [0,2,], errors: [1,,], leaf: 4 },
-				endpoint: null
-			},
-			{
-				id: "/(main)/skills",
-				pattern: /^\/skills\/?$/,
-				params: [],
-				page: { layouts: [0,2,], errors: [1,,], leaf: 7 },
-				endpoint: null
-			},
-			{
-				id: "/(main)/(projects)/vinkel-of-koljander",
-				pattern: /^\/vinkel-of-koljander\/?$/,
-				params: [],
-				page: { layouts: [0,2,], errors: [1,,], leaf: 5 },
-				endpoint: null
-			}
+			
 		],
-		prerendered_routes: new Set([]),
+		prerendered_routes: new Set(["/","/about","/doenit","/skills","/vinkel-of-koljander"]),
 		matchers: async () => {
 			
 			return {  };

@@ -34,7 +34,7 @@ export const skills: Skill[] = [
   {
     name: "Express.js",
     level: 4,
-    icon: "/icons/express.webp",
+    icon: "",
     experience: "4 yrs",
     years: "2019 – Present",
     description: "Experienced in building RESTful APIs with Express.js.",
@@ -42,7 +42,7 @@ export const skills: Skill[] = [
   {
     name: "MongoDB",
     level: 3,
-    icon: "/icons/mongodb.webp",
+    icon: "",
     experience: "3 yrs",
     years: "2020 – Present",
     description: "Familiar with MongoDB for NoSQL database management.",
@@ -50,7 +50,7 @@ export const skills: Skill[] = [
   {
     name: "Tailwind CSS",
     level: 4,
-    icon: "/icons/tailwind.webp",
+    icon: "",
     experience: "3 yrs",
     years: "2020 – Present",
     description: "Proficient in using Tailwind CSS for styling.",
@@ -58,7 +58,7 @@ export const skills: Skill[] = [
   {
     name: "Git",
     level: 4,
-    icon: "/icons/git.webp",
+    icon: "",
     experience: "5 yrs",
     years: "2018 – Present",
     description: "Experienced in version control with Git.",
@@ -74,7 +74,7 @@ export const skills: Skill[] = [
   {
     name: "C",
     level: 3,
-    icon: "/icons/c.webp",
+    icon: "",
     experience: "3 yrs",
     years: "2020 – Present",
     description: "Familiar with C programming for system-level development.",
@@ -82,7 +82,7 @@ export const skills: Skill[] = [
   {
     name: "Java",
     level: 3,
-    icon: "/icons/java.webp",
+    icon: "",
     experience: "3 yrs",
     years: "2020 – Present",
     description: "Experienced in Java for object-oriented programming.",
@@ -90,7 +90,7 @@ export const skills: Skill[] = [
   {
     name: "Docker",
     level: 3,
-    icon: "/icons/docker.webp",
+    icon: "",
     experience: "3 yrs",
     years: "2020 – Present",
     description: "Familiar with containerization using Docker.",
@@ -98,7 +98,7 @@ export const skills: Skill[] = [
   {
     name: "Firebase",
     level: 3,
-    icon: "/icons/firebase.webp",
+    icon: "",
     experience: "3 yrs",
     years: "2020 – Present",
     description: "Experienced in using Firebase for backend services.",

@@ -35,7 +35,7 @@ const skills = [
   {
     name: "Express.js",
     level: 4,
-    icon: "/icons/express.webp",
+    icon: "",
     experience: "4 yrs",
     years: "2019 – Present",
     description: "Experienced in building RESTful APIs with Express.js."
@@ -43,7 +43,7 @@ const skills = [
   {
     name: "MongoDB",
     level: 3,
-    icon: "/icons/mongodb.webp",
+    icon: "",
     experience: "3 yrs",
     years: "2020 – Present",
     description: "Familiar with MongoDB for NoSQL database management."
@@ -51,7 +51,7 @@ const skills = [
   {
     name: "Tailwind CSS",
     level: 4,
-    icon: "/icons/tailwind.webp",
+    icon: "",
     experience: "3 yrs",
     years: "2020 – Present",
     description: "Proficient in using Tailwind CSS for styling."
@@ -59,7 +59,7 @@ const skills = [
   {
     name: "Git",
     level: 4,
-    icon: "/icons/git.webp",
+    icon: "",
     experience: "5 yrs",
     years: "2018 – Present",
     description: "Experienced in version control with Git."
@@ -75,7 +75,7 @@ const skills = [
   {
     name: "C",
     level: 3,
-    icon: "/icons/c.webp",
+    icon: "",
     experience: "3 yrs",
     years: "2020 – Present",
     description: "Familiar with C programming for system-level development."
@@ -83,7 +83,7 @@ const skills = [
   {
     name: "Java",
     level: 3,
-    icon: "/icons/java.webp",
+    icon: "",
     experience: "3 yrs",
     years: "2020 – Present",
     description: "Experienced in Java for object-oriented programming."
@@ -91,7 +91,7 @@ const skills = [
   {
     name: "Docker",
     level: 3,
-    icon: "/icons/docker.webp",
+    icon: "",
     experience: "3 yrs",
     years: "2020 – Present",
     description: "Familiar with containerization using Docker."
@@ -99,7 +99,7 @@ const skills = [
   {
     name: "Firebase",
     level: 3,
-    icon: "/icons/firebase.webp",
+    icon: "",
     experience: "3 yrs",
     years: "2020 – Present",
     description: "Experienced in using Firebase for backend services."
