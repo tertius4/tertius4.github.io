@@ -56,6 +56,13 @@
       "_shared-server.js"
     ]
   },
+  "_lang.js": {
+    "file": "chunks/lang.js",
+    "name": "lang",
+    "imports": [
+      "_index2.js"
+    ]
+  },
   "_shared-server.js": {
     "file": "chunks/shared-server.js",
     "name": "shared-server"
@@ -121,7 +128,8 @@
     "imports": [
       "_index.js",
       "_index2.js",
-      "_Icon.js"
+      "_Icon.js",
+      "_lang.js"
     ]
   },
   "src/routes/(main)/+page.svelte": {
@@ -136,7 +144,8 @@
     "src": "src/routes/(main)/about/+page.svelte",
     "isEntry": true,
     "imports": [
-      "_index.js"
+      "_index.js",
+      "_lang.js"
     ]
   },
   "src/routes/(main)/skills/+page.svelte": {
@@ -175,7 +184,7 @@
       "_shared-server.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.CcgTkjbO.css"
+      "_app/immutable/assets/_layout.B1wb4Rlx.css"
     ]
   }
 }

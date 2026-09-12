@@ -1,6 +1,7 @@
 import { G as attributes, y as attr, z as stringify, J as attr_class, F as escape_html, K as clsx, x as head, N as ensure_array_like } from "../../../chunks/index.js";
 import { p as page } from "../../../chunks/index2.js";
 import { I as Icon, s as skills, p as projects } from "../../../chunks/Icon.js";
+import { t } from "../../../chunks/lang.js";
 function Avatar($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     const { src, alt, $$slots, $$events, ...rest } = $$props;
@@ -54,22 +55,6 @@ function CardProject($$renderer, $$props) {
     $$renderer2.push(`<!--]--></div></div> <p class="text-gray-400 text-sm">${escape_html(data.description)}</p></div></article></a>`);
   });
 }
-function t(key) {
-  const lang = page.data.lang || "en";
-  return map[lang]?.[key] || map["en"]?.[key] || "";
-}
-const map = {
-  en: {
-    intro_sentence: "I'm a Software Developer who has been building software since 2021, primarily in start-up environments. Outside of work, I build my own projects to sharpen my skills, explore new ideas, and keep learning.",
-    skills: "Skills",
-    my_projects: "My Projects"
-  },
-  af: {
-    intro_sentence: "Ek is ’n Software Developer met ervaring in startups sedert 2021. Buite werk bou ek aan my eie projekte om my vaardighede te slyp, met nuwe idees te eksperimenteer en aan te hou leer.",
-    skills: "Vaardighede",
-    my_projects: "My Projekte"
-  }
-};
 function CoverImage($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     const { src, alt, $$slots, $$events, ...rest } = $$props;
@@ -78,15 +63,6 @@ function CoverImage($$renderer, $$props) {
       class: `overflow-hidden ${stringify(rest.class || "")}`
     })}><img${attr("src", src)}${attr("alt", alt)} class="w-full h-full object-cover"/></div>`);
   });
-}
-function Heading2($$renderer, $$props) {
-  const { children, $$slots, $$events, ...rest } = $$props;
-  $$renderer.push(`<h2${attributes({
-    ...rest,
-    class: "text-white font-semibold text-2xl leading-10"
-  })}>`);
-  children($$renderer);
-  $$renderer.push(`<!----></h2>`);
 }
 function Container($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
@@ -298,14 +274,7 @@ function _layout($$renderer, $$props) {
               },
               $$slots: { default: true }
             });
-            $$renderer4.push(`<!----></div> <div class="space-y-2 pt-4 px-4 lg:px-0">`);
-            Heading2($$renderer4, {
-              children: ($$renderer5) => {
-                $$renderer5.push(`<!---->${escape_html(t("skills"))}`);
-              },
-              $$slots: { default: true }
-            });
-            $$renderer4.push(`<!----> <div class="flex flex-wrap gap-1.5"><!--[-->`);
+            $$renderer4.push(`<!----></div> <div class="space-y-2 pt-4 px-4 lg:px-0"><h2 class="text-white text-h2">${escape_html(t("skills"))}</h2> <div class="flex flex-wrap gap-1.5"><!--[-->`);
             const each_array = ensure_array_like(skills.sort((a, b) => b.level - a.level));
             for (let $$index = 0, $$length = each_array.length; $$index < $$length; $$index++) {
               let skill = each_array[$$index];
@@ -321,14 +290,7 @@ function _layout($$renderer, $$props) {
               },
               $$slots: { default: true }
             });
-            $$renderer4.push(`<!----></div> <div class="space-y-2 py-4 px-4 lg:px-0" id="projects">`);
-            Heading2($$renderer4, {
-              children: ($$renderer5) => {
-                $$renderer5.push(`<!---->${escape_html(t("my_projects"))}`);
-              },
-              $$slots: { default: true }
-            });
-            $$renderer4.push(`<!----> <div class="space-y-1"><!--[-->`);
+            $$renderer4.push(`<!----></div> <div class="space-y-2 py-4 px-4 lg:px-0" id="projects"><h2 class="text-white text-h2">${escape_html(t("my_projects"))}</h2> <div class="space-y-1"><!--[-->`);
             const each_array_1 = ensure_array_like(projects);
             for (let $$index_1 = 0, $$length = each_array_1.length; $$index_1 < $$length; $$index_1++) {
               let project = each_array_1[$$index_1];
