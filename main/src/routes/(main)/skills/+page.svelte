@@ -6,8 +6,6 @@
   import { skills } from "$lib";
 
   let search = $state("");
-  let inputEl: HTMLInputElement | undefined = undefined;
-  let isFocused = $state(false);
   const filtered_skills = $derived(skills.filter(filterSkills));
 
   function filterSkills(skill: Skill) {
@@ -37,14 +35,11 @@
     <h2 class="text-2xl font-bold">Skills</h2>
     <div class="relative">
       <input
-        bind:this={inputEl}
         {@attach focusSearch}
         type="text"
         placeholder="Search skills..."
         class="bg-surface border border-default lg:w-80 w-fit rounded-lg p-2 pr-12 text-white outline-none focus:ring active:ring ring-neutral-300 transition-colors"
         oninput={(e) => (search = e.target?.value || "")}
-        onfocus={() => (isFocused = true)}
-        onblur={() => (isFocused = false)}
       />
       <div
         class={{

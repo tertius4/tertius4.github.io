@@ -1,7 +1,13 @@
 <script>
-  const { children } = $props();
+  const { children, ...rest } = $props();
 </script>
 
-<article class="p-2 rounded-lg bg-surface border border-default w-full">
+<article
+  {...rest}
+  class={[
+    "p-2 rounded-lg max-sm:bg-card bg-surface border max-sm:border-strong border-default w-full",
+    rest.class || "",
+  ]}
+>
   {@render children()}
 </article>
