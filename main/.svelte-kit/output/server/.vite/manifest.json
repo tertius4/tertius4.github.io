@@ -134,7 +134,10 @@
     "file": "entries/pages/(main)/about/_page.svelte.js",
     "name": "entries/pages/(main)/about/_page.svelte",
     "src": "src/routes/(main)/about/+page.svelte",
-    "isEntry": true
+    "isEntry": true,
+    "imports": [
+      "_index.js"
+    ]
   },
   "src/routes/(main)/skills/+page.svelte": {
     "file": "entries/pages/(main)/skills/_page.svelte.js",
@@ -172,7 +175,7 @@
       "_shared-server.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.BcSy7uR7.css"
+      "_app/immutable/assets/_layout.CcgTkjbO.css"
     ]
   }
 }
