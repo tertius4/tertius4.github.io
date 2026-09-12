@@ -1,0 +1,11 @@
+import{R as k}from"../chunks/BUApaBEI.js";import"../chunks/DsnmJJEf.js";import{t as b,q as g,v as m,am as O,aZ as T,_ as h,a7 as R,ai as S,aV as I,aS as L,a3 as p,y as N,a2 as j,a5 as d,p as C,a_ as D,T as u,a as y,b as M,a$ as $,s as v,n as A,f as E}from"../chunks/BK2dqNuG.js";import{h as P}from"../chunks/CV23SkGN.js";import{s as Y}from"../chunks/DuZv-aFi.js";import{s as q}from"../chunks/ik91F--f.js";function z(s,e,t=!1,i=!1,f=!1){var c=s,n="";b(()=>{var r=O;if(n===(n=e()??"")){g&&m();return}if(r.nodes_start!==null&&(T(r.nodes_start,r.nodes_end),r.nodes_start=r.nodes_end=null),n!==""){if(g){h.data;for(var a=m(),_=a;a!==null&&(a.nodeType!==R||a.data!=="");)_=a,a=S(a);if(a===null)throw I(),L;p(h,_),c=N(a);return}var l=n+"";t?l=`<svg>${l}</svg>`:i&&(l=`<math>${l}</math>`);var o=j(l);if((t||i)&&(o=d(o)),p(d(o),o.lastChild),t||i)for(;d(o);)c.before(d(o));else c.before(o)}})}function B(s,e){throw new k(s,e.toString())}const H=!0,J=!0;async function U({url:s}){const e=window.matchMedia("(min-width: 768px)").matches,t=s.pathname==="/";if(e&&t)throw B(307,"/about");return{lang:document.cookie.split("; ").find(f=>f.startsWith("lang="))?.split("=")[1]||"en",is_home:t}}const x=Object.freeze(Object.defineProperty({__proto__:null,csr:J,load:U,prerender:H},Symbol.toStringTag,{value:"Module"})),V=globalThis.__sveltekit_1296guy.env,w={google_analytics_id:V.PUBLIC_ANALYTICS_ID};var W=$(E('<meta charset="utf-8"/> <script async><\/script> <!> <meta name="viewport" content="width=device-width, initial-scale=1"/> <link rel="preconnect" href="https://fonts.googleapis.com"/> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"/> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>',1));function tt(s,e){C(e,!0);var t=D();P(f=>{var c=W(),n=v(u(c),2),r=v(n,2);z(r,()=>`
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", ${JSON.stringify(w.google_analytics_id)});
+  <\/script>
+  `),A(8),b(()=>q(n,"src",`https://www.googletagmanager.com/gtag/js?id=${w.google_analytics_id??""}`)),y(f,c)});var i=u(t);Y(i,()=>e.children),y(s,t),M()}export{tt as component,x as universal};

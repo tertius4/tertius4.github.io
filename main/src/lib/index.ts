@@ -199,4 +199,11 @@ export const projects: Project[] = [
     tech: ["Firebase", "WhatsApp API"],
     status: "shelved",
   },
+  {
+    title: "This Website",
+    description: "My personal website to introduce myself",
+    tech: ["SvelteKit"],
+    status: "in_development",
+    href: "/",
+  }
 ];
