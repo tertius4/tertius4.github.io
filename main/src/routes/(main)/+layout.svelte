@@ -5,7 +5,6 @@
   import CardProject from "./comps/CardProject.svelte";
   import t from "$lib/lang";
   import CoverImage from "./comps/CoverImage.svelte";
-  import Heading2 from "./comps/Heading2.svelte";
   import Container from "./comps/layout/Container.svelte";
   import Main from "./comps/layout/Main.svelte";
   import SidePanel from "./comps/layout/SidePanel.svelte";
@@ -125,9 +124,9 @@
     </div>
 
     <div class="space-y-2 pt-4 px-4 lg:px-0">
-      <Heading2>
+      <h2 class="text-white text-h2">
         {t("skills")}
-      </Heading2>
+      </h2>
 
       <div class="flex flex-wrap gap-1.5">
         {#each skills.sort((a, b) => b.level - a.level) as skill}
@@ -141,9 +140,9 @@
     </div>
 
     <div class="space-y-2 py-4 px-4 lg:px-0" id="projects">
-      <Heading2>
+      <h2 class="text-white text-h2">
         {t("my_projects")}
-      </Heading2>
+      </h2>
 
       <div class="space-y-1">
         {#each projects as project}

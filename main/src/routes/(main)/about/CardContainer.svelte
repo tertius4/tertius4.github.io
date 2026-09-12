@@ -5,7 +5,7 @@
 <article
   {...rest}
   class={[
-    "p-2 rounded-lg max-sm:bg-card bg-surface border max-sm:border-strong border-default w-full",
+    "p-4 rounded-lg max-sm:bg-card bg-surface border max-sm:border-strong border-default w-full",
     rest.class || "",
   ]}
 >

@@ -1,9 +1,9 @@
-<main class="background min-h-screen text-stone-800">
-  <div class="mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8">
-    <div class="rounded-[28px] border border-stone-200/80 bg-white/80 p-6 shadow-[0_18px_45px_rgba(68,48,39,0.06)] backdrop-blur-sm sm:p-8 lg:p-10">
+<main class="background h-full text-neutral-800 w-full">
+  <div class="w-full rounded-lg p-4 sm:p-6 lg:p-8">
+    <div class="rounded-2xl border border-neutral-100 bg-white p-6 sm:p-8 lg:p-10">
       <div class="flex flex-col gap-6 lg:flex-row lg:items-center">
-        <div class="flex-shrink-0">
-          <div class="mx-auto h-40 w-40 overflow-hidden rounded-full border-4 border-white bg-stone-100 shadow-[0_12px_30px_rgba(68,48,39,0.12)] sm:h-48 sm:w-48">
+        <div class="shrink-0">
+          <div class="size-40 overflow-hidden rounded-full border border-neutral-100 sm:size-48">
             <img
               src="/vinkel-of-koljander-logo.webp"
               alt="Vinkel of Koljander logo"
@@ -13,14 +13,14 @@
         </div>
 
         <div class="flex-1">
-          <span class="inline-flex items-center rounded-full border border-stone-200 bg-stone-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-stone-600">
+          <span
+            class="inline-flex items-center rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-[12px] font-semibold uppercase tracking-widest text-neutral-600"
+          >
             Family recipe app
           </span>
-          <h1 class="mt-4 text-4xl font-bold tracking-tight text-stone-900 sm:text-5xl">
-            Vinkel of Koljander
-          </h1>
-          <p class="mt-3 max-w-xl text-base leading-7 text-stone-600 sm:text-lg">
-            A warm and practical place for recipes, inspiration, and favourite family dishes.
+          <h1 class="mt-4 text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">Vinkel of Koljander</h1>
+          <p class="mt-3 max-w-xl text-base leading-7 text-neutral-600 sm:text-lg">
+            A family recipe app to keep cherished recipes organized and easily accessible.
           </p>
 
           <div class="mt-6 flex flex-wrap gap-3">
@@ -28,49 +28,10 @@
               href="https://vinkel-of-koljander.web.app/"
               target="_blank"
               rel="noreferrer"
-              class="inline-flex items-center justify-center rounded-full bg-stone-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-stone-700"
+              class="inline-flex items-center justify-center rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-neutral-700"
             >
               Visit website
             </a>
-            <a
-              href="/"
-              class="inline-flex items-center justify-center rounded-full border border-stone-300 bg-white px-5 py-2.5 text-sm font-semibold text-stone-700 transition hover:border-stone-400 hover:bg-stone-50"
-            >
-              Back to projects
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-8 grid gap-4 md:grid-cols-3">
-        <div class="rounded-2xl border border-stone-200 bg-stone-50 p-4">
-          <p class="text-[10px] font-semibold uppercase tracking-[0.24em] text-stone-500">Focus</p>
-          <p class="mt-3 text-lg font-semibold text-stone-900">Recipe discovery</p>
-        </div>
-        <div class="rounded-2xl border border-stone-200 bg-stone-50 p-4">
-          <p class="text-[10px] font-semibold uppercase tracking-[0.24em] text-stone-500">Style</p>
-          <p class="mt-3 text-lg font-semibold text-stone-900">Simple and warm</p>
-        </div>
-        <div class="rounded-2xl border border-stone-200 bg-stone-50 p-4">
-          <p class="text-[10px] font-semibold uppercase tracking-[0.24em] text-stone-500">Stack</p>
-          <p class="mt-3 text-lg font-semibold text-stone-900">SvelteKit + Firebase</p>
-        </div>
-      </div>
-
-      <div class="mt-8 rounded-[24px] border border-stone-200 bg-stone-50 p-5">
-        <p class="text-[10px] font-semibold uppercase tracking-[0.24em] text-amber-700">Project overview</p>
-        <div class="mt-4 grid gap-4 md:grid-cols-3">
-          <div>
-            <p class="text-sm font-semibold text-stone-900">Easy to browse</p>
-            <p class="mt-1 text-sm leading-6 text-stone-600">Recipes are presented in a clean, friendly layout that feels personal.</p>
-          </div>
-          <div>
-            <p class="text-sm font-semibold text-stone-900">Built for everyday use</p>
-            <p class="mt-1 text-sm leading-6 text-stone-600">A practical setup that keeps the experience light, welcoming, and easy to revisit.</p>
-          </div>
-          <div>
-            <p class="text-sm font-semibold text-stone-900">Simple and modern</p>
-            <p class="mt-1 text-sm leading-6 text-stone-600">The design stays minimal while still feeling warm and thoughtfully made.</p>
           </div>
         </div>
       </div>
