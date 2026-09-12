@@ -189,7 +189,8 @@ export const projects: Project[] = [
     title: "Console Colours",
     description: "A small library to add colour to console output in Node.js.",
     tech: ["Node.js", "Typescript"],
-    status: "shelved",
+    status: "in_development",
+    image_src: "/console-colours-logo.webp",
     href: "/console-colours",
   },
   {
