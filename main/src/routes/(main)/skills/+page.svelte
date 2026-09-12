@@ -10,7 +10,7 @@
 
   const { data } = $props();
 
-  let search = $state(data.search);
+  let search = $state(page.url.searchParams.get("search") || "");
 
   const filtered_skills = $derived(
     skills.filter((skill) => skill.name.toLowerCase().includes(search.trim().toLowerCase() || "")),
