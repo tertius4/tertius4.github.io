@@ -119,4 +119,8 @@ body {
   .scrollbar-none::-webkit-scrollbar {
     display: none; /* Safari and Chrome */
   }
+
+  .text-2xs {
+    font-size: 0.625rem; /* 10px */
+  }
 }

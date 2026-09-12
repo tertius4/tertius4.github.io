@@ -34,7 +34,7 @@ export const skills: Skill[] = [
   {
     name: "Express.js",
     level: 4,
-    icon: "",
+    icon: "expressjs",
     experience: "4 yrs",
     years: "2019 – Present",
     description: "Experienced in building RESTful APIs with Express.js.",
@@ -42,15 +42,23 @@ export const skills: Skill[] = [
   {
     name: "MongoDB",
     level: 3,
-    icon: "",
+    icon: "mongodb",
     experience: "3 yrs",
     years: "2020 – Present",
     description: "Familiar with MongoDB for NoSQL database management.",
   },
   {
+    name: "Mongoose",
+    level: 3,
+    icon: "mongoose",
+    experience: "3 yrs",
+    years: "2020 – Present",
+    description: "Familiar with Mongoose for MongoDB object modeling.",
+  },
+  {
     name: "Tailwind CSS",
     level: 4,
-    icon: "",
+    icon: "tailwind-css",
     experience: "3 yrs",
     years: "2020 – Present",
     description: "Proficient in using Tailwind CSS for styling.",
@@ -58,7 +66,7 @@ export const skills: Skill[] = [
   {
     name: "Git",
     level: 4,
-    icon: "",
+    icon: "git",
     experience: "5 yrs",
     years: "2018 – Present",
     description: "Experienced in version control with Git.",
@@ -72,9 +80,9 @@ export const skills: Skill[] = [
     description: "I have been the go-to guy in every role I filled, when things break, and commits disappear.",
   },
   {
-    name: "C",
+    name: "The Language: C",
     level: 3,
-    icon: "",
+    icon: "c",
     experience: "3 yrs",
     years: "2020 – Present",
     description: "Familiar with C programming for system-level development.",
@@ -82,7 +90,7 @@ export const skills: Skill[] = [
   {
     name: "Java",
     level: 3,
-    icon: "",
+    icon: "java",
     experience: "3 yrs",
     years: "2020 – Present",
     description: "Experienced in Java for object-oriented programming.",
@@ -90,7 +98,7 @@ export const skills: Skill[] = [
   {
     name: "Docker",
     level: 3,
-    icon: "",
+    icon: "docker",
     experience: "3 yrs",
     years: "2020 – Present",
     description: "Familiar with containerization using Docker.",
@@ -98,11 +106,51 @@ export const skills: Skill[] = [
   {
     name: "Firebase",
     level: 3,
-    icon: "",
+    icon: "firebase",
     experience: "3 yrs",
     years: "2020 – Present",
     description: "Experienced in using Firebase for backend services.",
   },
+  {
+    name: "CapacitorJS",
+    level: 4,
+    icon: "capacitorjs",
+    experience: "3 yrs",
+    years: "2024 – Present",
+    description: "Experienced in building cross-platform mobile apps with Capacitor.",
+  },
+  {
+    name: "Flutter",
+    level: 2,
+    icon: "flutter",
+    experience: "few mos.",
+    years: "2024",
+    description: "Familiar with Flutter for cross-platform mobile app development.",
+  },
+  {
+    name: "Storybook",
+    level: 3,
+    icon: "storybook",
+    experience: "3 yrs",
+    years: "2020 – Present",
+    description: "Familiar with Storybook for UI component development.",
+  },
+  {
+    name: "Vue.js",
+    level: 3,
+    icon: "vuejs",
+    experience: "3 yrs",
+    years: "2020 – Present",
+    description: "Familiar with Vue.js for building user interfaces.",
+  },
+  {
+    name: "Bash",
+    level: 3,
+    icon: "bash",
+    experience: "3 yrs",
+    years: "2020 – Present",
+    description: "Familiar with Bash for scripting and automation.",
+  }
 ];
 
 export const projects: Project[] = [
