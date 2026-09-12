@@ -10,7 +10,7 @@
 
 <div
   class={[
-    "rounded-xl border border-white/10 bg-white/3 p-3 shadow-sm shadow-black/10 transition-colors duration-200 hover:border-white/15 hover:bg-white/4",
+    "rounded-xl border border-default bg-card-hover p-3 shadow-sm transition-colors duration-150 hover:border-strong",
     rest.class || "",
   ]}
 >
@@ -25,12 +25,12 @@
 
     <div class="min-w-0 flex-1">
       {#if label}
-        <span class="mb-1 block text-[10px] font-medium uppercase tracking-[0.18em] text-white/60">
+        <span class="mb-1 block text-[10px] font-medium uppercase tracking-[0.18em] text-foreground-200">
           {label}
         </span>
       {/if}
 
-      <div class="text-sm text-white/90">
+      <div class="text-sm">
         {@render children()}
       </div>
     </div>

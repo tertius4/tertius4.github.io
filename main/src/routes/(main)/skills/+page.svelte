@@ -3,16 +3,21 @@
   import { fade } from "svelte/transition";
   import { flip } from "svelte/animate";
   import { on } from "svelte/events";
+  import { page } from "$app/state";
+  import { replaceState } from "$app/navigation";
   import { skills } from "$lib";
+  import t from "$lib/lang";
 
-  let search = $state("");
-  const filtered_skills = $derived(skills.filter(filterSkills));
+  const { data } = $props();
 
-  function filterSkills(skill: Skill) {
-    return skill.name.toLowerCase().includes(search.toLowerCase());
-  }
+  let search = $state(data.search);
+
+  const filtered_skills = $derived(
+    skills.filter((skill) => skill.name.toLowerCase().includes(search.trim().toLowerCase() || "")),
+  );
 
   function focusSearch(element: HTMLInputElement) {
+    element.focus();
     return on(window, "keydown", (event: KeyboardEvent) => {
       const is_ctrl_key = (event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k";
 
@@ -28,18 +33,29 @@
       }
     });
   }
+
+  async function handleSearchInput(event: Event) {
+    if (search === "") {
+      page.url.searchParams.delete("search");
+    } else {
+      page.url.searchParams.set("search", search.trim().toLowerCase());
+    }
+
+    replaceState(page.url.toString(), {});
+  }
 </script>
 
 <div class="text-white w-full p-4 overflow-y-auto mb-auto">
   <div class="flex gap-2 justify-between w-full items-center mb-4">
-    <h2 class="text-2xl font-bold">Skills</h2>
+    <h2 class="text-2xl font-bold">{t("skills")}</h2>
     <div class="relative">
       <input
         {@attach focusSearch}
         type="text"
-        placeholder="Search skills..."
+        bind:value={search}
+        placeholder={t("search_skills")}
         class="bg-surface border border-default lg:w-80 w-fit rounded-lg p-2 pr-12 text-white outline-none focus:ring active:ring ring-neutral-300 transition-colors"
-        oninput={(e) => (search = e.target?.value || "")}
+        oninput={handleSearchInput}
       />
       <div
         class={{

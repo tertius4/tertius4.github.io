@@ -1,4 +1,5 @@
 <script lang="ts">
+  import t from "$lib/lang";
   import Icon from "./Icon.svelte";
 
   interface Props {
@@ -13,9 +14,9 @@
     <span class="font-medium text-xl">{data.name}</span>
   </div>
   <div class="bg-neutral-900 text-foreground-700 w-full rounded font-mono py-0.5 px-2 mt-4">
-    {data.experience} ● {data.years}
+    {[data.experience, data.years].filter(Boolean).join(" ● ")}
   </div>
   <p class="text-foreground-400 mt-1">
-    {data.description}
+    {t(data.description)}
   </p>
 </article>

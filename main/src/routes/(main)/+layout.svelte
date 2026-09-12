@@ -87,10 +87,10 @@
 
     <section class="pl-9 pt-12 md:pt-10">
       <h1 class="text-white font-bold text-3xl leading-12">Tertius van Niekerk</h1>
-      <p class="text-primary font-medium text-lg leading-8">Full-Stack Software Developer</p>
+      <p class="text-primary font-medium text-lg leading-8">{t("nav_full_stack_dev")}</p>
       <span class="text-muted flex items-center gap-0.5">
         <Icon name="map-pin" size={20} />
-        Luxembourg Bound • From South Africa
+        {t("nav_luxembourg_bound")}
       </span>
     </section>
 
@@ -100,7 +100,7 @@
       >
         <span
           ><span class="inline-flex size-2 rounded-full bg-amber-300 shrink-0 animate-pulse mr-1" aria-hidden="true"
-          ></span> Available & actively seeking full-time developer opportunities in the Luxembourg or German tech industry.</span
+          ></span> {t("nav_available_text")}</span
         >
       </div>
       <div class="grid grid-cols-3 gap-2">
@@ -118,7 +118,7 @@
         </CardContactMe>
       </div>
       <Link href="/about" class="pt-2">
-        <span>More about me</span>
+        <span>{t("nav_more_about_me")}</span>
         <Icon name="chevron-right" size={20} />
       </Link>
     </div>
@@ -129,12 +129,12 @@
       </h2>
 
       <div class="flex flex-wrap gap-1.5">
-        {#each skills.sort((a, b) => b.level - a.level) as skill}
+        {#each skills.sort((a, b) => b.level - a.level).slice(0, 15) as skill}
           <Skill data={skill} />
         {/each}
       </div>
       <Link href="/skills">
-        <span>Read more detailed</span>
+        <span>{t("nav_read_more")}</span>
         <Icon name="chevron-right" size={20} />
       </Link>
     </div>
@@ -158,11 +158,11 @@
   <BottomBar class="bg-surface border-t border-default lg:hidden p-2 overflow-hidden w-full">
     <ButtonBottomBar active={page.url.pathname === "/"}>
       <Icon name="home" size={24} />
-      <span>Home</span>
+      <span>{t("nav_home")}</span>
     </ButtonBottomBar>
     <ButtonBottomBar onclick={goToProjects}>
       <Icon name="user" size={24} />
-      <span>My Projects</span>
+      <span>{t("nav_my_projects_short")}</span>
     </ButtonBottomBar>
   </BottomBar>
 </Container>
