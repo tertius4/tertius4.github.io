@@ -190,6 +190,7 @@ export const projects: Project[] = [
     description: "A small library to add colour to console output in Node.js.",
     tech: ["Node.js", "Typescript"],
     status: "shelved",
+    href: "/console-colours",
   },
   {
     title: "Woorde Wenk",
