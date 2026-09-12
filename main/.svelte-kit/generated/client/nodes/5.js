@@ -1,1 +1,0 @@
-export { default as component } from "../../../../src/routes/(main)/(projects)/vinkel-of-koljander/+page.svelte";
