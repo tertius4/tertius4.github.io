@@ -4,7 +4,8 @@ import { redirect } from "@sveltejs/kit";
 export const prerender = true;
 export const csr = true;
 
-export async function load({ url }) {
+export async function load({ url, depends }) {
+  depends("layout:root");
   if (!browser) return { lang: "en" };
   const desktop = window.matchMedia("(min-width: 768px)").matches;
 

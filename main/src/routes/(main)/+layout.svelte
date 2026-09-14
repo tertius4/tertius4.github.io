@@ -14,27 +14,60 @@
   import BottomBar from "./comps/layout/BottomBar.svelte";
   import ButtonBottomBar from "./comps/ButtonBottomBar.svelte";
   import CardContactMe from "./comps/CardContactMe.svelte";
+  import { goto, invalidate } from "$app/navigation";
+  import { onMount } from "svelte";
 
   const { children } = $props();
 
-  function updateLanguage() {
+  let scrollY = $state(0);
+
+  $inspect(scrollY);
+  const is_scrolled_past_projects = $derived.by(() => {
+    if (typeof window === "undefined") return false;
+
+    const offsetTop = document.getElementById("projects")?.offsetTop ?? 0;
+    return page.data.is_home && scrollY > offsetTop;
+  });
+
+  onMount(() => {
+    const target = document.getElementById("sidebar");
+    if (!target) return;
+
+    const handleScroll = () => {
+      scrollY = target.scrollTop;
+    };
+
+    target.addEventListener("scroll", handleScroll);
+    return () => target.removeEventListener("scroll", handleScroll);
+  });
+
+  async function updateLanguage() {
     const currentLang = page.data.lang;
     const newLang = currentLang === "en" ? "af" : "en";
     document.cookie = `lang=${newLang}; path=/; SameSite=Lax`;
-    location.reload();
+    await invalidate("layout:root");
   }
 
   /** @param {MouseEvent} event */
-  function goToProjects(event) {
+  async function goToHome(event) {
     event.preventDefault();
 
+    if (!page.data.is_home) await goto("/");
+    // Scroll to top after navigating to home
+    const sidebar = document.getElementById("sidebar");
+    if (sidebar) sidebar.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  /** @param {MouseEvent} event */
+  async function goToProjects(event) {
+    event.preventDefault();
+
+    if (!page.data.is_home) await goto("/");
     const projectsSection = document.getElementById("projects");
     if (projectsSection) {
       projectsSection.scrollIntoView({ behavior: "smooth", block: "start" });
       return;
     }
-
-    location.href = "/#projects";
   }
 </script>
 
@@ -100,7 +133,8 @@
       >
         <span
           ><span class="inline-flex size-2 rounded-full bg-amber-300 shrink-0 animate-pulse mr-1" aria-hidden="true"
-          ></span> {t("nav_available_text")}</span
+          ></span>
+          {t("nav_available_text")}</span
         >
       </div>
       <div class="grid grid-cols-3 gap-2">
@@ -156,11 +190,11 @@
     {@render children()}
   </Main>
   <BottomBar class="bg-surface border-t border-default lg:hidden p-2 overflow-hidden w-full">
-    <ButtonBottomBar active={page.url.pathname === "/"}>
+    <ButtonBottomBar onclick={goToHome} active={page.data.is_home && !is_scrolled_past_projects}>
       <Icon name="home" size={24} />
       <span>{t("nav_home")}</span>
     </ButtonBottomBar>
-    <ButtonBottomBar onclick={goToProjects}>
+    <ButtonBottomBar onclick={goToProjects} active={is_scrolled_past_projects}>
       <Icon name="user" size={24} />
       <span>{t("nav_my_projects_short")}</span>
     </ButtonBottomBar>

@@ -10,7 +10,7 @@
 
 <div
   class={[
-    "rounded-xl border border-default bg-card-hover p-3 shadow-sm transition-colors duration-150 hover:border-strong",
+    "rounded-xl border border-default bg-card p-3",
     rest.class || "",
   ]}
 >
