@@ -1,0 +1,1 @@
+import"../chunks/DsnmJJEf.js";import"../chunks/fk9l0uR1.js";import{f as r,a as t}from"../chunks/Dhwn1bSW.js";var p=r('<span class="text-strong italic">In Progress</span>');function e(a){var o=p();t(a,o)}export{e as component};
