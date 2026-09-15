@@ -45,9 +45,9 @@
         </div>
       </SummaryInfoCard>
 
-      <SummaryInfoCard icon="birth-date" label={t("about_date_of_birth")}>
+      <SummaryInfoCard icon="experience" label={t("about_experience")}>
         <div>
-          <span class="text-muted">Jan 1998</span>
+          <span class="text-muted">~6 {t('years')}</span>
         </div>
       </SummaryInfoCard>
 
@@ -66,7 +66,7 @@
 
       <SummaryInfoCard icon="calendar" label={t("about_availability")}>
         <div>
-          <span class="text-muted">Nov 2026</span>
+          <span class="text-muted">9 Nov 2026</span>
         </div>
       </SummaryInfoCard>
 

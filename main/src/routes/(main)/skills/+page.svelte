@@ -60,15 +60,17 @@
         class="bg-surface border border-default lg:w-80 w-fit rounded-lg p-2 pr-12 text-white outline-none focus:ring active:ring ring-neutral-300 transition-colors"
         oninput={handleSearchInput}
       />
-      <div
-        class={{
-          "pointer-events-none absolute right-2 top-1/2 flex -translate-y-1/2 items-center gap-1 rounded-md border border-default bg-card px-1.5 py-0.5 text-xs font-medium font-mono uppercase text-neutral-300 transition-opacity": true,
-        }}
-      >
-        <span>Ctrl</span>
-        <span class="text-muted">+</span>
-        <span>K</span>
-      </div>
+      {#if search === ""}
+        <div
+          class={{
+            "pointer-events-none absolute right-2 top-1/2 flex -translate-y-1/2 items-center gap-1 rounded-md border border-default bg-card px-1.5 py-0.5 text-xs font-medium font-mono uppercase text-neutral-300 transition-opacity": true,
+          }}
+        >
+          <span>Ctrl</span>
+          <span class="text-muted">+</span>
+          <span>K</span>
+        </div>
+      {/if}
     </div>
   </div>
   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
@@ -76,6 +78,8 @@
       <div transition:fade={{ duration: 150 }} animate:flip={{ duration: 200 }}>
         <CardSkill data={skill} />
       </div>
+    {:else}
+      <p class="text-muted col-span-full mx-auto my-4">{t("no_skills_found")}</p>
     {/each}
   </div>
 </div>

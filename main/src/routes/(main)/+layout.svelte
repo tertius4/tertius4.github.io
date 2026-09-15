@@ -21,12 +21,11 @@
 
   let scrollY = $state(0);
 
-  $inspect(scrollY);
   const is_scrolled_past_projects = $derived.by(() => {
     if (typeof window === "undefined") return false;
 
     const offsetTop = document.getElementById("projects")?.offsetTop ?? 0;
-    return page.data.is_home && scrollY > offsetTop;
+    return page.data.is_home && scrollY > offsetTop - 100;
   });
 
   onMount(() => {
@@ -111,7 +110,7 @@
       />
 
       <button
-        class="absolute top-4 py-0.5 rounded-lg px-2 right-4 bg-card active:bg-onyx-600 focus:bg-onyx-600 text-white outline-none hover:font-medium active:font-medium focus:font-medium"
+        class="absolute top-4 py-0.5 rounded-lg px-2 right-4 bg-card active:bg-onyx-600 focus:bg-onyx-600 text-white outline-none hover:font-medium active:font-medium focus:font-medium cursor-pointer"
         onclick={updateLanguage}
       >
         {page.data.lang === "en" ? "EN" : "AF"}
@@ -142,7 +141,7 @@
           <Icon name="github" size={24} />
           <span>GitHub</span>
         </CardContactMe>
-        <CardContactMe class="flex flex-col gap-1" href="https://www.linkedin.com/in/tertius-van-niekerk-96a674237/">
+        <CardContactMe class="flex flex-col gap-1" href="https://www.linkedin.com/in/tertius6/">
           <Icon name="linkedIn" size={24} class="mr-2" />
           <span>LinkedIn</span>
         </CardContactMe>

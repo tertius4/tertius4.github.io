@@ -11,6 +11,8 @@ const map = {
       "I'm a Software Developer who has been building software since 2021, primarily in start-up environments. Outside of work, I build my own projects to sharpen my skills, explore new ideas, and keep learning.",
     skills: "Skills",
     my_projects: "My Projects",
+    years: "years",
+    no_skills_found: "No skills found",
     skill_javascript_desc: "The main language I use professionally.",
     skill_typescript_desc: "Where I use JavaScript, TypeScript has always been in its shadow.",
     skill_sveltekit_desc: "The main frontend framework I use professionally.",
@@ -30,7 +32,8 @@ const map = {
     skill_storybook_desc: "At UNAFFI we used Storybook for developing and testing UI components in isolation.",
     skill_vuejs_desc: "I built two personal projects using Vue.js.",
     skill_bash_desc: "At UNAFFI I wrote many automation scripts for redundant server tasks.",
-    skill_journeyapps_desc: "The platform used to develop and deploy custom business applications quickly and efficiently at Gatekeeper.",
+    skill_journeyapps_desc:
+      "The platform used to develop and deploy custom business applications quickly and efficiently at Gatekeeper.",
     skill_react_desc: "Only light dabbling, but seems easy enough.",
     nav_full_stack_dev: "Full-Stack Software Developer",
     nav_luxembourg_bound: "Luxembourg Bound • From South Africa",
@@ -69,7 +72,7 @@ const map = {
     about_afrikaans_level: "Fluent",
     about_german: "German",
     about_german_level: "Elementary (A2)",
-    about_date_of_birth: "Date of birth",
+    about_experience: "Experience",
     about_location: "Location",
     about_south_africa: "South Africa",
     about_south_africa_label: "My Current Residence",
@@ -94,16 +97,14 @@ const map = {
     about_high_school: "High School",
     about_high_school_desc: "I finished my metric in 2016 in South Africa, Cape Town.",
     about_other_education: "Other Education",
-    about_other_education_p1:
-      "I attended a leadership and adventure program in my gap-year throughout 2017.",
+    about_other_education_p1: "I attended a leadership and adventure program in my gap-year throughout 2017.",
     about_other_education_p2:
       "I also worked through various Udemy courses. Most of my learning in the last few years comes from my personal projects and self-study.",
     about_work_experience: "Work Experience",
     about_unaffi: "UNAFFI",
     about_unaffi_li_1:
       "Led frontend architecture decisions, including data modelling, API design, folder structure, and code organization standards.",
-    about_unaffi_li_2:
-      "Executed all code reviews across the team and used ESLint standards and best practices.",
+    about_unaffi_li_2: "Executed all code reviews across the team and used ESLint standards and best practices.",
     about_unaffi_li_3: "Developed applications with JavaScript, SvelteKit, Express, Zod, and OpenAPI.",
     about_unaffi_li_4:
       "Integrated authentication systems with Ory and built mobile apps (for Web, Android, and iOS) using SvelteKit and CapacitorJS.",
@@ -124,6 +125,8 @@ const map = {
       "Ek is ’n Software Developer met ervaring in startups sedert 2021. Buite werk bou ek aan my eie projekte om my vaardighede te slyp, met nuwe idees te eksperimenteer en aan te hou leer.",
     skills: "Vaardighede",
     my_projects: "My Projekte",
+    years: "jare",
+    no_skills_found: "Geen resultate gevind nie",
     skill_javascript_desc: "Die hooftaal wat ek professioneel gebruik.",
     skill_typescript_desc: "Waar ek JavaScript gebruik, was TypeScript altyd in sy skaduwee.",
     skill_sveltekit_desc: "Die hoof frontend-raamwerk wat ek professioneel gebruik.",
@@ -143,7 +146,8 @@ const map = {
     skill_storybook_desc: "By UNAFFI het ons Storybook gebruik om UI-komponente in isolasie te ontwikkel en te toets.",
     skill_vuejs_desc: "Ek het twee persoonlike projekte met Vue.js gebou.",
     skill_bash_desc: "By UNAFFI het ek baie outomatiseringsskripte vir herhalende bedienerwerk geskryf.",
-    skill_journeyapps_desc: "Die platform wat gebruik is om pasgemaakte besigheidsprogramme vinnig en doeltreffend te ontwikkel en te ontplooi by Gatekeeper.",
+    skill_journeyapps_desc:
+      "Die platform wat gebruik is om pasgemaakte besigheidsprogramme vinnig en doeltreffend te ontwikkel en te ontplooi by Gatekeeper.",
     skill_react_desc: "Slegs ligte eksperimentering, maar dit lyk redelik maklik.",
     nav_full_stack_dev: "Vol-stapel Sagteware-ontwikkelaar",
     nav_luxembourg_bound: "Oppad na Luxemburg • Van Suid-Afrika",
@@ -166,7 +170,8 @@ const map = {
     project_desc_wedding_website:
       "’n Webwerf wat ek vir my troue gebou het sodat gaste kan RSVP, basiese inligting kan vind en die geskenkregister kan hanteer.",
     project_title_tradesmith: "Tradesmith",
-    project_desc_tradesmith: "’n Projek om kriptovaluta outomaties te verhandel op grond van ’n stel reëls en strategieë.",
+    project_desc_tradesmith:
+      "’n Projek om kriptovaluta outomaties te verhandel op grond van ’n stel reëls en strategieë.",
     project_title_console_colours: "Console Kleure",
     project_desc_console_colours: "’n Klein biblioteek om kleur by konsooluitvoer in Node.js te voeg.",
     project_title_woorde_wenk: "Woorde Wenk",
@@ -182,7 +187,7 @@ const map = {
     about_afrikaans_level: "Vlot",
     about_german: "Duits",
     about_german_level: "Elementêr (A2)",
-    about_date_of_birth: "Geboortedatum",
+    about_experience: "Ervaring",
     about_location: "Ligging",
     about_south_africa: "Suid-Afrika",
     about_south_africa_label: "My huidige woonplek",
@@ -207,16 +212,14 @@ const map = {
     about_high_school: "Hoërskool",
     about_high_school_desc: "Ek het my matriek in 2016 in Suid-Afrika, Kaapstad, voltooi.",
     about_other_education: "Ander Onderwys",
-    about_other_education_p1:
-      "Ek het ’n leierskap- en avontuurprogram in my gapingjaar deur 2017 bygewoon.",
+    about_other_education_p1: "Ek het ’n leierskap- en avontuurprogram in my gapingjaar deur 2017 bygewoon.",
     about_other_education_p2:
       "Ek het ook deur verskeie Udemy-kursusse gegaan. Die meeste van my leer in die laaste paar jaar kom van my persoonlike projekte en selfstudie.",
     about_work_experience: "Werkervaring",
     about_unaffi: "UNAFFI",
     about_unaffi_li_1:
       "Het frontend-argitektuurbesluite gelei, insluitend datamodellering, API-ontwerp, vouerstruktuur en kode-organisasie standaarde.",
-    about_unaffi_li_2:
-      "Het alle kode-oorsigte in die span gedoen en ESLint-standaarde en beste praktyke toegepas.",
+    about_unaffi_li_2: "Het alle kode-oorsigte in die span gedoen en ESLint-standaarde en beste praktyke toegepas.",
     about_unaffi_li_3: "Het toepassings ontwikkel met JavaScript, SvelteKit, Express, Zod en OpenAPI.",
     about_unaffi_li_4:
       "Het verifikasiestelsels met Ory geïntegreer en mobiele apps (vir web, Android en iOS) gebou met SvelteKit en CapacitorJS.",
