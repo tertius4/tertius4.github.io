@@ -1,0 +1,1 @@
+import"../chunks/DsnmJJEf.js";import"../chunks/CWpJwVdF.js";import{f as p,a as t}from"../chunks/LnYGVWNt.js";var n=p('<span class="text-white">Loading…</span>');function e(a){var o=n();t(a,o)}export{e as component};
