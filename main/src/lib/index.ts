@@ -203,12 +203,12 @@ export const projects: Project[] = [
     status: "shelved",
   },
   {
-    title: "Console Colours",
-    description: "project_desc_console_colours",
+    title: "Styling Console",
+    description: "project_desc_styling_console",
     tech: ["Node.js", "Typescript"],
     status: "in_development",
-    image_src: "/console-colours-logo.webp",
-    href: "/console-colours",
+    image_src: "/styling-console-logo.webp",
+    href: "/styling-console",
   },
   {
     title: "Woorde Wenk",

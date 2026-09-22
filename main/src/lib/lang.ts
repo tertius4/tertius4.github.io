@@ -58,7 +58,7 @@ const map = {
     project_title_tradesmith: "Tradesmith",
     project_desc_tradesmith: "A project to automatically trade cryptocurrency based on a set of rules and strategies.",
     project_title_console_colours: "Console Colours",
-    project_desc_console_colours: "A small library to add colour to console output in Node.js.",
+    project_desc_styling_console: "A small library to add colour to console output in Node.js.",
     project_title_woorde_wenk: "Woorde Wenk",
     project_desc_woorde_wenk: "A simple word game built for Afrikaans learners to practice their vocabulary.",
     project_title_this_website: "This Website",
@@ -173,7 +173,7 @@ const map = {
     project_desc_tradesmith:
       "’n Projek om kriptovaluta outomaties te verhandel op grond van ’n stel reëls en strategieë.",
     project_title_console_colours: "Console Kleure",
-    project_desc_console_colours: "’n Klein biblioteek om kleur by konsooluitvoer in Node.js te voeg.",
+    project_desc_styling_console: "’n Klein biblioteek om kleur by konsooluitvoer in Node.js te voeg.",
     project_title_woorde_wenk: "Woorde Wenk",
     project_desc_woorde_wenk: "’n Eenvoudige woordspel vir Afrikaansleerlinge om hul woordeskat te oefen.",
     project_title_this_website: "Hierdie Webwerf",
