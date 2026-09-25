@@ -47,7 +47,7 @@
 
       <SummaryInfoCard icon="experience" label={t("about_experience")}>
         <div>
-          <span class="text-muted">~6 {t('years')}</span>
+          <span class="text-muted">~6 {t("years")}</span>
         </div>
       </SummaryInfoCard>
 
@@ -143,28 +143,28 @@
           <h3 class="mb-3 text-white text-h3">{t("about_unaffi")}</h3>
           <ul class="grid gap-2 text-sm leading-relaxed text-muted">
             <li class="flex gap-2">
-              <span class="mt-1.5 text-primary">•</span>
-              <span>{t("about_unaffi_li_1")}</span>
+              <span class="text-primary">•</span>
+              <span class="flex items-center">{t("about_unaffi_li_1")}</span>
             </li>
             <li class="flex gap-2">
-              <span class="mt-1.5 text-primary">•</span>
-              <span>{t("about_unaffi_li_2")}</span>
+              <span class="text-primary">•</span>
+              <span class="flex items-center">{t("about_unaffi_li_2")}</span>
             </li>
             <li class="flex gap-2">
-              <span class="mt-1.5 text-primary">•</span>
-              <span>{t("about_unaffi_li_3")}</span>
+              <span class="text-primary">•</span>
+              <span class="flex items-center">{t("about_unaffi_li_3")}</span>
             </li>
             <li class="flex gap-2">
-              <span class="mt-1.5 text-primary">•</span>
-              <span>{t("about_unaffi_li_4")}</span>
+              <span class="text-primary">•</span>
+              <span class="flex items-center">{t("about_unaffi_li_4")}</span>
             </li>
             <li class="flex gap-2">
-              <span class="mt-1.5 text-primary">•</span>
-              <span>{t("about_unaffi_li_5")}</span>
+              <span class="text-primary">•</span>
+              <span class="flex items-center">{t("about_unaffi_li_5")}</span>
             </li>
             <li class="flex gap-2">
-              <span class="mt-1.5 text-primary">•</span>
-              <span>{t("about_unaffi_li_6")}</span>
+              <span class="text-primary">•</span>
+              <span class="flex items-center">{t("about_unaffi_li_6")}</span>
             </li>
           </ul>
         </div>
@@ -173,24 +173,24 @@
           <h3 class="mb-3 text-white text-h3">{t("about_gatekeeper")}</h3>
           <ul class="grid gap-2 text-sm leading-relaxed text-muted">
             <li class="flex gap-2">
-              <span class="mt-1.5 text-primary">•</span>
-              <span>{t("about_gatekeeper_li_1")}</span>
+              <span class="text-primary">•</span>
+              <span class="flex items-center">{t("about_gatekeeper_li_1")}</span>
             </li>
             <li class="flex gap-2">
-              <span class="mt-1.5 text-primary">•</span>
-              <span>{t("about_gatekeeper_li_2")}</span>
+              <span class="text-primary">•</span>
+              <span class="flex items-center">{t("about_gatekeeper_li_2")}</span>
             </li>
             <li class="flex gap-2">
-              <span class="mt-1.5 text-primary">•</span>
-              <span>{t("about_gatekeeper_li_3")}</span>
+              <span class="text-primary">•</span>
+              <span class="flex items-center">{t("about_gatekeeper_li_3")}</span>
             </li>
             <li class="flex gap-2">
-              <span class="mt-1.5 text-primary">•</span>
-              <span>{t("about_gatekeeper_li_4")}</span>
+              <span class="text-primary">•</span>
+              <span class="flex items-center">{t("about_gatekeeper_li_4")}</span>
             </li>
             <li class="flex gap-2">
-              <span class="mt-1.5 text-primary">•</span>
-              <span>{t("about_gatekeeper_li_5")}</span>
+              <span class="text-primary">•</span>
+              <span class="flex items-center">{t("about_gatekeeper_li_5")}</span>
             </li>
           </ul>
         </div>
