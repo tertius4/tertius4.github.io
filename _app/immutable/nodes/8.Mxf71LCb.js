@@ -1,0 +1,1 @@
+import"../chunks/DsnmJJEf.js";import"../chunks/CWpJwVdF.js";import{f as a,a as r}from"../chunks/LnYGVWNt.js";var t=a('<div class="player"><video src="test-video.mp4" controls><track kind="captions" srclang="en" label="English"/></video></div>',2);function n(o){var i=t();r(o,i)}function c(o){n(o)}export{c as component};
