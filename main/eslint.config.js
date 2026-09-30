@@ -15,11 +15,12 @@ export default ts.config(
     languageOptions: { globals: { ...globals.browser, ...globals.node } },
     rules: {
       "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }],
+      // $effect is a rule of thumb, not a ban: warn so it is a conscious choice.
       "no-restricted-syntax": [
-        "error",
+        "warn",
         {
           selector: "CallExpression[callee.name='$effect'], CallExpression[callee.object.name='$effect']",
-          message: "Avoid $effect(); use derived state, attachments or event handlers instead.",
+          message: "Prefer $derived, attachments or event handlers; use $effect only if they overcomplicate the code.",
         },
       ],
     },

@@ -51,6 +51,3 @@ export function setConsent(granted: boolean) {
   analytics.consent = granted ? "granted" : "denied";
   if (granted && config.google_analytics_id) loadGtag(config.google_analytics_id);
 }
-
-export const acceptAnalytics = () => setConsent(true);
-export const declineAnalytics = () => setConsent(false);

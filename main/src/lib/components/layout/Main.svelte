@@ -1,9 +1,9 @@
 <script>
-  import { is_home } from "$lib/navigation";
+  import { page } from "$app/state";
 
   const { children, ...rest } = $props();
 
-  const on_home = $derived(is_home());
+  const on_home = $derived(page.url.pathname === "/");
 </script>
 
 <main

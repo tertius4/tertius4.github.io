@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { analytics, acceptAnalytics, declineAnalytics } from "$lib/analytics.svelte";
+  import { analytics, setConsent } from "$lib/analytics.svelte";
   import { t } from "$lib/lang";
 </script>
 
@@ -11,13 +11,13 @@
   >
     <p>{t("consent_text")}</p>
     <div class="mt-3 flex gap-2 justify-end">
-      <button type="button" class="rounded-lg px-3 py-1 text-muted cursor-pointer" onclick={declineAnalytics}>
+      <button type="button" class="rounded-lg px-3 py-1 text-muted cursor-pointer" onclick={() => setConsent(false)}>
         {t("consent_decline")}
       </button>
       <button
         type="button"
         class="rounded-lg bg-primary px-3 py-1 font-medium text-white cursor-pointer"
-        onclick={acceptAnalytics}
+        onclick={() => setConsent(true)}
       >
         {t("consent_accept")}
       </button>

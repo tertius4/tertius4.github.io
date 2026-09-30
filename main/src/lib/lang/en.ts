@@ -44,6 +44,7 @@ export const en = {
   project_desc_vinkel_of_koljander: "A website I created for my family to share recipes",
   project_desc_wedding_website:
     "A website I built for my wedding for guests to RSVP, find basic information and handle the gift registry.",
+  project_title_wedding_website: "My Wedding Website",
   project_desc_tradesmith: "A project to automatically trade cryptocurrency based on a set of rules and strategies.",
   project_desc_styling_console: "A small library to add colour to console output in Node.js.",
   project_desc_woorde_wenk: "A simple word game built for Afrikaans learners to practice their vocabulary.",

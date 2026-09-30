@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { goto } from "$app/navigation";
+  import { page } from "$app/state";
   import Avatar from "$lib/components/Avatar.svelte";
   import ButtonBottomBar from "$lib/components/ButtonBottomBar.svelte";
   import CardContactMe from "$lib/components/CardContactMe.svelte";
@@ -14,13 +16,26 @@
   import { projects, top_skills } from "$lib/data";
   import { revealEmail } from "$lib/email";
   import { language, t, toggleLanguage } from "$lib/lang";
-  import { goToHome, goToProjects, is_home } from "$lib/navigation";
-  import { sidebar_scroll } from "$lib/scroll.svelte";
+  import { PROJECTS_ID, SIDEBAR_ID, sidebar_scroll } from "$lib/scroll.svelte";
 
   const { children } = $props();
 
-  const on_home = $derived(is_home());
+  const on_home = $derived(page.url.pathname === "/");
   const is_scrolled_past_projects = $derived(on_home && sidebar_scroll.past_projects);
+
+  async function goToHome(event: MouseEvent) {
+    event.preventDefault();
+
+    if (!on_home) await goto("/");
+    document.getElementById(SIDEBAR_ID)?.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  async function goToProjects(event: MouseEvent) {
+    event.preventDefault();
+
+    if (!on_home) await goto("/");
+    document.getElementById(PROJECTS_ID)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 </script>
 
 <svelte:head>

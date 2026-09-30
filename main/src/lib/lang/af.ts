@@ -39,13 +39,14 @@ export const af: Record<keyof typeof en, string> = {
   nav_my_projects_short: "My Projekte",
   search_skills: "Soek vaardighede...",
   project_status_in_development: "In Ontwikkeling",
-  project_status_shelved: "Geskrap",
+  project_status_shelved: "Op sy gesit",
   project_status_production: "Produksie",
-  project_status_improving: "Verbetering",
+  project_status_improving: "Verbeter tans",
   project_desc_doenit: "’n Afrikaanse ToDo-lysprogram wat eenvoudig, privaat en vanlyn-vaardig gebou is.",
   project_desc_vinkel_of_koljander: "’n Webwerf wat ek vir my gesin geskep het om resepte te deel",
   project_desc_wedding_website:
     "’n Webwerf wat ek vir my troue gebou het sodat gaste kan RSVP, basiese inligting kan vind en die geskenkregister kan hanteer.",
+  project_title_wedding_website: "My Trouwebwerf",
   project_desc_tradesmith:
     "’n Projek om kriptovaluta outomaties te verhandel op grond van ’n stel reëls en strategieë.",
   project_desc_styling_console: "’n Klein biblioteek om kleur by konsooluitvoer in Node.js te voeg.",
