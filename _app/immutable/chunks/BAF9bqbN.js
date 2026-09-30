@@ -1,1 +1,0 @@
-import{e as o,g as i,i as c,E as d,j as E,H as T,k as b,l as g,m as _}from"./Bvot_Dxv.js";import{B as m}from"./D8Z9p0WQ.js";function k(t,f,l=!1){i&&c();var e=new m(t),u=l?d:0;function n(a,r){if(i){const h=E(t)===T;if(a===h){var s=b();g(s),e.anchor=s,_(!1),e.ensure(a,r),_(!0);return}}e.ensure(a,r)}o(()=>{var a=!1;f((r,s=!0)=>{a=!0,n(s,r)}),a||n(!1,null)},u)}export{k as i};

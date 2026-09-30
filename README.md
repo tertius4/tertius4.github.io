@@ -9,9 +9,8 @@ https://tertius4.github.io/
 ## Project structure
 
 - `main/` — SvelteKit application source and development setup
-- `build/` — generated production build output
-- `deploy` — deployment script for publishing the site
-- root-level HTML files — generated GitHub Pages artifacts
+- `build/` — generated production build output (git-ignored, created by the build)
+- `.github/workflows/static.yml` — builds the site and deploys it to GitHub Pages
 
 ## Local development
 
@@ -41,22 +40,13 @@ npm run preview
 
 ## Deployment
 
-First, make the deploy script executable if needed:
+Pushing to `master` runs the GitHub Actions workflow, which installs dependencies, runs `npm run check`, builds the site and deploys the `build/` output to GitHub Pages. Build output is no longer committed.
 
-```bash
-chmod +x deploy
-```
-
-Then, from the repository root (not `/main`), run:
-
-```bash
-./deploy
-```
-
-Then commit your changes and push them to the appropriate branch (for this project, `master`).
+The workflow sets `PUBLIC_ANALYTICS_ID` (Google Analytics). Analytics only load after the visitor accepts the consent banner. Node 20.19+ (22 recommended) is required.
 
 ## Notes
 
 - The app source code lives under `main/`.
 - The built static site is published through GitHub Pages.
+- Formatting: `npm run format` (Prettier). Icons live in `main/static/icons/sprite.svg` and are referenced by id via `Icon.svelte`.
 - This project is designed for a personal portfolio / landing page with lightweight static hosting.

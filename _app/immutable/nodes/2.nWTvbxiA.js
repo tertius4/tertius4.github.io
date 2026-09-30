@@ -1,1 +1,0 @@
-import"../chunks/DsnmJJEf.js";import"../chunks/BYj3PBTR.js";import{e as t,b as p,n as a}from"../chunks/Bcvu3o5W.js";function m(e){a();var o=t("Haai, Ek is Tertius. Welkom op my persoonlike webwerf!");p(e,o)}export{m as component};

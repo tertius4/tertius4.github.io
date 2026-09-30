@@ -1,9 +1,12 @@
+import type { TranslationKey } from "$lib/lang";
+
 declare global {
   namespace App {}
 
   interface Project {
     title: string;
-    description: string;
+    title_key?: TranslationKey;
+    description: TranslationKey;
     status: "in_development" | "improving" | "shelved" | "production";
     image_src?: string;
     tech: string[];
@@ -16,7 +19,7 @@ declare global {
     icon: string;
     experience: string;
     years: string;
-    description: string;
+    description: TranslationKey;
   }
 }
 

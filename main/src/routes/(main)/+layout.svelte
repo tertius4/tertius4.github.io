@@ -1,73 +1,26 @@
-<script>
+<script lang="ts">
   import { page } from "$app/state";
-  import { projects, skills } from "$lib";
-  import Avatar from "$lib/comps/Avatar.svelte";
-  import CardProject from "./comps/CardProject.svelte";
-  import t from "$lib/lang";
-  import CoverImage from "./comps/CoverImage.svelte";
-  import Container from "./comps/layout/Container.svelte";
-  import Main from "./comps/layout/Main.svelte";
-  import SidePanel from "./comps/layout/SidePanel.svelte";
-  import Skill from "./comps/Skill.svelte";
-  import Icon from "$lib/comps/Icon.svelte";
-  import Link from "$lib/comps/Link.svelte";
-  import BottomBar from "./comps/layout/BottomBar.svelte";
-  import ButtonBottomBar from "./comps/ButtonBottomBar.svelte";
-  import CardContactMe from "./comps/CardContactMe.svelte";
-  import { goto, invalidate } from "$app/navigation";
-  import { onMount } from "svelte";
+  import Avatar from "$lib/components/Avatar.svelte";
+  import ButtonBottomBar from "$lib/components/ButtonBottomBar.svelte";
+  import CardContactMe from "$lib/components/CardContactMe.svelte";
+  import CardProject from "$lib/components/CardProject.svelte";
+  import CoverImage from "$lib/components/CoverImage.svelte";
+  import Icon from "$lib/components/Icon.svelte";
+  import BottomBar from "$lib/components/layout/BottomBar.svelte";
+  import Container from "$lib/components/layout/Container.svelte";
+  import Main from "$lib/components/layout/Main.svelte";
+  import SidePanel from "$lib/components/layout/SidePanel.svelte";
+  import Link from "$lib/components/Link.svelte";
+  import Skill from "$lib/components/Skill.svelte";
+  import { projects, top_skills } from "$lib/data";
+  import { language, t, toggleLanguage } from "$lib/lang";
+  import { goToHome, goToProjects, is_home } from "$lib/navigation";
+  import { sidebar_scroll } from "$lib/scroll.svelte";
 
   const { children } = $props();
 
-  let scrollY = $state(0);
-
-  const is_scrolled_past_projects = $derived.by(() => {
-    if (typeof window === "undefined") return false;
-
-    const offsetTop = document.getElementById("projects")?.offsetTop ?? 0;
-    return page.data.is_home && scrollY > offsetTop - 100;
-  });
-
-  onMount(() => {
-    const target = document.getElementById("sidebar");
-    if (!target) return;
-
-    const handleScroll = () => {
-      scrollY = target.scrollTop;
-    };
-
-    target.addEventListener("scroll", handleScroll);
-    return () => target.removeEventListener("scroll", handleScroll);
-  });
-
-  async function updateLanguage() {
-    const currentLang = page.data.lang;
-    const newLang = currentLang === "en" ? "af" : "en";
-    document.cookie = `lang=${newLang}; path=/; SameSite=Lax`;
-    await invalidate("layout:root");
-  }
-
-  /** @param {MouseEvent} event */
-  async function goToHome(event) {
-    event.preventDefault();
-
-    if (!page.data.is_home) await goto("/");
-    // Scroll to top after navigating to home
-    const sidebar = document.getElementById("sidebar");
-    if (sidebar) sidebar.scrollTo({ top: 0, behavior: "smooth" });
-  }
-
-  /** @param {MouseEvent} event */
-  async function goToProjects(event) {
-    event.preventDefault();
-
-    if (!page.data.is_home) await goto("/");
-    const projectsSection = document.getElementById("projects");
-    if (projectsSection) {
-      projectsSection.scrollIntoView({ behavior: "smooth", block: "start" });
-      return;
-    }
-  }
+  const on_home = $derived(is_home());
+  const is_scrolled_past_projects = $derived(on_home && sidebar_scroll.past_projects);
 </script>
 
 <svelte:head>
@@ -87,22 +40,22 @@
     content="Full stack developer with South African and German citizenship, available for opportunities with European teams."
   />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tertius4.github.io/" />
+  <meta property="og:image" content="https://tertius4.github.io/tertius-pic-square.webp" />
+  <meta name="twitter:card" content="summary" />
+  <link rel="canonical" href="https://tertius4.github.io/" />
 </svelte:head>
 
 <Container class="w-dvw h-dvh overflow-hidden">
   <SidePanel
     class={{
       "grow w-full": true,
-      "lg:flex flex-col max-lg:hidden bg-onyx-850 ring-2 ring-onyx-800 rounded-2xl space-y-4": !page.data.is_home,
-      "max-lg:h-full flex flex-col": page.data.is_home,
+      "lg:flex flex-col max-lg:hidden ring-2 ring-neutral-800 rounded-2xl space-y-4": !on_home,
+      "max-lg:h-full flex flex-col": on_home,
     }}
   >
     <div class="relative">
-      <CoverImage
-        src="/cover-image.webp"
-        alt="Cover Image"
-        class="w-full h-[200px] lg:rounded-2xl lg:border-2 border-default"
-      />
+      <CoverImage src="/cover-image.webp" alt="" class="w-full h-[200px] lg:rounded-2xl lg:border-2 border-default" />
       <Avatar
         src="/tertius-pic-square.webp"
         alt="Tertius"
@@ -110,10 +63,12 @@
       />
 
       <button
-        class="absolute top-4 py-0.5 rounded-lg px-2 right-4 bg-card active:bg-onyx-600 focus:bg-onyx-600 text-white outline-none hover:font-medium active:font-medium focus:font-medium cursor-pointer"
-        onclick={updateLanguage}
+        type="button"
+        aria-label={t("switch_language")}
+        class="absolute top-4 py-0.5 rounded-lg px-2 right-4 bg-card active:bg-neutral-600 focus:bg-neutral-600 text-white outline-none hover:font-medium active:font-medium focus:font-medium cursor-pointer"
+        onclick={toggleLanguage}
       >
-        {page.data.lang === "en" ? "EN" : "AF"}
+        {language.current.toUpperCase()}
       </button>
     </div>
 
@@ -162,7 +117,7 @@
       </h2>
 
       <div class="flex flex-wrap gap-1.5">
-        {#each skills.sort((a, b) => b.level - a.level).slice(0, 15) as skill}
+        {#each top_skills as skill (skill.name)}
           <Skill data={skill} />
         {/each}
       </div>
@@ -178,7 +133,7 @@
       </h2>
 
       <div class="space-y-1">
-        {#each projects as project}
+        {#each projects as project (project.title || project.title_key)}
           <CardProject data={project} />
         {/each}
       </div>
@@ -189,7 +144,7 @@
     {@render children()}
   </Main>
   <BottomBar class="bg-surface border-t border-default lg:hidden p-2 overflow-hidden w-full">
-    <ButtonBottomBar onclick={goToHome} active={page.data.is_home && !is_scrolled_past_projects}>
+    <ButtonBottomBar onclick={goToHome} active={on_home && !is_scrolled_past_projects}>
       <Icon name="home" size={24} />
       <span>{t("nav_home")}</span>
     </ButtonBottomBar>

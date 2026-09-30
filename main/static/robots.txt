@@ -1,6 +1,5 @@
-# Tertius Luitingh - Personal Website
+# Tertius van Niekerk - Personal Website
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://tertiusdev.github.io/sitemap.xml
+Sitemap: https://tertius4.github.io/sitemap.xml

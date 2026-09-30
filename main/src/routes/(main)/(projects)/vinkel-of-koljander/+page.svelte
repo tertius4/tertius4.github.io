@@ -1,4 +1,4 @@
-<main class="background h-full text-neutral-800 w-full">
+<div class="background h-full text-neutral-800 w-full">
   <div class="w-full rounded-lg p-4 sm:p-6 lg:p-8">
     <div class="rounded-2xl border border-neutral-100 bg-white p-6 sm:p-8 lg:p-10">
       <div class="flex flex-col gap-6 lg:flex-row lg:items-center">
@@ -7,6 +7,8 @@
             <img
               src="/vinkel-of-koljander-logo.webp"
               alt="Vinkel of Koljander logo"
+              width="192"
+              height="192"
               class="h-full w-full object-cover"
             />
           </div>
@@ -37,13 +39,18 @@
       </div>
     </div>
   </div>
-</main>
+</div>
+
+<svelte:head>
+  <title>Vinkel of Koljander – Tertius van Niekerk</title>
+</svelte:head>
 
 <style>
   .background {
     background-color: #f8efeb;
     opacity: 0.8;
-    background-image: conic-gradient(
+    background-image:
+      conic-gradient(
         from 60deg at 56.25% calc(425% / 6),
         transparent 0deg,
         transparent 0.5deg,
