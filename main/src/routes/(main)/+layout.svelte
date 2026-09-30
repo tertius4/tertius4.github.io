@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { page } from "$app/state";
   import Avatar from "$lib/components/Avatar.svelte";
   import ButtonBottomBar from "$lib/components/ButtonBottomBar.svelte";
   import CardContactMe from "$lib/components/CardContactMe.svelte";
@@ -13,6 +12,7 @@
   import Link from "$lib/components/Link.svelte";
   import Skill from "$lib/components/Skill.svelte";
   import { projects, top_skills } from "$lib/data";
+  import { revealEmail } from "$lib/email";
   import { language, t, toggleLanguage } from "$lib/lang";
   import { goToHome, goToProjects, is_home } from "$lib/navigation";
   import { sidebar_scroll } from "$lib/scroll.svelte";
@@ -100,7 +100,7 @@
           <Icon name="linkedIn" size={24} class="mr-2" />
           <span>LinkedIn</span>
         </CardContactMe>
-        <CardContactMe class="flex flex-col gap-1" href="mailto:tertius.vanniekerk@pm.me">
+        <CardContactMe class="flex flex-col gap-1" href="mailto:" {@attach revealEmail("personal")}>
           <Icon name="email" size={24} class="mr-2" />
           <span>Email</span>
         </CardContactMe>

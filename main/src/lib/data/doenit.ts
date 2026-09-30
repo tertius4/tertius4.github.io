@@ -5,7 +5,6 @@ export const links = {
   github: "https://github.com/tertius4/doenit",
   ios_waiting_list:
     "https://docs.google.com/forms/d/e/1FAIpQLSd95Q-fA4WIjmwKEbcjSOrzDqoYAE5Y3O_djThffA6-aBo10w/viewform?usp=header",
-  support_email: "doenitapp@gmail.com",
 };
 
 export const stats = [
@@ -134,6 +133,6 @@ export const footer_links = [
 
 export const footer_support = [
   { label: "Hulp & FAQ", href: links.reddit },
-  { label: "Kontak my", href: `mailto:${links.support_email}` },
-  { label: "Rapporteer 'n probleem", href: `mailto:${links.support_email}?subject=Doenit%20Rapporteer%20n%20Probleem` },
-];
+  { label: "Kontak my", email: true },
+  { label: "Rapporteer 'n probleem", email: true, subject: "Doenit Rapporteer 'n Probleem" },
+] as const;

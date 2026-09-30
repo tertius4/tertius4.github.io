@@ -27,6 +27,7 @@ export function searchInput(element: HTMLInputElement) {
 }
 
 export function syncSearchToUrl(event: Event & { currentTarget: HTMLInputElement }) {
+  // eslint-disable-next-line svelte/prefer-svelte-reactivity
   const url = new URL(page.url);
   const query = event.currentTarget.value.trim().toLowerCase();
 

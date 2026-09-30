@@ -40,6 +40,9 @@ jobs:
       - name: Install dependencies
         working-directory: main
         run: npm ci
+      - name: Lint
+        working-directory: main
+        run: npm run lint
       - name: Type check
         working-directory: main
         run: npm run check

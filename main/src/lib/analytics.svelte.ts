@@ -16,6 +16,7 @@ declare global {
 function loadGtag(id: string) {
   window.dataLayer = window.dataLayer || [];
   function gtag(..._args: unknown[]) {
+    // eslint-disable-next-line prefer-rest-params
     window.dataLayer.push(arguments);
   }
   gtag("js", new Date());

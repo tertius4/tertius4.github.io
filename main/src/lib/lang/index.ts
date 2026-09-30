@@ -1,14 +1,12 @@
-import { language, type Language } from "./state.svelte";
+import { en, type TranslationKey } from "./en";
+import { language, translations } from "./state.svelte";
+
+export type { TranslationKey } from "./en";
 export { language, initLanguage, toggleLanguage } from "./state.svelte";
-import { af } from "./af";
-import { en } from "./en";
-
-export type TranslationKey = keyof typeof en;
-
-const maps: Record<Language, Record<TranslationKey, string>> = { en, af };
 
 export function t(key: TranslationKey): string {
-  return maps[language.current][key] || en[key] || key;
+  const map = language.current === "af" ? translations.af : en;
+  return map?.[key] || en[key] || key;
 }
 
 export default t;

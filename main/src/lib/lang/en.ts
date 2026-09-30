@@ -117,3 +117,5 @@ export const en = {
   error_contact: "or contact me if you think this is an error",
   switch_language: "Switch language",
 };
+
+export type TranslationKey = keyof typeof en;

@@ -11,6 +11,7 @@
     testimonials,
     tone_classes,
   } from "$lib/data/doenit";
+  import { revealEmail } from "$lib/email";
 
   const site = "https://tertius4.github.io";
   const title = "Doenit – Afrikaanse Taaklys-toep/ToDo app";
@@ -92,7 +93,7 @@
       </div>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
-        {#each stats as stat}
+        {#each stats as stat (stat.label)}
           <div class="text-center">
             <div class="text-2xl font-bold text-primary">{stat.value}</div>
             <div class="text-sm text-muted">{stat.label}</div>
@@ -113,7 +114,7 @@
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {#each features as feature}
+        {#each features as feature (feature.title)}
           <div
             class="bg-card p-6 rounded-xl border border-default hover:border-primary/50 transition-all duration-300 group hover:transform hover:scale-105 relative overflow-hidden"
           >
@@ -156,7 +157,7 @@
       </p>
 
       <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-        {#each screenshots as shot}
+        {#each screenshots as shot (shot.src)}
           <div class="group">
             <div
               class="relative overflow-hidden rounded-2xl shadow-lg group-hover:shadow-2xl transition-all duration-300"
@@ -193,7 +194,7 @@
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {#each testimonials as testimonial}
+        {#each testimonials as testimonial (testimonial.name)}
           <div class="bg-card p-6 rounded-xl border border-default">
             <div class="flex items-center mb-4">
               <div class="flex text-warning" role="img" aria-label="5 sterre">⭐⭐⭐⭐⭐</div>
@@ -234,7 +235,7 @@
       </div>
 
       <div class="space-y-6">
-        {#each faqs as faq}
+        {#each faqs as faq (faq.question)}
           <details
             class="bg-surface border border-default rounded-xl p-6 hover:border-primary/30 transition-colors group"
           >
@@ -243,7 +244,7 @@
               <span class="text-primary group-open:rotate-180 transition-transform" aria-hidden="true">▼</span>
             </summary>
             <div class="mt-4 text-muted leading-relaxed">
-              {#each faq.answer as part}
+              {#each faq.answer as part, index (index)}
                 {#if typeof part === "string"}
                   {part}
                 {:else if part.href}
@@ -316,7 +317,7 @@
             Die eerste Afrikaanse taaklys-app. Eenvoudig, veilig en volledig in jou moedertaal.
           </p>
           <div class="flex space-x-4">
-            {#each footer_social as link}
+            {#each footer_social as link (link.label)}
               <a
                 href={link.href}
                 target="_blank"
@@ -332,7 +333,7 @@
         <div>
           <h3 class="font-semibold text-strong mb-4">Skakels</h3>
           <ul class="space-y-2 text-muted">
-            {#each footer_links as link}
+            {#each footer_links as link (link.label)}
               <li>
                 <a
                   href={link.href}
@@ -348,9 +349,17 @@
         <div>
           <h3 class="font-semibold text-strong mb-4">Ondersteuning</h3>
           <ul class="space-y-2 text-muted">
-            {#each footer_support as link}
+            {#each footer_support as link (link.label)}
               <li>
-                <a href={link.href} class="hover:text-primary transition-colors">{link.label}</a>
+                {#if "email" in link}
+                  <a
+                    href="mailto:"
+                    {@attach revealEmail("doenit_support", "subject" in link ? link.subject : undefined)}
+                    class="hover:text-primary transition-colors">{link.label}</a
+                  >
+                {:else}
+                  <a href={link.href} class="hover:text-primary transition-colors">{link.label}</a>
+                {/if}
               </li>
             {/each}
           </ul>
