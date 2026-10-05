@@ -49,17 +49,16 @@ export const features = [
     icon: "👥",
     tone: "primary",
     title: "Deel met vriende",
-    text: "Doenit Plus sal jou laat saamwerk aan take met vriende en familie. Bou saam aan doelwitte!",
-    badge: "Binnekort 🔥",
+    text: "Doenit laat jou saamwerk aan take met vriende en familie. Bou saam aan doelwitte!",
   },
 ] as const;
 
 /** Tailwind needs the full class names to be present in the source. */
 export const tone_classes = {
-  primary: { bg: "bg-primary/20 group-hover:bg-primary/30", text: "text-primary" },
-  success: { bg: "bg-success/20 group-hover:bg-success/30", text: "text-success" },
-  warning: { bg: "bg-warning/20 group-hover:bg-warning/30", text: "text-warning" },
-  error: { bg: "bg-error/20 group-hover:bg-error/30", text: "text-error" },
+  primary: { bg: "bg-primary/20 group-hover:bg-primary/30", text: "text-primary", border: "border-primary/50" },
+  success: { bg: "bg-success/20 group-hover:bg-success/30", text: "text-success", border: "border-success/50" },
+  warning: { bg: "bg-warning/20 group-hover:bg-warning/30", text: "text-warning", border: "border-warning/50" },
+  error: { bg: "bg-error/20 group-hover:bg-error/30", text: "text-error", border: "border-error/50" },
 } as const;
 
 export const screenshots = [
@@ -78,47 +77,6 @@ export const testimonials = [
   },
 ] as const;
 
-type Segment = string | { text: string; href?: string; bold?: boolean };
-
-export const faqs: { question: string; answer: Segment[] }[] = [
-  {
-    question: "Is Doenit werklik gratis?",
-    answer: [
-      "Ja! Doenit se kernfunksies is 100% gratis - take, kategorieë, herinnerings, widgets, alles. Ons het wel 'n ",
-      { text: "Doenit Plus", bold: true },
-      " subskripsie wat binnekort premium funksies soos vriende-deling en outomatiese rugsteun sal bied.",
-    ],
-  },
-  {
-    question: "Hoe veilig is my data?",
-    answer: [
-      "Jou data bly op jou toestel en word plaaslik geënkripteer. Ons stoor niks op ons bedieners nie, tensy jy spesifiek rugsteun aktiveer. Selfs dan word alles geënkripteer voordat dit jou toestel verlaat.",
-    ],
-  },
-  {
-    question: "Wanneer kom Doenit na iOS?",
-    answer: [
-      "Ons wil graag Doenit na iOS bring, maar die Apple Developer Program kos R1600 per jaar. As die Android-weergawe genoeg ondersteuning kry, sal ons daardie koste kan regverdig. Hou r/Doenit dop vir nuutste verwikkelinge!",
-    ],
-  },
-  {
-    question: "Kan ek Engels ook gebruik?",
-    answer: [
-      "Absoluut! Doenit ondersteun beide Afrikaans en Engels volledig. Jy kan maklik tussen die tale skakel in die instellings-skerm.",
-    ],
-  },
-  {
-    question: "Hoe kan ek help met ontwikkeling?",
-    answer: [
-      "Doenit is oopbron! Jy kan bydra op ",
-      { text: "GitHub", href: links.github },
-      ", deel jou idees op ",
-      { text: "r/Doenit", href: links.reddit },
-      ", of help ander gebruikers. Elke bietjie hulp tel!",
-    ],
-  },
-];
-
 export const footer_social = [
   { label: "💻 GitHub", href: links.github },
   { label: "💬 Reddit", href: links.reddit },
@@ -127,7 +85,7 @@ export const footer_social = [
 
 export const footer_links = [
   { label: "Google Play", href: links.play },
-  { label: "Brondekode", href: links.github },
+  { label: "Bron-kode", href: links.github },
   { label: "Gemeenskap", href: links.reddit },
 ];
 

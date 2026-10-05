@@ -1,6 +1,9 @@
 <script lang="ts">
+  import "@fontsource/ubuntu/400.css";
+  import "@fontsource/ubuntu/500.css";
+  import "@fontsource/ubuntu/700.css";
+  import "@fontsource-variable/bitter";
   import {
-    faqs,
     features,
     footer_links,
     footer_social,
@@ -44,15 +47,17 @@
   <link rel="canonical" href="{site}/doenit" />
 </svelte:head>
 
-<div lang="af" class="min-h-screen bg-page text-normal font-sans w-full overflow-y-auto">
+<div lang="af" class="doenit min-h-screen bg-page text-normal w-full overflow-y-auto">
   <!-- Hero -->
-  <section
-    class="relative bg-linear-to-br from-primary/20 via-neutral-950 to-neutral-900 text-center py-20 px-4 overflow-hidden"
-  >
-    <div class="absolute inset-0 opacity-5" aria-hidden="true">
-      <div class="absolute top-10 left-10 w-32 h-32 border border-primary rounded-full"></div>
-      <div class="absolute bottom-20 right-20 w-24 h-24 border border-primary rounded-full"></div>
-      <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-primary/20 rounded-full"></div>
+  <section class="relative bg-surface text-center py-20 px-4 overflow-hidden">
+    <!-- Faint oversized checkbox motif, as on the store screenshots -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+      <div class="relative size-144 max-w-[90vw] max-h-[90vw] opacity-[0.06]">
+        <div class="absolute inset-0 border-[2.5rem] border-foreground rounded-[5rem]"></div>
+        <div
+          class="absolute left-[22%] top-[38%] w-[30%] h-[52%] border-r-[2.5rem] border-b-[2.5rem] border-foreground rotate-45 rounded-br-2xl"
+        ></div>
+      </div>
     </div>
 
     <div class="relative z-10 max-w-4xl mx-auto">
@@ -66,8 +71,9 @@
         />
       </div>
 
-      <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-linear-to-r from-foreground to-primary bg-clip-text">Doenit</h1>
-      <p class="text-xl md:text-2xl text-muted mb-2">Die eerste Afrikaanse taaklys-app</p>
+      <p class="tagline text-sm md:text-base text-muted mb-4">In jou moedertaal.</p>
+      <h1 class="font-serif text-5xl md:text-6xl font-bold mb-4 text-strong">Doenit</h1>
+      <p class="font-serif text-xl md:text-2xl font-semibold text-strong mb-4">Die eerste Afrikaanse taaklys-app</p>
       <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
         Organiseer jou lewe op 'n eenvoudige en veilige wyse en in jou eie taal. Geen internet nodig nie — net jy en jou
         take.
@@ -107,7 +113,7 @@
   <section class="bg-surface py-16 px-6">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-strong">Hoekom Doenit?</h2>
+        <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4 text-strong">Hoekom Doenit?</h2>
         <p class="text-lg text-muted max-w-2xl mx-auto">
           Ontwerp vir Afrikaanse gebruikers wat waarde heg aan eenvoud, privaatheid en doeltreffendheid.
         </p>
@@ -124,9 +130,9 @@
               </div>
             {/if}
             <div
-              class="w-16 h-16 rounded-full flex items-center justify-center mb-4 transition-colors {tone_classes[
+              class="w-14 h-14 rounded-xl border flex items-center justify-center mb-4 transition-colors {tone_classes[
                 feature.tone
-              ].bg}"
+              ].bg} {tone_classes[feature.tone].border}"
             >
               <span class="text-2xl" aria-hidden="true">{feature.icon}</span>
             </div>
@@ -139,7 +145,9 @@
       <div
         class="mt-12 bg-linear-to-r from-primary/10 to-success/10 p-8 rounded-2xl border border-primary/20 text-center"
       >
-        <h3 class="text-2xl font-bold mb-4 text-strong flex items-center justify-center gap-2">🇿🇦 Trots Afrikaans</h3>
+        <h3 class="font-serif text-2xl font-bold mb-4 text-strong flex items-center justify-center gap-2">
+          🇿🇦 Trots Afrikaans
+        </h3>
         <p class="text-lg text-muted max-w-3xl mx-auto">
           Doenit is die <strong class="text-primary">eerste taaklys-toep</strong> wat volledig in Afrikaans ontwerp is. Gebruik
           Doenit en versterk sommer jou taal ook.
@@ -151,7 +159,7 @@
   <!-- Screenshots -->
   <section class="py-16 px-6 text-center bg-page">
     <div class="max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-strong">Kyk hoe eenvoudig is dit</h2>
+      <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4 text-strong">Kyk hoe eenvoudig is dit</h2>
       <p class="text-lg text-muted mb-12 max-w-2xl mx-auto">
         'n Paar skermskote om jou te wys hoe maklik dit is om jou lewe te organiseer met Doenit.
       </p>
@@ -189,7 +197,7 @@
   <section class="py-16 px-6 bg-surface">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-strong">Wat sê gebruikers?</h2>
+        <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4 text-strong">Wat sê gebruikers?</h2>
         <p class="text-lg text-muted">Terugvoer van die r/Doenit gemeenskap en Google Play-resensies</p>
       </div>
 
@@ -226,44 +234,10 @@
     </div>
   </section>
 
-  <!-- FAQ -->
-  <section class="py-16 px-6 bg-page">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-strong">Gereelde vrae</h2>
-        <p class="text-lg text-muted">Antwoorde op die mees algemene vrae oor Doenit</p>
-      </div>
-
-      <div class="space-y-6">
-        {#each faqs as faq (faq.question)}
-          <details
-            class="bg-surface border border-default rounded-xl p-6 hover:border-primary/30 transition-colors group"
-          >
-            <summary class="font-semibold text-lg text-strong cursor-pointer flex items-center justify-between">
-              {faq.question}
-              <span class="text-primary group-open:rotate-180 transition-transform" aria-hidden="true">▼</span>
-            </summary>
-            <div class="mt-4 text-muted leading-relaxed">
-              {#each faq.answer as part, index (index)}
-                {#if typeof part === "string"}
-                  {part}
-                {:else if part.href}
-                  <a href={part.href} class="text-primary hover:underline">{part.text}</a>
-                {:else}
-                  <strong>{part.text}</strong>
-                {/if}
-              {/each}
-            </div>
-          </details>
-        {/each}
-      </div>
-    </div>
-  </section>
-
   <!-- Community & final CTA -->
   <section class="py-16 px-6 text-center bg-surface">
     <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-strong">Word deel van die Doenit-familie</h2>
+      <h2 class="font-serif text-3xl md:text-4xl font-bold mb-6 text-strong">Word deel van die Doenit-familie</h2>
       <p class="text-lg text-muted max-w-2xl mx-auto mb-8">
         Sluit aan by duisende gebruikers wat reeds hul lewe organiseer met Doenit. Deel idees, kry hulp, en help ons
         Doenit nog beter maak.
@@ -274,7 +248,7 @@
           href={links.reddit}
           target="_blank"
           rel="noopener noreferrer"
-          class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold transition-colors duration-300 flex items-center gap-2"
+          class="bg-card hover:bg-neutral-600 border border-default text-normal px-6 py-3 rounded-full font-semibold transition-colors duration-300 flex items-center gap-2"
         >
           💬 r/Doenit gemeenskap
         </a>
@@ -289,7 +263,7 @@
       </div>
 
       <div class="bg-card p-8 rounded-2xl border border-default">
-        <h3 class="text-2xl font-bold mb-4 text-strong">Gereed om te begin?</h3>
+        <h3 class="font-serif text-2xl font-bold mb-4 text-strong">Gereed om te begin?</h3>
         <p class="text-muted mb-6">Begin vandag</p>
         <a
           href={links.play}
@@ -368,3 +342,32 @@
     </div>
   </footer>
 </div>
+
+<style>
+  /* Doenit's own palette and type, scoped to this page so the rest of the site keeps its theme. */
+  .doenit {
+    --color-neutral-950: #25292d;
+    --color-neutral-900: #2a2e33;
+    --color-neutral-700: #33393f;
+    --color-neutral-600: #454c54;
+    --color-neutral-500: #565e67;
+
+    --color-foreground: #f2f4f5;
+    --color-foreground-400: #ffffff;
+    --color-foreground-600: #a8adb3;
+
+    --color-primary: #1a9bf0;
+    --color-success: #4caf7a;
+    --color-error: #e06363;
+
+    --font-serif: "Bitter Variable", ui-serif, Georgia, serif;
+
+    font-family: "Ubuntu", ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .tagline {
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+</style>
