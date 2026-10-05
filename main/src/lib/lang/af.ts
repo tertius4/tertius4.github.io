@@ -32,7 +32,7 @@ export const af: Record<keyof typeof en, string> = {
   nav_full_stack_dev: "Vol-stapel Sagteware-ontwikkelaar",
   nav_luxembourg_bound: "Oppad na Luxemburg • Van Suid-Afrika",
   nav_available_text:
-    "Beskikbaar en aktief op soek na voltydse ontwikkelaargeleenthede in die Luxemburgse of Duitse tegnologiebedryf.",
+    "Beskikbaar en aktief op soek na voltydse ontwikkelaargeleenthede in die tegnologiebedryf.",
   nav_more_about_me: "Meer oor my",
   nav_read_more: "Lees meer gedetailleerd",
   nav_home: "Tuis",
@@ -61,7 +61,7 @@ export const af: Record<keyof typeof en, string> = {
   about_afrikaans: "Afrikaans",
   about_afrikaans_level: "Vlot",
   about_german: "Duits",
-  about_german_level: "Elementêr (A2)",
+  about_german_level: "Intermediêre (B1)",
   about_experience: "Ervaring",
   about_location: "Ligging",
   about_south_africa: "Suid-Afrika",

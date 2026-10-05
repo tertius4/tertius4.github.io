@@ -90,10 +90,6 @@
     <section class="pl-9 pt-12 md:pt-10">
       <h1 class="text-white font-bold text-3xl leading-12">Tertius van Niekerk</h1>
       <p class="text-primary font-medium text-lg leading-8">{t("nav_full_stack_dev")}</p>
-      <span class="text-muted flex items-center gap-0.5">
-        <Icon name="map-pin" size={20} />
-        {t("nav_luxembourg_bound")}
-      </span>
     </section>
 
     <div class="space-y-4 pt-4 px-4 lg:px-0">

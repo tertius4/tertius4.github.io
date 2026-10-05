@@ -30,7 +30,7 @@ export const en = {
   nav_full_stack_dev: "Full-Stack Software Developer",
   nav_luxembourg_bound: "Luxembourg Bound • From South Africa",
   nav_available_text:
-    "Available & actively seeking full-time developer opportunities in the Luxembourg or German tech industry.",
+    "Available & actively seeking full-time developer opportunities in the tech industry.",
   nav_more_about_me: "More about me",
   nav_read_more: "Read more detailed",
   nav_home: "Home",
@@ -58,7 +58,7 @@ export const en = {
   about_afrikaans: "Afrikaans",
   about_afrikaans_level: "Fluent",
   about_german: "German",
-  about_german_level: "Elementary (A2)",
+  about_german_level: "Intermediate (B1)",
   about_experience: "Experience",
   about_location: "Location",
   about_south_africa: "South Africa",
