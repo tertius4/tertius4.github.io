@@ -29,8 +29,7 @@ export const en = {
   skill_react_desc: "Only light dabbling, but seems easy enough.",
   nav_full_stack_dev: "Full-Stack Software Developer",
   nav_luxembourg_bound: "Luxembourg Bound • From South Africa",
-  nav_available_text:
-    "Available & actively seeking full-time developer opportunities in the tech industry.",
+  nav_available_text: "Available & actively seeking full-time developer opportunities in the tech industry.",
   nav_more_about_me: "More about me",
   nav_read_more: "Read more detailed",
   nav_home: "Home",

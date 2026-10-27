@@ -6,10 +6,10 @@
   }
 
   const status_classes: Record<Project["status"], string> = {
-    in_development: "bg-primary-800 text-normal",
-    improving: "bg-primary-800 text-normal",
+    in_development: "bg-emerald-800 text-normal",
+    improving: "bg-emerald-800 text-normal",
     production: "bg-primary-800 text-normal",
-    shelved: "bg-primary-900 text-muted",
+    shelved: "bg-neutral-600 text-muted",
   };
 
   const { data, ...rest }: Props & Record<string, any> = $props();

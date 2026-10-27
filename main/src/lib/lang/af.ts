@@ -31,8 +31,7 @@ export const af: Record<keyof typeof en, string> = {
   skill_react_desc: "Slegs ligte eksperimentering, maar dit lyk redelik maklik.",
   nav_full_stack_dev: "Vol-stapel Sagteware-ontwikkelaar",
   nav_luxembourg_bound: "Oppad na Luxemburg • Van Suid-Afrika",
-  nav_available_text:
-    "Beskikbaar en aktief op soek na voltydse ontwikkelaargeleenthede in die tegnologiebedryf.",
+  nav_available_text: "Beskikbaar en aktief op soek na voltydse ontwikkelaargeleenthede in die tegnologiebedryf.",
   nav_more_about_me: "Meer oor my",
   nav_read_more: "Lees meer gedetailleerd",
   nav_home: "Tuis",
