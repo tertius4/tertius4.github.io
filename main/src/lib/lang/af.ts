@@ -48,7 +48,7 @@ export const af: Record<keyof typeof en, string> = {
   project_title_wedding_website: "My Trouwebwerf",
   project_desc_tradesmith:
     "’n Projek om kriptovaluta outomaties te verhandel op grond van ’n stel reëls en strategieë.",
-  project_desc_styling_console: "’n Klein biblioteek om kleur by konsooluitvoer in Node.js te voeg.",
+  project_desc_styling_console: "Gestileerde konsool-logging vir Node.js en die blaaier, sonder afhanklikhede.",
   project_desc_woorde_wenk: "’n Eenvoudige woordspel vir Afrikaansleerlinge om hul woordeskat te oefen.",
   project_title_this_website: "Hierdie Webwerf",
   project_desc_this_website: "My persoonlike webwerf om myself bekend te stel",

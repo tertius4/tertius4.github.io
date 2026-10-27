@@ -45,7 +45,7 @@ export const en = {
     "A website I built for my wedding for guests to RSVP, find basic information and handle the gift registry.",
   project_title_wedding_website: "My Wedding Website",
   project_desc_tradesmith: "A project to automatically trade cryptocurrency based on a set of rules and strategies.",
-  project_desc_styling_console: "A small library to add colour to console output in Node.js.",
+  project_desc_styling_console: "Zero-dependency styled console logging for Node.js and the browser.",
   project_desc_woorde_wenk: "A simple word game built for Afrikaans learners to practice their vocabulary.",
   project_title_this_website: "This Website",
   project_desc_this_website: "My personal website to introduce myself",
