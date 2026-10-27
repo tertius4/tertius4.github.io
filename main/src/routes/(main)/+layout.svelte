@@ -43,16 +43,16 @@
   <link rel="icon" href="/profile-picture.webp" />
   <meta
     name="description"
-    content="Personal website of Tertius, a full stack software developer with South African and German citizenship, open to opportunities across Europe."
+    content="Personal website of Tertius, a full stack software developer with South African and German citizenship, open to opportunities in South Africa and Luxembourg."
   />
   <meta
     name="keywords"
-    content="full stack developer, web developer, JavaScript, TypeScript, Svelte, Node.js, Europe, Germany, South Africa, multilingual developer"
+    content="full stack developer, web developer, JavaScript, TypeScript, Svelte, Node.js, South Africa, Luxembourg, Europe, multilingual developer"
   />
   <meta property="og:title" content="Tertius – Software Developer" />
   <meta
     property="og:description"
-    content="Full stack developer with South African and German citizenship, available for opportunities with European teams."
+    content="Full stack developer with South African and German citizenship, available for opportunities in South Africa and Luxembourg."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tertius4.github.io/" />

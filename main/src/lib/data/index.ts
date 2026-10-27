@@ -175,7 +175,7 @@ export const projects: Project[] = [
     description: "project_desc_doenit",
     image_src: "/doenit-logo.webp",
     tech: ["SvelteKit", "Capacitor", "Firebase"],
-    status: "in_development",
+    status: "improving",
     href: "/doenit",
   },
   {
