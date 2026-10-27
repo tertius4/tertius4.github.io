@@ -40,7 +40,7 @@
 
 <svelte:head>
   <title>Tertius – Software Developer</title>
-  <link rel="icon" href="/tertius-pic-square.webp" />
+  <link rel="icon" href="/profile-picture.webp" />
   <meta
     name="description"
     content="Personal website of Tertius, a full stack software developer with South African and German citizenship, open to opportunities across Europe."
@@ -56,7 +56,7 @@
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tertius4.github.io/" />
-  <meta property="og:image" content="https://tertius4.github.io/tertius-pic-square.webp" />
+  <meta property="og:image" content="https://tertius4.github.io/profile-picture.webp" />
   <meta name="twitter:card" content="summary" />
   <link rel="canonical" href="https://tertius4.github.io/" />
 </svelte:head>
@@ -72,7 +72,7 @@
     <div class="relative">
       <CoverImage src="/cover-image.webp" alt="" class="w-full h-[200px] lg:rounded-2xl lg:border-2 border-default" />
       <Avatar
-        src="/tertius-pic-square.webp"
+        src="/profile-picture.webp"
         alt="Tertius"
         class="absolute bottom-0 -mb-8 left-6 lg:left-8 transform size-36 border-2 border-default"
       />

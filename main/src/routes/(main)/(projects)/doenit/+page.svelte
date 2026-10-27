@@ -55,7 +55,7 @@
       <div class="relative size-144 max-w-[90vw] max-h-[90vw] opacity-[0.06]">
         <div class="absolute inset-0 border-[2.5rem] border-foreground rounded-[5rem]"></div>
         <div
-          class="absolute left-[22%] top-[38%] w-[30%] h-[52%] border-r-[2.5rem] border-b-[2.5rem] border-foreground rotate-45 rounded-br-2xl"
+          class="absolute left-[35%] top-[12%] w-[35%] h-[60%] border-r-[2.5rem] border-b-[2.5rem] border-foreground rotate-45 rounded-br-2xl"
         ></div>
       </div>
     </div>
