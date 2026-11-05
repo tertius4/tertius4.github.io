@@ -40,6 +40,7 @@ export const en = {
   project_status_production: "Production",
   project_status_improving: "Improving",
   project_desc_doenit: "An Afrikaans ToDo list app built to be simple, private, and offline-first.",
+  project_desc_didache: "Get to know your Bible: a short story, then a few questions. A few minutes a day.",
   project_desc_vinkel_of_koljander: "A website I created for my family to share recipes",
   project_desc_wedding_website:
     "A website I built for my wedding for guests to RSVP, find basic information and handle the gift registry.",

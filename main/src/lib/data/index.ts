@@ -179,6 +179,14 @@ export const projects: Project[] = [
     href: "/doenit",
   },
   {
+    title: "Didache",
+    description: "project_desc_didache",
+    image_src: "/didache-logo.webp",
+    tech: ["SvelteKit", "Tailwind CSS", "Capacitor"],
+    status: "in_development",
+    href: "/didache",
+  },
+  {
     title: "Vinkel of Koljander",
     description: "project_desc_vinkel_of_koljander",
     image_src: "/vinkel-of-koljander-logo.webp",

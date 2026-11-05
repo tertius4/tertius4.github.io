@@ -42,6 +42,7 @@ export const af: Record<keyof typeof en, string> = {
   project_status_production: "Produksie",
   project_status_improving: "Verbeter tans",
   project_desc_doenit: "’n Afrikaanse ToDo-lysprogram wat eenvoudig, privaat en vanlyn-vaardig gebou is.",
+  project_desc_didache: "Leer jou Bybel beter ken: ’n kort storie, dan ’n paar vrae. ’n Paar minute per dag.",
   project_desc_vinkel_of_koljander: "’n Webwerf wat ek vir my gesin geskep het om resepte te deel",
   project_desc_wedding_website:
     "’n Webwerf wat ek vir my troue gebou het sodat gaste kan RSVP, basiese inligting kan vind en die geskenkregister kan hanteer.",
