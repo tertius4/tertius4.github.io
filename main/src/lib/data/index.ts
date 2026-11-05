@@ -189,7 +189,7 @@ export const projects: Project[] = [
   {
     title: "Styling Console",
     description: "project_desc_styling_console",
-    tech: ["Node.js", "Typescript"],
+    tech: ["Node.js", "TypeScript"],
     status: "production",
     image_src: "/styling-console-logo.webp",
     href: "/styling-console",
@@ -219,7 +219,7 @@ export const projects: Project[] = [
     title: "",
     title_key: "project_title_this_website",
     description: "project_desc_this_website",
-    tech: ["SvelteKit"],
+    tech: ["SvelteKit", "TypeScript", "Tailwind CSS"],
     status: "production",
     href: "/",
   },

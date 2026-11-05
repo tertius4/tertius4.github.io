@@ -21,7 +21,7 @@
   href={data.href}
   class={[
     {
-      "block outline-none rounded-lg transition-colors": true,
+      "group block outline-none rounded-lg transition-colors": true,
       "focus:bg-neutral-700 hover:bg-neutral-700": !!data.href,
     },
     rest.class || "",
@@ -48,6 +48,17 @@
         </span>
       </div>
       <p class="text-gray-400 text-sm">{t(data.description)}</p>
+      {#if data.tech.length}
+        <ul class="flex flex-wrap gap-1 pt-1" aria-label="Tech stack">
+          {#each data.tech as tech (tech)}
+            <li
+              class="text-xs text-normal bg-neutral-700 group-hover:bg-neutral-600 group-focus:bg-neutral-600 px-1.5 py-0.5 rounded transition-colors"
+            >
+              {tech}
+            </li>
+          {/each}
+        </ul>
+      {/if}
     </div>
   </article>
 </svelte:element>
