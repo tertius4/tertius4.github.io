@@ -63,7 +63,7 @@ export const af: Record<keyof typeof en, string> = {
   about_german_level: "Intermediêre (B1)",
   about_experience: "Ervaring",
   about_location: "Ligging",
-  about_south_africa: "Suid-Afrika",
+  about_south_africa: "Suid-Afrika, Wes-Kaap",
   about_south_africa_label: "My huidige woonplek, soek werkgeleenthede hier",
   about_availability: "Beskikbaarheid",
   about_references: "Verwysings",

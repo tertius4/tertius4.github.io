@@ -60,7 +60,7 @@ export const en = {
   about_german_level: "Intermediate (B1)",
   about_experience: "Experience",
   about_location: "Location",
-  about_south_africa: "South Africa",
+  about_south_africa: "South Africa, Western Cape",
   about_south_africa_label: "My current residence, looking for opportunities here",
   about_availability: "Availability",
   about_references: "References",
