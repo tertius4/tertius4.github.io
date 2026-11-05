@@ -2,10 +2,23 @@
   import CardContainer from "$lib/components/CardContainer.svelte";
   import Icon from "$lib/components/Icon.svelte";
   import SummaryInfoCard from "$lib/components/SummaryInfoCard.svelte";
+  import Timeline from "$lib/components/Timeline.svelte";
+  import TimelineItem from "$lib/components/TimelineItem.svelte";
   import { education, hobbies, languages, locations, work_experience } from "$lib/data/about";
   import { years_of_experience } from "$lib/data";
   import { t } from "$lib/lang";
+
+  const highlights = $derived([
+    `~${years_of_experience} ${t("years")} ${t("about_highlight_experience")}`,
+    t("about_highlight_apps"),
+    t("about_highlight_lead"),
+    t("about_highlight_mentoring"),
+  ]);
 </script>
+
+{#snippet chip(text: string)}
+  <li class="rounded-md bg-card px-2 py-0.5 text-xs text-foreground-200">{text}</li>
+{/snippet}
 
 <svelte:head>
   <title>{t("about_introduction")} – Tertius van Niekerk</title>
@@ -18,6 +31,11 @@
   <CardContainer class="sm:col-span-1 xl:col-span-2">
     <h2 class="text-white text-h1">{t("about_introduction")}</h2>
     <p class="text-muted my-2">{t("intro_sentence")}</p>
+    <ul class="flex flex-wrap gap-1.5 mt-3">
+      {#each highlights as highlight (highlight)}
+        {@render chip(highlight)}
+      {/each}
+    </ul>
   </CardContainer>
 
   <CardContainer class="sm:row-span-4">
@@ -78,18 +96,28 @@
     <div class="grid gap-5">
       <h2 class="text-white text-h1">{t("about_education")}</h2>
 
-      <div class="grid gap-3">
+      <Timeline>
         {#each education as entry (entry.title)}
-          <div class="rounded-md border border-default bg-neutral-800 p-3">
-            <h3 class="mb-1.5 text-white text-h3">{t(entry.title)}</h3>
-            <div class="grid gap-2 text-muted leading-relaxed">
+          <TimelineItem
+            period={t(entry.period)}
+            title={t(entry.title)}
+            subtitle={entry.subtitle ? t(entry.subtitle) : undefined}
+          >
+            <div class="grid gap-2 text-sm leading-relaxed text-muted">
               {#each entry.paragraphs as paragraph (paragraph)}
                 <p>{t(paragraph)}</p>
               {/each}
             </div>
-          </div>
+            {#if entry.tags}
+              <ul class="mt-2 flex flex-wrap gap-1.5">
+                {#each entry.tags as tag (tag)}
+                  {@render chip(tag)}
+                {/each}
+              </ul>
+            {/if}
+          </TimelineItem>
         {/each}
-      </div>
+      </Timeline>
     </div>
   </CardContainer>
 
@@ -97,10 +125,12 @@
     <div class="grid gap-5">
       <h2 class="text-white text-h1">{t("about_work_experience")}</h2>
 
-      <div class="grid gap-4 xl:grid-cols-2">
+      <Timeline>
         {#each work_experience as job (job.company)}
-          <div class="rounded-md border border-default bg-neutral-800 p-4">
-            <h3 class="mb-3 text-white text-h3">{t(job.company)}</h3>
+          <TimelineItem period={t(job.period)} title={t(job.company)}>
+            {#if job.summary}
+              <p class="mb-2 text-sm leading-relaxed text-muted">{t(job.summary)}</p>
+            {/if}
             <ul class="grid gap-2 text-sm leading-relaxed text-muted">
               {#each job.points as point (point)}
                 <li class="flex gap-2">
@@ -109,9 +139,9 @@
                 </li>
               {/each}
             </ul>
-          </div>
+          </TimelineItem>
         {/each}
-      </div>
+      </Timeline>
     </div>
   </CardContainer>
 </div>

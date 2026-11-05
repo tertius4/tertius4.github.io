@@ -22,7 +22,7 @@
           </span>
           <h1 class="mt-4 text-4xl font-bold tracking-tight text-neutral-900 sm:text-5xl">Vinkel of Koljander</h1>
           <p class="mt-3 max-w-xl text-base leading-7 text-neutral-600 sm:text-lg">
-            A family recipe app to keep cherished recipes organized and easily accessible.
+            A family recipe app to keep cherished recipes organised and easily accessible.
           </p>
 
           <div class="mt-6 flex flex-wrap gap-3">

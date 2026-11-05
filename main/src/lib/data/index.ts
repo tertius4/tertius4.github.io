@@ -236,5 +236,8 @@ export const projects: Project[] = [
 /** Skills shown on the home panel: highest level first, computed once. */
 export const top_skills: Skill[] = [...skills].sort((a, b) => b.level - a.level).slice(0, 15);
 
-const CAREER_START_YEAR = 2021;
-export const years_of_experience = new Date().getFullYear() - CAREER_START_YEAR;
+const CAREER_START = new Date(2021, 0); // Jan 2021
+const now = new Date();
+const months_of_experience =
+  (now.getFullYear() - CAREER_START.getFullYear()) * 12 + (now.getMonth() - CAREER_START.getMonth());
+export const years_of_experience = Math.round(months_of_experience / 12);

@@ -43,16 +43,16 @@
   <link rel="icon" href="/profile-picture.webp" />
   <meta
     name="description"
-    content="Personal website of Tertius, a full stack software developer with South African and German citizenship, open to opportunities in South Africa and Luxembourg."
+    content="Personal website of Tertius, a full stack software developer with South African and German citizenship, open to opportunities in South Africa."
   />
   <meta
     name="keywords"
-    content="full stack developer, web developer, JavaScript, TypeScript, Svelte, Node.js, South Africa, Luxembourg, Europe, multilingual developer"
+    content="full stack developer, web developer, JavaScript, TypeScript, Svelte, Node.js, South Africa, Europe, multilingual developer"
   />
   <meta property="og:title" content="Tertius – Software Developer" />
   <meta
     property="og:description"
-    content="Full stack developer with South African and German citizenship, available for opportunities in South Africa and Luxembourg."
+    content="Full stack developer with South African and German citizenship, available for opportunities in South Africa."
   />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tertius4.github.io/" />
@@ -65,16 +65,16 @@
   <SidePanel
     class={{
       "grow w-full": true,
-      "lg:flex flex-col max-lg:hidden ring-2 ring-neutral-800 rounded-2xl space-y-4": !on_home,
+      "lg:flex flex-col max-lg:hidden space-y-4": !on_home,
       "max-lg:h-full flex flex-col": on_home,
     }}
   >
     <div class="relative">
-      <CoverImage src="/cover-image.webp" alt="" class="w-full h-[200px] lg:rounded-2xl lg:border-2 border-default" />
+      <CoverImage src="/cover-image.webp" alt="" class="w-full h-[200px] lg:rounded-md" />
       <Avatar
         src="/profile-picture.webp"
         alt="Tertius"
-        class="absolute bottom-0 -mb-8 left-6 lg:left-8 transform size-36 border-2 border-default"
+        class="absolute bottom-0 -mb-8 left-6 lg:left-8 transform size-36 ring-4 ring-neutral-900"
       />
 
       <button

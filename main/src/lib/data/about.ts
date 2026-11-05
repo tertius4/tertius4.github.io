@@ -8,7 +8,6 @@ export const languages: { flag: string; name: TranslationKey; level: Translation
 
 export const locations: { name: TranslationKey; label: TranslationKey }[] = [
   { name: "about_south_africa", label: "about_south_africa_label" },
-  { name: "about_luxembourg", label: "about_luxembourg_label" },
 ];
 
 export const hobbies: { name: TranslationKey; description: TranslationKey }[] = [
@@ -18,15 +17,55 @@ export const hobbies: { name: TranslationKey; description: TranslationKey }[] = 
   { name: "about_jogging", description: "about_jogging_desc" },
 ];
 
-export const education: { title: TranslationKey; paragraphs: TranslationKey[] }[] = [
-  { title: "about_university", paragraphs: ["about_university_desc"] },
-  { title: "about_high_school", paragraphs: ["about_high_school_desc"] },
-  { title: "about_other_education", paragraphs: ["about_other_education_p1", "about_other_education_p2"] },
+export const education: {
+  title: TranslationKey;
+  subtitle?: TranslationKey;
+  period: TranslationKey;
+  paragraphs: TranslationKey[];
+  tags?: string[];
+}[] = [
+  {
+    title: "about_self_study",
+    subtitle: "about_self_study_subtitle",
+    period: "about_self_study_period",
+    paragraphs: ["about_self_study_desc"],
+  },
+  {
+    title: "about_university",
+    subtitle: "about_university_subtitle",
+    period: "about_university_period",
+    paragraphs: ["about_university_desc"],
+    tags: ["C", "Java"],
+  },
+  {
+    title: "about_gap_year",
+    subtitle: "about_gap_year_subtitle",
+    period: "about_gap_year_period",
+    paragraphs: ["about_gap_year_desc"],
+  },
+  {
+    title: "about_high_school",
+    subtitle: "about_high_school_subtitle",
+    period: "about_high_school_period",
+    paragraphs: ["about_high_school_desc"],
+  },
 ];
 
-export const work_experience: { company: TranslationKey; points: TranslationKey[] }[] = [
+export const work_experience: {
+  company: TranslationKey;
+  period: TranslationKey;
+  summary?: TranslationKey;
+  points: TranslationKey[];
+}[] = [
+  {
+    company: "about_between_jobs",
+    period: "about_between_jobs_period",
+    summary: "about_between_jobs_summary",
+    points: ["about_between_jobs_li_1", "about_between_jobs_li_2", "about_between_jobs_li_3"],
+  },
   {
     company: "about_unaffi",
+    period: "about_unaffi_period",
     points: [
       "about_unaffi_li_1",
       "about_unaffi_li_2",
@@ -38,6 +77,7 @@ export const work_experience: { company: TranslationKey; points: TranslationKey[
   },
   {
     company: "about_gatekeeper",
+    period: "about_gatekeeper_period",
     points: [
       "about_gatekeeper_li_1",
       "about_gatekeeper_li_2",

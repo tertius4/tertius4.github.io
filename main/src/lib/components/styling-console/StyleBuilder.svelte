@@ -90,7 +90,7 @@
         </div>
       </fieldset>
 
-      <StyleOption label="Color" bind:value={color} />
+      <StyleOption label="Colour" bind:value={color} />
       <StyleOption label="Background" bind:value={background} />
     </div>
 

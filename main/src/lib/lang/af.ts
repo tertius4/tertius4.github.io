@@ -2,7 +2,7 @@ import type { en } from "./en";
 
 export const af: Record<keyof typeof en, string> = {
   intro_sentence:
-    "Ek is ’n Software Developer met ervaring in startups sedert 2021. Buite werk bou ek aan my eie projekte om my vaardighede te slyp, met nuwe idees te eksperimenteer en aan te hou leer.",
+    "Ek is ’n vol-stapel ontwikkelaar wat sedert 2021 sagteware bou, meestal in begin-ondernemings. Ek hou daarvan om ’n funksie van begin tot einde te besit, van die datamodel tot die app in jou hand.",
   skills: "Vaardighede",
   my_projects: "My Projekte",
   years: "jare",
@@ -30,7 +30,6 @@ export const af: Record<keyof typeof en, string> = {
     "Die platform wat gebruik is om pasgemaakte besigheidsprogramme vinnig en doeltreffend te ontwikkel en te ontplooi by Gatekeeper.",
   skill_react_desc: "Slegs ligte eksperimentering, maar dit lyk redelik maklik.",
   nav_full_stack_dev: "Vol-stapel Sagteware-ontwikkelaar",
-  nav_luxembourg_bound: "Gebaseer in Suid-Afrika • Oop vir Luxemburg",
   nav_available_text: "Beskikbaar en aktief op soek na voltydse ontwikkelaargeleenthede in die tegnologiebedryf.",
   nav_more_about_me: "Meer oor my",
   nav_read_more: "Lees meer gedetailleerd",
@@ -66,8 +65,6 @@ export const af: Record<keyof typeof en, string> = {
   about_location: "Ligging",
   about_south_africa: "Suid-Afrika",
   about_south_africa_label: "My huidige woonplek, soek werkgeleenthede hier",
-  about_luxembourg: "Luxemburg",
-  about_luxembourg_label: "Soek werkgeleenthede in Luxemburg",
   about_availability: "Beskikbaarheid",
   about_references: "Verwysings",
   about_available_upon_request: "Beskikbaar op aanvraag",
@@ -81,17 +78,39 @@ export const af: Record<keyof typeof en, string> = {
   about_jogging: "Hardloop",
   about_jogging_desc: "Het 2 maratons voltooi",
   about_education: "Onderwys",
-  about_university: "Universiteit",
+  about_self_study: "Selfstudie",
+  about_self_study_subtitle: "Boeke, Udemy-kursusse & persoonlike projekte",
+  about_self_study_period: "Deurlopend",
+  about_self_study_desc:
+    "Ek lees boeke oor hoe om ’n begin-onderneming te bou en te bestuur, en ek het deur verskeie Udemy-kursusse gewerk. Die meeste van my tegniese leer kom van my persoonlike projekte.",
+  about_university: "Universiteit Stellenbosch",
+  about_university_subtitle: "BSc – Wiskunde & Rekenaarwetenskap",
+  about_university_period: "2018 – 2020",
   about_university_desc:
     "Ek het my voorgraadse/baccalaureusstudie in 2020 aan die Universiteit van Stellenbosch voltooi. Ek het in Wiskunde en Rekenaarwetenskap gemajor.",
+  about_gap_year: "Gapingjaar",
+  about_gap_year_subtitle: "Leierskap- en avontuurprogram",
+  about_gap_year_period: "2017",
+  about_gap_year_desc: "Ek het deur my gapingjaar ’n leierskap- en avontuurprogram bygewoon.",
   about_high_school: "Hoërskool",
-  about_high_school_desc: "Ek het my matriek in 2016 in Suid-Afrika, Kaapstad, voltooi.",
-  about_other_education: "Ander Onderwys",
-  about_other_education_p1: "Ek het ’n leierskap- en avontuurprogram in my gapingjaar deur 2017 bygewoon.",
-  about_other_education_p2:
-    "Ek het ook deur verskeie Udemy-kursusse gegaan. Die meeste van my leer in die laaste paar jaar kom van my persoonlike projekte en selfstudie.",
+  about_high_school_subtitle: "Matriek · Kaapstad, Suid-Afrika",
+  about_high_school_period: "2016",
+  about_high_school_desc: "Ek het my matriek in 2016 in Kaapstad, Suid-Afrika, voltooi.",
+  about_highlight_experience: "ervaring",
+  about_highlight_apps: "2 gepubliseerde mobiele apps",
+  about_highlight_lead: "Argitektuur & kode-oorsigte gelei",
+  about_highlight_mentoring: "Mentorskap & opleiding van ontwikkelaars",
   about_work_experience: "Werkervaring",
+  about_between_jobs: "Tussen Werk – Uitbreiding van my Portefeulje",
+  about_between_jobs_period: "Okt 2026 – Des 2026",
+  about_between_jobs_summary: "Ek het my ou projekte herbesoek en voltooi wat ek nog nie klaargemaak het nie.",
+  about_between_jobs_li_1:
+    "Het ’n tuisbediener vir my familie gebou wat ons vandag nog gebruik: van navorsing oor die beste onderdele en die bou van die rekenaar tot die installering van die sagteware, die opstel van die sekuriteit, en ’n Bitcoin-nodus en ’n Bitcoin Lightning-nodus.",
+  about_between_jobs_li_2:
+    "Het Doenit voltooi en onderhou, en Vinkel of Koljander, Didache, Styling Console en hierdie webwerf gebou.",
+  about_between_jobs_li_3: "Het ook Dorpsplein, ai-simon en ’n begrotingsapp gebou.",
   about_unaffi: "UNAFFI",
+  about_unaffi_period: "Mrt 2024 – Sep 2026",
   about_unaffi_li_1:
     "Het frontend-argitektuurbesluite gelei, insluitend datamodellering, API-ontwerp, vouerstruktuur en kode-organisasie standaarde.",
   about_unaffi_li_2: "Het alle kode-oorsigte in die span gedoen en ESLint-standaarde en beste praktyke toegepas.",
@@ -101,6 +120,7 @@ export const af: Record<keyof typeof en, string> = {
   about_unaffi_li_5: "Het outomatiseringsskripte geskep om bedieneroperasies en ontplooiingswerkvloei te stroomlyn.",
   about_unaffi_li_6: "Het saamgewerk met ’n 4-persoon tegniese span op funksie-ontwikkeling en lewering.",
   about_gatekeeper: "Gatekeeper Technologies",
+  about_gatekeeper_period: "Jan 2021 – Mei 2024",
   about_gatekeeper_li_1:
     "Het ’n klein span gelei om 2 nuwe toepassings te skep en 6 bestaande toepassings te onderhou, veral vir die Wes-Kaapse Trafiekdepartement.",
   about_gatekeeper_li_2:
@@ -109,7 +129,7 @@ export const af: Record<keyof typeof en, string> = {
     "Het kliëntgesentreerde toepassings gebou met die JourneyApps-platform, wat XML, JavaScript en TypeScript gebruik.",
   about_gatekeeper_li_4: "Het verskeie private npm-pakkette vir interne maatskappygebruik gepubliseer.",
   about_gatekeeper_li_5: "Het alle spanlede opgelei terwyl die maatskappy van 3 na 10 ontwikkelaars gegroei het.",
-  about_availability_date: "9 Nov 2026",
+  about_availability_date: "23 Nov 2026",
   consent_text:
     "Hierdie webwerf gebruik Google Analytics om te verstaan hoe dit gebruik word. Laat anonieme analise toe?",
   consent_accept: "Aanvaar",

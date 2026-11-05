@@ -21,7 +21,7 @@
   <meta name="description" content={short_description} />
   <meta
     name="keywords"
-    content="styling-console, console, logger, logging, terminal, browser, devtools, colors, ANSI, Node.js, npm"
+    content="styling-console, console, logger, logging, terminal, browser, devtools, colours, colors, ANSI, Node.js, npm"
   />
   <meta property="og:title" content={title} />
   <meta name="twitter:title" content={title} />
