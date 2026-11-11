@@ -39,10 +39,13 @@
   <meta property="og:description" content={short_description} />
   <meta name="twitter:description" content={short_description} />
   <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:card" content="summary" />
   <meta name="twitter:domain" content="tertius4.github.io" />
-  <meta property="og:image" content="{site}/doenit-logo.webp" />
-  <meta name="twitter:image" content="{site}/doenit-logo.webp" />
+  <meta property="og:image" content="{site}/doenit-og.png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:image:type" content="image/png" />
+  <meta name="twitter:image" content="{site}/doenit-og.png" />
   <link rel="canonical" href="{site}/doenit" />
 </svelte:head>
 
