@@ -17,7 +17,9 @@
       Jou take bly <Mark>op jou toestel</Mark>, tensy jy self sinkronisering aanskakel.
     </InfoBlock>
     <InfoBlock title="Sinkroniseer as jy wil" icon="fa-cloud-arrow-up">
-      Wil jy dieselfde take op jou foon en die web hê? Teken in met Google of Apple. Jou take word dan in <Mark>Johannesburg</Mark>
+      Wil jy dieselfde take op jou foon en die web hê? Teken in met Google of Apple. Jou take word dan in <Mark
+        >Johannesburg</Mark
+      >
       gestoor. Foto's bly op jou toestel.
     </InfoBlock>
   </div>

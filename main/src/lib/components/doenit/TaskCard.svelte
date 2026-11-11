@@ -16,7 +16,11 @@
   const status = $derived(statusOf(task));
 </script>
 
-<div class="flex items-center gap-3.5 rounded-2xl px-4 py-3.5 {status === 'later' && later_class ? later_class : card_classes[status]}">
+<div
+  class="flex items-center gap-3.5 rounded-2xl px-4 py-3.5 {status === 'later' && later_class
+    ? later_class
+    : card_classes[status]}"
+>
   <span class="size-6.5 shrink-0 rounded-md bg-foreground-400" aria-hidden="true"></span>
   <div class="flex min-w-0 flex-1 flex-col gap-1.5">
     <span class="text-lg text-strong">{task.title}</span>

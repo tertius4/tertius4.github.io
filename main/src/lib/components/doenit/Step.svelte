@@ -20,7 +20,10 @@
     <span class="font-medium text-primary">{n}</span>{title}
   </h3>
   <p class="text-pretty">{@render text()}</p>
-  <div class={["mt-1 rounded-2xl border border-default bg-surface p-3 md:mt-3 md:p-4", panel]} aria-hidden={interactive ? undefined : "true"}>
+  <div
+    class={["mt-1 rounded-2xl border border-default bg-surface p-3 md:mt-3 md:p-4", panel]}
+    aria-hidden={interactive ? undefined : "true"}
+  >
     {@render mockup()}
   </div>
 </div>

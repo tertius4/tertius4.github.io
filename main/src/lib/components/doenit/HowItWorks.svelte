@@ -14,7 +14,8 @@
   <div class="grid gap-8 md:grid-cols-3 md:gap-12">
     <Step n={1} title="Skryf die taak" panel="flex flex-col gap-2">
       {#snippet text()}
-        Waterfilter omruil. Gee dit 'n <Mark>kategorie</Mark>, en voeg 'n <Mark>beskrywing</Mark> of 'n <Mark >foto</Mark> by as jy wil.
+        Waterfilter omruil. Gee dit 'n <Mark>kategorie</Mark>, en voeg 'n <Mark>beskrywing</Mark> of 'n <Mark>foto</Mark
+        > by as jy wil.
       {/snippet}
       {#snippet mockup()}
         <Field>Waterfilter omruil</Field>
@@ -29,7 +30,9 @@
 
     <Step n={2} title="Kies hoe gereeld" interactive>
       {#snippet text()}
-        Elke dag, elke week of <Mark>op gekose dae</Mark>, elke maand, elke jaar, of <Mark>elke 2 weke</Mark> en <Mark>elke 3 maande</Mark>.
+        Elke dag, elke week of <Mark>op gekose dae</Mark>, elke maand, elke jaar, of <Mark>elke 2 weke</Mark> en <Mark
+          >elke 3 maande</Mark
+        >.
       {/snippet}
       {#snippet mockup()}
         <Dropdown options={repeat_options} selected={repeat_selected} />

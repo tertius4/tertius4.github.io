@@ -17,8 +17,8 @@
   <div class="flex max-w-2xl flex-col gap-5">
     <SectionHeading>Vir die dinge wat jy aanhou vergeet.</SectionHeading>
     <p class="text-pretty">
-      Sit jou take in <Mark>kategorieë</Mark> soos Onderhoud, Afsprake en Higiëne, en <Mark>filtreer</Mark> om net te sien wat jy nou wil. Probeer
-      dit: tik op 'n kategorie, en weer om dit te verwyder.
+      Sit jou take in <Mark>kategorieë</Mark> soos Onderhoud, Afsprake en Higiëne, en <Mark>filtreer</Mark> om net te sien
+      wat jy nou wil. Probeer dit: tik op 'n kategorie, en weer om dit te verwyder.
     </p>
   </div>
 

@@ -49,7 +49,9 @@
     </div>
   </div>
 
-  <div class="flex gap-2 overflow-x-auto border-t border-default bg-surface px-4 py-3 [&>*]:shrink-0 [&>*]:whitespace-nowrap">
+  <div
+    class="flex gap-2 overflow-x-auto border-t border-default bg-surface px-4 py-3 [&>*]:shrink-0 [&>*]:whitespace-nowrap"
+  >
     {#each categories as category (category)}
       {#if count(category)}
         <PillButton size="sm" count={count(category)}>{category}</PillButton>

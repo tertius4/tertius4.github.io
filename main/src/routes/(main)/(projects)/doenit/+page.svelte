@@ -20,7 +20,7 @@
     "Doenit is 'n Afrikaanse taaklys-app vir Android, iOS en die web. Herhalende take, kategorieë en herinneringe. Werk sonder internet; sinkronisering en deel met ander is opsioneel.";
 
   onMount(() => {
-    clock.today = new Date();
+    clock.now = Date.now();
   });
 </script>
 

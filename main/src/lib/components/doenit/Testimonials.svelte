@@ -10,7 +10,9 @@
     <SectionHeading>Wat sê gebruikers?</SectionHeading>
     <p class="text-muted">
       Resensies op Google Play en gesprekke op
-      <a href={links.reddit} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">r/Doenit</a>.
+      <a href={links.reddit} target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">
+        r/Doenit
+      </a>.
     </p>
   </div>
   <div class="grid gap-6 md:grid-cols-3">

@@ -47,7 +47,11 @@ export const groups_demo = [
 export const testimonials = [
   { name: "Franco", color: "bg-primary", text: "Hou baie daarvan!" },
   { name: "Werner", color: "bg-(--accent)", text: "Uitstekend toep, dit is verbruikers vriendelike en werk goed." },
-  { name: "Heike", color: "bg-success", text: "Baie lekker om so n toepassing in afrikaans te kan hê. Baie gebruikersvriendelik." },
+  {
+    name: "Heike",
+    color: "bg-success",
+    text: "Baie lekker om so n toepassing in afrikaans te kan hê. Baie gebruikersvriendelik.",
+  },
 ] as const;
 
 export type Status = "late" | "today" | "later";
