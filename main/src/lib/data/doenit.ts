@@ -1,96 +1,92 @@
 export const links = {
   play: "https://play.google.com/store/apps/details?id=doenit.app",
+  app_store: "https://apps.apple.com/us/app/doenit-app/id6783408047",
+  web: "https://doenit.org",
   reddit: "https://www.reddit.com/r/Doenit/",
   x: "https://x.com/Tertius39",
   github: "https://github.com/tertius4/doenit",
-  ios_waiting_list:
-    "https://docs.google.com/forms/d/e/1FAIpQLSd95Q-fA4WIjmwKEbcjSOrzDqoYAE5Y3O_djThffA6-aBo10w/viewform?usp=header",
-};
-
-export const stats = [
-  { value: "100%", label: "Afrikaans" },
-  { value: "R 0", label: "Gratis" },
-  { value: "🔒", label: "Vanlyn (offline)" },
-  { value: "🇿🇦", label: "Suid-Afrika" },
-];
-
-export const features = [
-  {
-    icon: "🕒",
-    tone: "primary",
-    title: "Herhalende take",
-    text: "Stel herinnerings op vir enige tydsinterval — maandliks, weekliks of selfs elke tweede Donderdag. Perfek vir roetines.",
-  },
-  {
-    icon: "🔒",
-    tone: "success",
-    title: "Vanlyn & veilig",
-    text: "Jou data bly op jou toestel, geënkripteer. Geen internet nodig nie, en jy bepaal of jy rugsteun wil hê.",
-  },
-  {
-    icon: "🧩",
-    tone: "warning",
-    title: "Maklike kategorieë",
-    text: "Hou werk, huis en familie take apart met eenvoudige groepering en duidelike kleur-etikette.",
-  },
-  {
-    icon: "🎨",
-    tone: "primary",
-    title: "Lig of donker tema",
-    text: "Pas Doenit aan by jou styl — automaties volgens jou toestel se instelling, of kies self.",
-  },
-  {
-    icon: "📱",
-    tone: "error",
-    title: "Tuisskerm-widgets",
-    text: "Sien jou belangrike take direk op jou tuisskerm sonder om die app oop te maak.",
-  },
-  {
-    icon: "👥",
-    tone: "primary",
-    title: "Deel met vriende",
-    text: "Doenit laat jou saamwerk aan take met vriende en familie. Bou saam aan doelwitte!",
-  },
-] as const;
-
-/** Tailwind needs the full class names to be present in the source. */
-export const tone_classes = {
-  primary: { bg: "bg-primary/20 group-hover:bg-primary/30", text: "text-primary", border: "border-primary/50" },
-  success: { bg: "bg-success/20 group-hover:bg-success/30", text: "text-success", border: "border-success/50" },
-  warning: { bg: "bg-warning/20 group-hover:bg-warning/30", text: "text-warning", border: "border-warning/50" },
-  error: { bg: "bg-error/20 group-hover:bg-error/30", text: "text-error", border: "border-error/50" },
 } as const;
 
-export const screenshots = [
-  { src: "/tuisblad.webp", alt: "Doenit tuisblad skerm", title: "Tuisblad", text: "Jou hele dag in een oogopslag" },
-  { src: "/wysig-taak.webp", alt: "Wysig taak skerm", title: "Wysig take", text: "Stel alles presies reg" },
-  { src: "/instellings.webp", alt: "Doenit instellings skerm", title: "Instellings", text: "Maak dit jou eie" },
+export type Category = "Afsprake" | "Higiëne" | "Onderhoud";
+
+export interface DemoTask {
+  title: string;
+  category: Category;
+  /** Shown beside the card on the page, not in the app itself. */
+  repeat: string;
+  /** Days from today: negative is overdue, 0 is today. Dates are worked out in the browser so they never go stale. */
+  in_days: number;
+}
+
+export const categories: Category[] = ["Afsprake", "Higiëne", "Onderhoud"];
+
+/** Sample tasks for the category filter: things that come back every few weeks or months. */
+export const demo_tasks: DemoTask[] = [
+  { title: "Aircon skoonmaak", category: "Onderhoud", repeat: "Elke jaar", in_days: -8 },
+  { title: "Waterfilter omruil", category: "Onderhoud", repeat: "Elke 3 maande", in_days: 0 },
+  { title: "Beddegoed was", category: "Higiëne", repeat: "Elke 2 weke", in_days: 0 },
+  { title: "Naels knip", category: "Higiëne", repeat: "Elke week", in_days: 7 },
+  { title: "Hare laat sny", category: "Afsprake", repeat: "Elke 6 weke", in_days: 21 },
+  { title: "Tandarts", category: "Afsprake", repeat: "Elke 6 maande", in_days: 23 },
+  { title: "Tandeborsel vervang", category: "Higiëne", repeat: "Elke 3 maande", in_days: 51 },
+  { title: "Oogtoets", category: "Afsprake", repeat: "Elke 2 jaar", in_days: 70 },
+  { title: "Motor se diens", category: "Onderhoud", repeat: "Elke jaar", in_days: 95 },
+];
+
+/** The tasks drawn inside the app screen in the hero. */
+export const hero_titles = ["Lugversorger skoonmaak", "Waterfilter omruil", "Beddegoed was", "Tandarts"];
+
+export const repeat_options = ["Elke dag", "Elke week", "Elke maand", "Elke 3 maande", "Elke jaar"];
+export const repeat_selected = "Elke 3 maande";
+
+export const groups_demo = [
+  { name: "Familie", members: "Jy, Elsie", tasks: 10 },
+  { name: "Die Kantoor", members: "Jy, Gert, Anne-Marie", tasks: 32 },
 ];
 
 export const testimonials = [
-  { name: "Franco", tone: "primary", text: "Hou baie daarvan!" },
-  { name: "Werner", tone: "success", text: "Uitstekend toep, dit is verbruikers vriendelike en werk goed." },
-  {
-    name: "Heike",
-    tone: "error",
-    text: "Baie lekker om so n toepassing in afrikaans te kan hê. Baie gebruikersvriendelik.",
-  },
+  { name: "Franco", color: "bg-primary", text: "Hou baie daarvan!" },
+  { name: "Werner", color: "bg-(--accent)", text: "Uitstekend toep, dit is verbruikers vriendelike en werk goed." },
+  { name: "Heike", color: "bg-success", text: "Baie lekker om so n toepassing in afrikaans te kan hê. Baie gebruikersvriendelik." },
 ] as const;
 
-export const footer_social = [
-  { label: "💻 GitHub", href: links.github },
-  { label: "💬 Reddit", href: links.reddit },
-  { label: "🐦 Twitter", href: links.x },
+export type Status = "late" | "today" | "later";
+
+export function statusOf(task: DemoTask): Status {
+  if (task.in_days < 0) return "late";
+  if (task.in_days === 0) return "today";
+  return "later";
+}
+
+// Full class names so Tailwind can see them.
+export const card_classes: Record<Status, string> = {
+  late: "bg-(--late-card)",
+  today: "bg-(--today-card)",
+  later: "bg-surface",
+};
+export const chip_classes: Record<Status, string> = {
+  late: "bg-(--late-chip)",
+  today: "bg-(--today-chip)",
+  later: "bg-card",
+};
+
+export type FooterLink = { label: string; href: string } | { label: string; email: true; subject?: string };
+
+export const footer_social: FooterLink[] = [
+  { label: "GitHub", href: links.github },
+  { label: "Reddit", href: links.reddit },
+  { label: "X", href: links.x },
 ];
 
-export const footer_links = [
+export const footer_links: FooterLink[] = [
   { label: "Google Play", href: links.play },
+  { label: "Web", href: links.web },
   { label: "Bron-kode", href: links.github },
   { label: "Gemeenskap", href: links.reddit },
 ];
 
-export const footer_support = [
+export const footer_support: FooterLink[] = [
   { label: "Hulp & FAQ", href: links.reddit },
   { label: "Kontak my", email: true },
   { label: "Rapporteer 'n probleem", email: true, subject: "Doenit Rapporteer 'n Probleem" },
-] as const;
+];

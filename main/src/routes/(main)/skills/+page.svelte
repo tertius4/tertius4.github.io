@@ -45,7 +45,7 @@
   <title>{t("skills")} – Tertius van Niekerk</title>
 </svelte:head>
 
-<div class="text-white w-full p-4 overflow-y-auto mb-auto">
+<div class="text-white w-full p-4 lg:p-8 overflow-y-auto mb-auto">
   <div class="flex gap-2 justify-between w-full items-center mb-4">
     <h2 class="text-2xl font-bold">{t("skills")}</h2>
     <div class="relative">

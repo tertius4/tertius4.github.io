@@ -64,7 +64,7 @@ export const af: Record<keyof typeof en, string> = {
   about_experience: "Ervaring",
   about_location: "Ligging",
   about_south_africa: "Suid-Afrika, Wes-Kaap",
-  about_south_africa_label: "My huidige woonplek, soek werkgeleenthede hier",
+  about_south_africa_label: "My huidige woonplek",
   about_availability: "Beskikbaarheid",
   about_references: "Verwysings",
   about_available_upon_request: "Beskikbaar op aanvraag",
@@ -141,4 +141,5 @@ export const af: Record<keyof typeof en, string> = {
   error_back_home: "← Terug na Tuis",
   error_contact: "of kontak my as jy dink dit is ’n fout",
   switch_language: "Verander taal",
+  toggle_sidebar: "Wys/versteek kantbalk",
 };

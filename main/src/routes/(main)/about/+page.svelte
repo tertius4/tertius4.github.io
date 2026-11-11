@@ -26,7 +26,7 @@
 </svelte:head>
 
 <div
-  class="text-white w-full grid overflow-y-auto grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 max-sm:gap-4 gap-8 h-full max-lg:p-4"
+  class="text-white w-full grid overflow-y-auto grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 max-sm:gap-4 gap-8 h-full p-4 lg:p-8"
 >
   <CardContainer class="sm:col-span-1 xl:col-span-2">
     <h2 class="text-white text-h1">{t("about_introduction")}</h2>

@@ -5,7 +5,6 @@
   import ButtonBottomBar from "$lib/components/ButtonBottomBar.svelte";
   import CardContactMe from "$lib/components/CardContactMe.svelte";
   import CardProject from "$lib/components/CardProject.svelte";
-  import CoverImage from "$lib/components/CoverImage.svelte";
   import Icon from "$lib/components/Icon.svelte";
   import BottomBar from "$lib/components/layout/BottomBar.svelte";
   import Container from "$lib/components/layout/Container.svelte";
@@ -19,6 +18,9 @@
   import { PROJECTS_ID, SIDEBAR_ID, sidebar_scroll } from "$lib/scroll.svelte";
 
   const { children } = $props();
+
+  // Only the landing route decides the initial state; later navigation keeps it.
+  let sidebar_open = $state(["/", "/about", "/skills"].includes(page.url.pathname));
 
   const on_home = $derived(page.url.pathname === "/");
   const is_scrolled_past_projects = $derived(on_home && sidebar_scroll.past_projects);
@@ -61,47 +63,35 @@
   <link rel="canonical" href="https://tertius4.github.io/" />
 </svelte:head>
 
-<Container class="w-dvw h-dvh overflow-hidden">
+<Container open={sidebar_open} class="w-dvw h-dvh overflow-hidden">
   <SidePanel
+    open={sidebar_open}
     class={{
       "grow w-full": true,
       "lg:flex flex-col max-lg:hidden space-y-4": !on_home,
       "max-lg:h-full flex flex-col": on_home,
     }}
   >
-    <div class="relative">
-      <CoverImage src="/cover-image.webp" alt="" class="w-full h-[200px] lg:rounded-md" />
-      <Avatar
-        src="/profile-picture.webp"
-        alt="Tertius"
-        class="absolute bottom-0 -mb-8 left-6 lg:left-8 transform size-36 ring-4 ring-neutral-900"
-      />
+    <div class="relative flex justify-center pt-6">
+      <Avatar src="/profile-picture.webp" alt="Tertius" class="size-36 ring-4 ring-neutral-900" />
 
       <button
         type="button"
         aria-label={t("switch_language")}
-        class="absolute top-4 py-0.5 rounded-lg px-2 right-4 bg-card active:bg-neutral-600 focus:bg-neutral-600 text-white outline-none hover:font-medium active:font-medium focus:font-medium cursor-pointer"
+        class="absolute top-4 right-4 flex items-center gap-1.5 py-1 px-2 rounded-lg border border-default bg-card hover:bg-card-hover active:bg-neutral-600 focus:bg-neutral-600 text-white outline-none hover:font-medium active:font-medium focus:font-medium cursor-pointer"
         onclick={toggleLanguage}
       >
-        {language.current.toUpperCase()}
+        <Icon name="languages" size={16} />
+        <span>{language.current.toUpperCase()}</span>
       </button>
     </div>
 
-    <section class="pl-9 pt-12 md:pt-10">
+    <section class="text-center pt-4">
       <h1 class="text-white font-bold text-3xl leading-12">Tertius van Niekerk</h1>
       <p class="text-primary font-medium text-lg leading-8">{t("nav_full_stack_dev")}</p>
     </section>
 
     <div class="space-y-4 pt-4 px-4 lg:px-0">
-      <div
-        class="flex items-center gap-2 mb-2 rounded-lg border border-amber-400/40 bg-amber-400/10 px-3 py-2 text-sm text-amber-100 shadow-sm shadow-amber-950/20"
-      >
-        <span
-          ><span class="inline-flex size-2 rounded-full bg-amber-300 shrink-0 animate-pulse mr-1" aria-hidden="true"
-          ></span>
-          {t("nav_available_text")}</span
-        >
-      </div>
       <div class="grid grid-cols-3 gap-2">
         <CardContactMe class="flex flex-col gap-1" href="https://github.com/tertius4">
           <Icon name="github" size={24} />
@@ -116,7 +106,7 @@
           <span>Email</span>
         </CardContactMe>
       </div>
-      <Link href="/about" class="pt-2">
+      <Link href="/about" class="pt-2" disabled={page.url.pathname === "/about"}>
         <span>{t("nav_more_about_me")}</span>
         <Icon name="chevron-right" size={20} />
       </Link>
@@ -132,7 +122,7 @@
           <Skill data={skill} />
         {/each}
       </div>
-      <Link href="/skills">
+      <Link href="/skills" disabled={page.url.pathname === "/skills"}>
         <span>{t("nav_read_more")}</span>
         <Icon name="chevron-right" size={20} />
       </Link>
@@ -151,7 +141,20 @@
     </div>
   </SidePanel>
 
-  <Main class="lg:rounded-lg overflow-hidden w-full">
+  <Main class="relative overflow-hidden w-full min-w-0">
+    <button
+      type="button"
+      aria-label={t("toggle_sidebar")}
+      aria-expanded={sidebar_open}
+      class="max-lg:hidden absolute top-3 left-3 z-10 rounded-lg bg-card hover:bg-card-hover text-white p-1 cursor-pointer outline-none focus-visible:ring-2 ring-primary"
+      onclick={() => (sidebar_open = !sidebar_open)}
+    >
+      <Icon
+        name="chevron-right"
+        size={20}
+        class={sidebar_open ? "transition-transform duration-300 rotate-180" : "transition-transform duration-300"}
+      />
+    </button>
     {@render children()}
   </Main>
   <BottomBar class="bg-surface border-t border-default lg:hidden p-2 overflow-hidden w-full">

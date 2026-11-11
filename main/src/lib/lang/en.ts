@@ -61,7 +61,7 @@ export const en = {
   about_experience: "Experience",
   about_location: "Location",
   about_south_africa: "South Africa, Western Cape",
-  about_south_africa_label: "My current residence, looking for opportunities here",
+  about_south_africa_label: "My current residence",
   about_availability: "Availability",
   about_references: "References",
   about_available_upon_request: "Available upon request",
@@ -137,6 +137,7 @@ export const en = {
   error_back_home: "← Back to Home",
   error_contact: "or contact me if you think this is an error",
   switch_language: "Switch language",
+  toggle_sidebar: "Toggle sidebar",
 };
 
 export type TranslationKey = keyof typeof en;
