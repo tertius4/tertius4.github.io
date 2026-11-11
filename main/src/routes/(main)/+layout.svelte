@@ -23,6 +23,8 @@
   let sidebar_open = $state(["/", "/about", "/skills"].includes(page.url.pathname));
 
   const on_home = $derived(page.url.pathname === "/");
+  // The Doenit page supplies its own social/canonical tags.
+  const on_doenit = $derived(page.url.pathname.replace(/\/$/, "") === "/doenit");
   const is_scrolled_past_projects = $derived(on_home && sidebar_scroll.past_projects);
 
   async function goToHome(event: MouseEvent) {
@@ -51,16 +53,18 @@
     name="keywords"
     content="full stack developer, web developer, JavaScript, TypeScript, Svelte, Node.js, South Africa, Europe, multilingual developer"
   />
-  <meta property="og:title" content="Tertius – Software Developer" />
-  <meta
-    property="og:description"
-    content="Full stack developer with South African and German citizenship, available for opportunities in South Africa."
-  />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tertius4.github.io/" />
-  <meta property="og:image" content="https://tertius4.github.io/profile-picture.webp" />
-  <meta name="twitter:card" content="summary" />
-  <link rel="canonical" href="https://tertius4.github.io/" />
+  {#if !on_doenit}
+    <meta property="og:title" content="Tertius – Software Developer" />
+    <meta
+      property="og:description"
+      content="Full stack developer with South African and German citizenship, available for opportunities in South Africa."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tertius4.github.io/" />
+    <meta property="og:image" content="https://tertius4.github.io/profile-picture.webp" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="canonical" href="https://tertius4.github.io/" />
+  {/if}
 </svelte:head>
 
 <Container open={sidebar_open} class="w-dvw h-dvh overflow-hidden">
